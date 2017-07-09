@@ -1,0 +1,35 @@
+section.process
+  .container
+    .row
+      .col-24
+        h2.sub-heading.service__heading!= content.index.process.heading
+    .row
+      .col-24
+        .tab(role='tabpanel')
+          ul.hidden-md-up.tab__control.tab-control(role='tablist')
+            each item, key in content.index.process.tab.control
+              li.tab-control__item(role='presentation')
+                a.tab-control__link(href=item.target, role='tab')!= item.name
+          .tab__content
+            - var i = 0
+            each items, key in content.index.process.tab.panel
+              - i++
+              .tab__panel.process(class={"tab__panel--active": (i - 1) === 0}, id=key, role='tabpanel')
+                .ol.step-indicator
+                  each item, count in items
+                    li.step-indicator__item(class={"step-indicator__item--active": (count) === 0})!= (count + 1) + content.index.process.tab.carousel.indicator.name
+                .row
+                  each item in items
+                    .col-24.col-md-8
+                      .process__item
+                        .process__photo
+                          .process__icon
+                            i.ic(class=item.icon)
+                        .process__name!= item.name
+                        .process__descr!= item.descr.text
+                          if (item.descr.link)
+                            a.process__link(href=item.descr.link.href)!= item.descr.link.name
+                  .col-24
+                    .process__btn-group
+                      a.btn(href=content.index.process.tab.btns[i - 1].href)!= content.index.process.tab.btns[i - 1].name
+

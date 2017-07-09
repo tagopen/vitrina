@@ -1,0 +1,16 @@
+section.shop
+  .container
+    .row
+      .col-24
+        h2.sub-heading.shop__heading!= content.index.shop.heading.name
+          .sub-heading.sub-heading--orange!= content.index.shop.heading.orange
+    .row.align-items-center.justify-content-center
+      each item in content.index.shop.items
+        .col-6.col-md-auto.col-lg-3.offset-lg-1
+          .client
+            a.client__link(href=item.link.href)
+              img.img-fluid.client__img(src=item.img.src, alt=item.img.alt)
+    .row
+      .col-24
+        button.shop__btn.shop__btn--showall(type='button')!= content.index.shop.btn.text
+          i.fa(class=content.index.shop.btn.icon)

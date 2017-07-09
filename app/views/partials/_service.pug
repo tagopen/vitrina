@@ -1,0 +1,29 @@
+section.service
+  .container
+    .row
+      .col-24
+        h2.sub-heading.service__heading!= content.index.service.heading
+    .row
+      .col-24
+        .tab(role='tabpanel')
+          ul.tab__control.tab-control(role='tablist')
+            each item, key in content.index.service.tab.control
+              li.tab-control__item(role='presentation')
+                a.tab-control__link(href=item.target, role='tab')!= item.name
+          .tab__content
+            .row
+              - var i = 0
+              each items, key in content.index.service.tab.panel
+                - i++
+                .col-24.col-md-12
+                  .tab__panel.panel(class='tab__panel--' + key, class={"tab__panel--active": (i - 1) === 0}, id=key, role='tabpanel')
+                    .row
+                      .hidden-sm-down.col-24
+                        .panel__heading!= content.index.service.tab.control[i - 1].name
+                      each item in items
+                        .col-24.col-md-12.panel__item
+                          .panel__photo
+                            i.ic(class=item.icon)
+                          .panel__name!= item.name
+                          if (item.descr)
+                            .panel__descr!= item.descr

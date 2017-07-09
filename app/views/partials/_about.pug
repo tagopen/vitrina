@@ -1,0 +1,9 @@
+section.about
+  .container
+    .row
+      .col-24
+        h2.sub-heading.about__heading!= content.index.about.heading
+    .row
+      .col-24
+        each item in content.index.about.paragraphs
+          p.about__text!= item 

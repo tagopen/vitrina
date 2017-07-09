@@ -1,0 +1,17 @@
+section.presentation
+  .container
+    .row
+      .col-24
+        h2.sub-heading.presentation__heading!= content.index.presentation.heading
+    .row
+      .col-24.col-lg-16.col-lg-offset-4
+        .presentation__item
+          img.img-fluid.presentation__img(src=content.index.presentation.img.src, alt=content.index.presentation.img.alt)
+        .presentation__declimer!= content.index.presentation.declimer
+        .presentation__btn-group
+          a.btn(href=content.index.presentation.btn.href)
+            i.ic.presentation__btn-icon(class=content.index.presentation.btn.icon)
+            span.presentation__btn-name!= content.index.presentation.btn.text
+            span.presentation__btn-descr!= content.index.presentation.btn.descr
+
+

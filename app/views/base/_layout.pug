@@ -71,16 +71,17 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-  body.body
-    div.wrapper
+  body.body.d-flex.flex-column
+    block header
+    main.flex-grow
       block content
     block footer
     block modal
 
     // build:js js/bundle.min.js
 
-    //Modernizr JavaScript
-    script(src='js/modernizr-custom.js')
+    // Tether JavaScript
+    script(src='js/tether.js')
     // jQuery
     script(src='js/jquery.js')
     // Bootstrap JavaScript
@@ -88,8 +89,6 @@ html(lang='ru' prefix='og: http://ogp.me/ns#')
     // Old browsers reject JavaScript
     script(src='js/jquery.reject.js')
     block scripts
-    // Match Height JavaScript
-    script(src='js/jquery.matchHeight.js')
     // Slick-Slider JavaScript
     script(src='js/slick.js')
     // Fancybox JavaScript

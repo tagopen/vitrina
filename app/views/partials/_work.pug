@@ -1,0 +1,11 @@
+section.work
+  .container
+    .row
+      .col-24
+        h2.sub-heading.work__heading!= content.index.work.heading
+    .row
+      .col-24.col-md-16.offset-md-4
+        .video(data-youtube=content.index.work.video.id)
+          a#video__play.video__play(href='#')
+            img.hidden-sm-down.img-fluid.video__img(src=content.index.work.video.images.desktop.src, alt=content.index.work.video.images.desktop.alt)/
+            img.hidden-md-up.img-fluid.video__img(src=content.index.work.video.images.mobile.src, alt=content.index.work.video.images.mobile.alt)/
