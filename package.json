@@ -53,5 +53,15 @@
     "gulp.spritesmith": "^6.4.0",
     "imagemin-pngquant": "^5.0.0",
     "vinyl-ftp": "^0.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap-validator": "^0.11.9",
+    "fancybox": "^3.0.0",
+    "font-awesome": "^4.7.0",
+    "formvalidation": "^0.6.2-dev",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.6.0",
+    "tether": "^1.4.0"
   }
 }
