@@ -120,6 +120,17 @@
   vertical-align: middle;
 }
 
+.body {
+  min-height: 100vh;
+}
+
+.flex-grow {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 /* form */
 .text-danger {
   color: #b94a48;
@@ -156,19 +167,330 @@
   }
 }
 
-/* modal */
-.modal {
-  -webkit-overflow-scrolling: touch;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-}
-
 /* ---------------------------------------- */
 /* H O M E    P A G E    S T Y L E          */
 /* ---------------------------------------- */
-.body {
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1;
+.logo {
+  text-align: center;
+}
+
+.logo__img {
+  width: 4.063rem;
+  margin: 0 auto;
+}
+
+.logo__descr {
+  margin: 1.5rem 0 0.4375rem;
+  font: 700 1rem/1.1rem "Muller", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.sub-heading {
+  font: 900 1rem/1.125rem "Muller", sans-serif;
+  color: #424242;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo__img {
+    width: 5rem;
+  }
+  .logo__descr {
+    margin: 3rem 0 0.75rem;
+    font-size: 1.875rem;
+    line-height: 2rem;
+    letter-spacing: 0.1875rem;
+  }
+  .sub-heading {
+    font-size: 1.563rem;
+    line-height: 1.6875rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .logo__descr {
+    margin: 2.875rem 0 2.125rem;
+    font-size: 2.4375rem;
+    line-height: 2.5625rem;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .logo__img {
+    width: 5.688rem;
+  }
+  .logo__descr {
+    margin: 4.375rem 0 2.625rem;
+    font-size: 2.5625rem;
+    line-height: 2.6875rem;
+    letter-spacing: 0.4375rem;
+  }
+  .sub-heading {
+    font-size: 1.875rem;
+    line-height: 2rem;
+  }
+}
+
+/* ------------------------------------------ */
+/* S E C T I O N    H E A D E R    S T Y L E  */
+/* ------------------------------------------ */
+.header {
+  padding: 2.25rem 0 0;
+  background: #0571b1 url(../img/header-bg.jpg) no-repeat scroll 0 0;
+  background-size: cover;
+}
+
+.header__btn-group {
+  width: 100%;
+  text-align: center;
+}
+
+.header__btn {
+  margin-top: 0.75rem;
+}
+
+.heading {
+  font: 500 0.688rem/0.8125rem "Muller", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.dropdown {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dropdown__toggle {
+  border-bottom: 1px dashed #fff;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.dropdown__toggle:hover, .dropdown__toggle:focus {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu--right {
+  right: 0;
+  left: auto;
+}
+
+.tenantry {
+  padding: 0.875rem 0;
+  text-align: center;
+}
+
+.tenantry__value {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0.375rem;
+  font: 200 2.5rem/2.563rem "Muller", sans-serif;
+  color: #fff;
+}
+
+.tenantry__value--underline {
+  border-bottom: 1px dashed #fff;
+}
+
+.tenantry__name {
+  padding: 0.3125rem 0;
+  font: 500 1.125rem/1.25rem "Muller", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.tenantry__descr {
+  font: 400 0.938rem/1.125rem "Muller", sans-serif;
+  color: #fff;
+  opacity: .8;
+}
+
+.btn--rounded {
+  padding: 0.75rem 3.438rem;
+  border: 0.188rem solid #fff;
+  -webkit-border-radius: 22px;
+          border-radius: 22px;
+  font: 700 0.813rem/0.9375rem "Muller", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  text-decoration: none;
+}
+
+.btn--rounded:hover, .btn--rounded:focus {
+  text-decoration: none;
+  background-color: #fff;
+  color: #0f5a91;
+}
+
+.btn--default {
+  padding: 0.875rem;
+  width: 100%;
+  max-width: 20rem;
+  background: #ff3701 -webkit-gradient(linear, left top, right top, from(#ff3200), to(#ff7512)) no-repeat scroll 0 0;
+  background: #ff3701 -webkit-linear-gradient(left, #ff3200 0%, #ff7512 100%) no-repeat scroll 0 0;
+  background: #ff3701 linear-gradient(to right, #ff3200 0%, #ff7512 100%) no-repeat scroll 0 0;
+  border: 0 none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  font: 700 0.813rem/0.9375rem "Muller", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  text-decoration: none;
+}
+
+.btn--default:hover, .btn--default:focus {
+  text-decoration: none;
+  opacity: .9;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 1.625rem 0 1.5rem;
+  }
+  .header__btn {
+    margin: 0.9375rem;
+  }
+  .heading {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    letter-spacing: 0.125rem;
+  }
+  .dropdown__toggle {
+    border-bottom-width: 0.125rem;
+  }
+  .dropdown__toggle:hover, .dropdown__toggle:focus {
+    border-bottom-width: 0.125rem;
+  }
+  .tenantry {
+    padding: 3.25rem 0 1.625rem;
+  }
+  .tenantry__value--underline {
+    border-bottom-width: 0.125rem;
+  }
+  .btn--rounded {
+    padding: 1.6875rem 3.483rem;
+    -webkit-border-radius: 46px;
+            border-radius: 46px;
+  }
+  .btn--default {
+    padding: 1.6875rem 3.483rem;
+    -webkit-border-radius: 46px;
+            border-radius: 46px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .header {
+    padding: 2.25rem 0 1.6875rem;
+  }
+  .heading {
+    font-size: 1.8125rem;
+    line-height: 1.9375rem;
+  }
+  .tenantry {
+    padding: 3.25rem 0 1.6875rem;
+  }
+  .tenantry__value {
+    font-size: 3.25rem;
+    line-height: 3.375rem;
+  }
+  .tenantry__name {
+    padding: 0.625rem 0;
+    font-size: 1.5rem;
+    line-height: 1.625rem;
+  }
+  .tenantry__descr {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .header {
+    padding: 2.25rem 0 2.5rem;
+  }
+  .header__btn {
+    margin: 1rem 1.5rem;
+  }
+  .heading {
+    font-size: 1.875rem;
+    line-height: 2rem;
+  }
+  .tenantry {
+    padding: 4.438rem 0 3.625rem;
+  }
+  .tenantry__value {
+    font-size: 4.375rem;
+    line-height: 4.5rem;
+  }
+  .tenantry__name {
+    padding: 0.1875rem 0 1rem;
+    font-size: 1.8125rem;
+    line-height: 1.9375rem;
+    letter-spacing: 0.125rem;
+  }
+  .tenantry__descr {
+    font-size: 1.3125rem;
+    line-height: 1.4375rem;
+    letter-spacing: 0.0625rem;
+  }
+  .btn--rounded {
+    width: 100%;
+    max-width: 27.875rem;
+    padding: 2.1875rem 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+  }
+  .btn--default {
+    max-width: 27.875rem;
+    padding: 2.1875rem 2.25rem;
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+  }
+}
+
+/* ---------------------------------------- */
+/* S E C T I O N    W O R K    S T Y L E    */
+/* ---------------------------------------- */
+.work {
+  padding: 1.125rem 0 1.875rem;
+}
+
+.work__heading {
+  margin: 0.75rem 0;
+}
+
+.video {
+  margin: 0.75rem 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .work {
+    padding: 3rem 0;
+  }
+  .video {
+    margin: 1.5rem 0;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .work {
+    padding: 3.1875rem 0 3.9375rem;
+  }
+  .video {
+    margin: 2.0625rem 0;
+  }
 }
