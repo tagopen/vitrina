@@ -492,3 +492,16 @@
     margin: 2.0625rem 0;
   }
 }
+
+/* -------------------------------------------- */
+/* S E C T I O N    S E R V I C E    S T Y L E  */
+/* -------------------------------------------- */
+.service {
+  background: #f6f6f6;
+}
+
+.tab__panel {
+  background: #fff;
+  -webkit-box-shadow: 0 2.688rem 3.875rem rgba(176, 176, 176, 0.31);
+          box-shadow: 0 2.688rem 3.875rem rgba(176, 176, 176, 0.31);
+}
