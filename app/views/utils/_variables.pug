@@ -12,31 +12,116 @@
           favicon: "favicon.png",
           appleTouchIcon: "apple-touch-icon.png"
         },
-        nav: {
-          links: [
+        footer: {
+          cols: [
             {
-              href: "/link1",
-              displayName: "Link 1"
+              heading: {
+                link: {
+                  href: "#",
+                  text: "Торговые центры"
+                }
+              },
+              list: {
+                links: [
+                  {
+                    href: "#",
+                    text: "Каталог торговых центров"
+                  }, 
+                  {
+                    href: "#",
+                    text: "Список торговых центров"
+                  },
+                  {
+                    href: "#",
+                    text: "Сравнение торговых центров"
+                  }
+                ]
+              }
             },
-
             {
-              href: "/link2",
-              displayName: "Link 2"
+              heading: {
+                link: {
+                  href: "#",
+                  text: "Полезные статьи"
+                }
+              },
+              list: {
+                links1: [
+                  {
+                    href: "#",
+                    text: "Информация по ТЦ"
+                  },
+                  {
+                    href: "#",
+                    text: "Месторасположения ТЦ"
+                  },
+                  {
+                    href: "#",
+                    text: "Что нужно узнать по аренде"
+                  },
+                  {
+                    href: "#",
+                    text: "Договор аренды ТЦ"
+                  },
+                ],
+                links2: [
+                  {
+                    href: "#",
+                    text: "Информация по ТЦ"
+                  },
+                  {
+                    href: "#",
+                    text: "Месторасположения ТЦ"
+                  },
+                  {
+                    href: "#",
+                    text: "Что нужно узнать по аренде"
+                  },
+                  {
+                    href: "#",
+                    text: "Договор аренды ТЦ"
+                  }
+                ]
+              }
+            },
+            {
+              heading: {
+                link: {
+                  href: "#",
+                  text: "Помощь"
+                }
+              },
+                list: {
+                links: [
+                  {
+                    href: "#",
+                    text: "Вопросы и ответы"
+                  },
+                  {
+                    href: "#",
+                    text: "Публичная оферта"
+                  },
+                  {
+                    href: "#",
+                    text: "Правила конфиденциальности"
+                  },
+                  {
+                    href: "#",
+                    text: "Служба поддержки"
+                  }
+                ]
+              }
+            },
+          ],
+          copyright: {
+            text: "Vitrina&nbsp;Club&nbsp;&copy;&nbsp;2017. All&nbsp;rights&nbsp;reserved.",
+            designed: {
+              text: "Дизайн - ",
+              icons: [
+                "ic--brainlogo",
+              ]
             }
-          ]
-        },
-        navRight: {
-          links: [
-            {
-              href: "/link3",
-              displayName: "Link 3"
-            },
-
-            {
-              href: "/link4",
-              displayName: "Link 4"
-            },
-          ]
+          }
         }
       }, //- site
       index: {
@@ -62,6 +147,346 @@
             description: "My Site is cool",
             image: hostname + "/img/logo/microformat.png"
           }
-        }
+        },
+        logo: {
+          img: {
+            src: "img/logo/logo.png",
+            alt: "Vitrina club"
+          },
+          descr: "Биржа ритейла",
+        },
+        h1: {
+          text: "Аренда помещений в торговых центрах без посредников в ",
+          localization: [
+            {
+              name: "Москве",
+              link: "#"
+            },
+            {
+              name: "Химки",
+              link: "#"
+            },
+            {
+              name: "Санкт Петербург",
+              link: "#"
+            }
+          ]
+        },
+        header: {
+          selection: [
+            {
+              value: "465",
+              name: "Торговых центров",
+              descr: "в нашем каталоге ТЦ",
+              modifier: "selection__value--underline"
+            },
+            {
+              value: "124",
+              name: "Арендаторов",
+              descr: "небольших и крупных",
+              modifier: "selection__value--underline"
+            },
+            {
+              value: "10k <sub>/</sub> 90",
+              name: "Оформленных заявок",
+              descr: "всего / сегодня",
+            }
+          ],
+          btns: [
+            {
+              text: "Найти арендатора",
+              link: "#"
+            },
+            {
+              text: "Подобрать торговый центр",
+              link: "#"
+            }
+          ]
+        },
+        work: {
+          heading: "Как это работает",
+          video: {
+            id: "8z9kooDFTSE",
+            images: {
+              desktop: {
+                src: "img/video.jpg",
+                alt: "Как это работает"
+              },
+              mobile: {
+                src: "img/video-xs.jpg",
+                alt: "Как это работает"
+              }
+            }
+          }
+        },
+        service: {
+          heading: "Какую информацию мы предоставляем",
+          tab: {
+            control: [
+              {
+                name: "о торговом центре",
+                target: "#service1"
+              },
+              {
+                name: "о арендаторе",
+                target: "#service2"
+              }
+            ],
+            panel: {
+              service1: [
+                {
+                  icon: "ic--collaboration",
+                  name: "Якорные арендаторы"
+                },
+                {
+                  icon: "ic--plaza",
+                  name: "Свободные торговые площади"
+                },
+
+                {
+                  icon: "ic--location",
+                  name: "Локация",
+                  descr: "(месторасположение)"
+                },
+                {
+                  icon: "ic--blueprint",
+                  name: "Площадь",
+                  descr: "(GLA/GLB)"
+                },
+              ],
+              service2: [
+                {
+                  icon: "ic--shops",
+                  name: "Количество магазинов"
+                },
+                {
+                  icon: "ic--check",
+                  name: "Средний чек"
+                },
+                {
+                  icon: "ic--share",
+                  name: "Бренды",
+                },
+                {
+                  icon: "ic--rgb",
+                  name: "Форматы"
+                },
+              ]
+            }
+          }
+        },
+        process: {
+          heading: "Процесс заключения сделки в 3 шага",
+          tab: {
+            control: [
+              {
+                name: "Для торговых центров",
+                target: "#process1"
+              },
+              {
+                name: "Для арендаторов",
+                target: "#process2"
+              }
+            ],
+            panel: {
+              process1: [
+                {
+                  icon: "ic--premises",
+                  name: "Поиск помещения",
+                  descr: {
+                    text: "Осуществляйте простой и удобный поиск в ",
+                    link: {
+                      name: "каталоге торговых центров",
+                      href: "#"
+                    }
+                  }
+                },
+                {
+                  icon: "ic--compared",
+                  name: "Сравнение ТЦ",
+                  descr: {
+                    text: "Сравнивайте торговые центры по важным характеристикам"
+                  }
+                },
+                {
+                  icon: "ic--deal",
+                  name: "Заключение сделки",
+                  descr: {
+                    text:"заполните и отправьте нам письмо о намерениях"
+                  }
+                },
+              ],
+              process2: [
+                {
+                  icon: "ic--premises",
+                  name: "Поиск арендатора",
+                  descr: {
+                    text: "Осуществляйте простой и удобный поиск в ",
+                    link: {
+                      name: "каталоге арендаторов",
+                      href: "#"
+                    }
+                  }
+                },
+                {
+                  icon: "ic--compared",
+                  name: "Сравнение арендаторов",
+                  descr: {
+                    text: "Сравнивайте арендаторов по важным характеристикам"
+                  }
+                },
+                {
+                  icon: "ic--deal",
+                  name: "Письмо о намерениях",
+                  descr: {
+                    text: "ознакомьтесь и выберите подходящего арендатора"
+                  }
+                },
+              ]
+            },
+            btns: [
+              {
+                name: "заключить сделку",
+                href: "#"
+              },
+              {
+                name: "Выбрать арендатора",
+                href: "#"
+              },
+
+            ],
+            carousel: {
+              indicator: {
+               name: "шаг" 
+              }
+            },
+          },
+        },
+        shop: {
+          heading: {
+            name: "Некоторые из ",
+            orange: "торговых центров"
+          },
+          items: [
+            {
+              link: {
+                href: "#"
+              },
+              img: {
+                src: "img/logo/company/evropejskij.png",
+                alt: "Европейский торгово-развлекательный центр"
+              }
+            },
+            {
+              link: {
+                href: "#"
+              },
+              img: {
+                src: "img/logo/company/rio.png",
+                alt: "РИО"
+              }
+            },
+            {
+              link: {
+                href: "#"
+              },
+              img: {
+                src: "img/logo/company/skypark.png",
+                alt: "Торговый центр SkyPark"
+              }
+            },
+            {
+              link: {
+                href: "#"
+              },
+              img: {
+                src: "img/logo/company/colored.png",
+                alt: "Цветной универмаг"
+              }
+            },
+            {
+              link: {
+                href: "#"
+              },
+              img: {
+                src: "img/logo/company/willing.png",
+                alt: "Охотный ряд торговый центр"
+              }
+            },
+            {
+              link: {
+                href: "#"
+              },
+              img: {
+                src: "img/logo/company/park.png",
+                alt: "Ритейл парк"
+              }
+            },
+            {
+              link: {
+                href: "#"
+              },
+              img: {
+                src: "img/logo/company/vavilon.png",
+                alt: "Золотой вавилон"
+              }
+            },
+            {
+              link: {
+                href: "#"
+              },
+              img: {
+                src: "img/logo/company/metropolis.png",
+                alt: "Метрополос"
+              }
+            },
+            {
+              link: {
+                href: "#"
+              },
+              img: {
+                src: "img/logo/company/megapolis.png",
+                alt: "Мегаполис"
+              }
+            },
+            {
+              link: {
+                href: "#"
+              },
+              img: {
+                src: "img/logo/company/cum.png",
+                alt: "ЦУМ"
+              }
+            },
+          ],
+          btn: {
+            text: "Показать всех",
+            icon: "fa-angle-double-down"
+          }
+        },
+        presentation: {
+          heading: "Презентация сервиса",
+          img: {
+            src: "img/presentation.jpg",
+            alt: "Презентация Vitrina Club"
+          },
+          declimer: "или",
+          btn: {
+            href: "#",
+            icon: "ic--arrow-down",
+            text: "Скачать презентацию",
+            descr: "5 мегабайт, PDF"
+          }
+        },
+        about: {
+          heading: "О сервисе",
+          paragraphs: [
+            "Не следует, однако забывать, что укрепление и развитие структуры позволяет оценить значение новых предложений. Идейные соображения высшего порядка, а также консультация с широким активом влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.",
+            "С другой стороны рамки и место обучения кадров позволяет выполнять важные задания по разработке направлений прогрессивного развития.",
+            "Не следует, однако забывать, что укрепление и развитие структуры позволяет оценить значение новых предложений. Идейные соображения высшего порядка, а также консультация с широким активом влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.",
+            "С другой стороны рамки и место обучения кадров позволяет выполнять важные задания по разработке направлений прогрессивного развития.",
+            "Не следует, однако забывать, что укрепление и развитие структуры позволяет оценить значение новых предложений. Идейные соображения высшего порядка, а также консультация с широким активом влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий."
+          ]
+        },
       }, //- index
     }
