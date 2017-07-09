@@ -187,6 +187,7 @@
 }
 
 .sub-heading {
+  margin: 0.75rem 0;
   font: 900 1rem/1.125rem "Muller", sans-serif;
   color: #424242;
   text-transform: uppercase;
@@ -466,10 +467,7 @@
 /* ---------------------------------------- */
 .work {
   padding: 1.125rem 0 1.875rem;
-}
-
-.work__heading {
-  margin: 0.75rem 0;
+  border: 0.063rem solid #e8e8e8;
 }
 
 .video {
