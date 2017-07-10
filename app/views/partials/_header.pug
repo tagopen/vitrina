@@ -14,15 +14,14 @@ header.header
               each item, i in content.index.h1.localization
                 if (i > 0)
                   a.dropdown-item(href=item.link)!= item.name
-    .carousel
-      .row
-        each item, i in content.index.header.selection
-          .col-24.col-md-8
-            .carousel__item
-              .tenantry
-                .tenantry__value(class=item.modifier)!= item.value
-                .tenantry__name!= item.name
-                .tenantry__descr!= item.descr
+    #carousel-header.row
+      each item, i in content.index.header.selection
+        .col-24.col-md-8
+          .carousel__item
+            .tenantry
+              .tenantry__value(class=item.modifier)!= item.value
+              .tenantry__name!= item.name
+              .tenantry__descr!= item.descr
     .row
       .d-md-flex.flex-row-reverse.justify-content-center.header__btn-group
         each item in content.index.header.btns

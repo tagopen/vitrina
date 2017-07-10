@@ -29,90 +29,43 @@
     });
   });
 
-  // jQuery for page scrolling feature - requires jQuery Easing plugin
-  /*$(function() {
-      $('a.page-scroll').bind('click', function(event) {
-          var $anchor = $(this);
-          $('html, body').stop().animate({
-              scrollTop: $($anchor.attr('href')).offset().top
-          }, 1500, 'easeInOutExpo');
-          event.preventDefault();
-      });
-  });*/
-
-
-  // Fixed navbar on Scroll
-  /*if(!$('.navbar-toggle').is(':visible')) {
-    $('.navbar').affix({
-      offset: {
-        top: $('header').innerHeight()
-      }
-    }); 
-  }*/
-
-  // Highlight the top nav as scrolling occurs
-  /*$('body').scrollspy({
-      target: '.navbar-fixed-top'
-  })*/
-
-  // Navbar class active
-  /*$(document).ready( function () {
-    $(".nav li").click( function () {
-      $(".nav li").removeClass("active");
-      $(this).addClass("active");
-    });
-  });*/
-
-  // Dropdowns on hover on desktop
-  /*var navbarToggle = '.navbar-toggle'; // name of navbar toggle, BS3 = '.navbar-toggle', BS4 = '.navbar-toggler'  
-  $('.dropdown, .dropup').each(function() {
-    var dropdown = $(this),
-      dropdownToggle = $('[data-toggle="dropdown"]', dropdown),
-      dropdownHoverAll = dropdownToggle.data('dropdown-hover-all') || false;
-    
-    // Mouseover
-    dropdown.hover(function(){
-      var notMobileMenu = $(navbarToggle).size() > 0 && $(navbarToggle).css('display') === 'none' && $(document).width() >= 992 ;
-      if ((dropdownHoverAll === true || (dropdownHoverAll === false && notMobileMenu))) { 
-        dropdownToggle.trigger('click');
-      }
-    });
-  });*/
-
-
-  // Close dropdowns on "esc"
-  /*$('.dropdown-menu').bind('keydown',function(event) {
-    // ESC = Keycode 27
-    if (event.keyCode == 27) {
-      $(this).parrent().find('.dropdown-toggle').dropdown('toggle');
-    }
-  });*/
-
-  // Closes the Responsive Menu on Menu Item Click
-/*  $('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function() {
-    $('.navbar-collapse ul li a').click(function(){ 
-      $('.navbar-toggle:visible').click();
-    });
-  });*/
-
-  // Equal height
-  /*$(function() {
-    $('.item').matchHeight({
-      byRow: true,
-      property: 'height',
-      target: null,
-      remove: false
-    });
-  });*/
-
-  /*
-  if ($('.slider').length) { 
-    $('.slider').slick({
+  // Header slick slider
+  if ($('#carousel-header').length) { 
+    $('#carousel-header').slick({
       dots: true,
+      dotsClass: "slick-dots slick-dots--inverse",
+      arrows: false,
       infinite: true,
-      speed: 300,
       slidesToShow: 1,
-      adaptiveHeight: true
+      speed: 500,
+      mobileFirst: true,
+      swipeToSlide: '15',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: "unslick",
+        }
+      ]
     });
-  }*/
+  }
+
+  // Shop slick slider
+  if ($('#carousel-shop').length) { 
+    $('#carousel-shop').slick({
+      dots: true,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      mobileFirst: true,
+      swipeToSlide: '15',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: "unslick",
+        }
+      ]
+    });
+  }
+
 })(jQuery); // End of use strict

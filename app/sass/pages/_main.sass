@@ -101,6 +101,17 @@
       padding: 2.1875rem 2.25rem
       font-size: 1.25rem
       line-height: 1.375rem
++cm('slick slider')
+.slick-dots
+  &--inverse
+    li 
+      button
+        &:before
+          border-color: $slick-dots-border-inverse
+      &.slick-active 
+        button
+          &:before
+            background: $slick-dots-bg-inverse
 +comment("home page style")
 .logo
   text-align: center
