@@ -304,12 +304,99 @@
 
 +comment("section service style")
 .service
+  padding: 1.25rem 0 4rem
   background: $service-bg
+.slick-dots--service
+  bottom: -2.375rem
 .tab
   &__panel
     background: $panel-bg
     box-shadow: $panel-shadow
-
+    display: none
+    &--active
+      display: block
+.panel
+  &__row
+    margin: 0
+  &__item
+    padding: 1.625rem
+  &__heading
+    padding: 1.0625rem 0
+    font: 200 1.125rem/1.25rem $main-font
+    color: $service-heading-color
+    text-align: center
+  &__photo
+    margin: 1rem 0
+    text-align: center
+  &__name
+    font: 200 1.375rem/1.75rem $main-font
+    color: $service-name-color
+    text-align: center
+  &__descr
+    font: 200 1.125rem/1.25rem $main-font
+    text-align: center
+.tab-control
+  &__item
+    text-align: center
+  &__link
+    display: inline-block
+    margin: 0.4375rem 0
+    padding: 1.0625rem
+    min-width: 13.25rem
+    border: 0.063rem dashed $panel-control-border
+    border-radius: 1.4375rem
+    font: 500 0.875rem/1rem $main-font
+    color: $panel-control-link-color
+    opacity: .6
+    text-decoration: none
+    &:hover,
+    &:focus
+      border-color: $link-color
+      text-decoration: none
+      opacity: .9
+    &--active
+      min-width: 15rem
+      opacity: 1
+      &:hover,
+      &:focus
+        color: $panel-control-link-color
+        border-color: $panel-control-border
++r(768)
+  .service
+    &__heading
+      margin-bottom: 2.5rem
+  .tab
+    &__panel
+      display: block
+      padding: 3.125rem 0 1.5rem
+      height: 100%
+  .tab-control
+    &__link
+      font-size: 0.938rem
+      line-height: 1.0625rem
++r(992)
+  .tab
+    &__panel
+      box-shadow: $panel-shadow
+  .panel
+    &__name
+      font-size: 1.063rem
+      line-height: 1.188rem
+  .panel
+    &__descr
+      font-size: 1.063rem
+      line-height: 1.188rem
++r(1344)
+  .service
+    padding: 4rem 0
+  .panel
+    &__name
+      font-size: 1.375rem
+      line-height: 1.5rem
+  .panel
+    &__descr
+      font-size: 1.125rem
+      line-height: 1.375rem
 +comment("section shop style")
 .shop
   background: $shop-bg

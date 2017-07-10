@@ -6,22 +6,23 @@ section.service
     .row
       .col-24
         .tab(role='tabpanel')
-          ul.hidden-md-up.tab__control.tab-control(role='tablist')
+          ul.hidden-md-up.list-unstyled.tab__control.tab-control(role='tablist')
             each item, key in content.index.service.tab.control
               li.tab-control__item(role='presentation')
-                a.tab-control__link(href=item.target, role='tab')!= item.name
+                a.tab-control__link(class={"tab-control__link--active": key === 0}, href=item.target, role='tab')!= item.name
           .tab__content
             .row.justify-content-center.align-items-stretch
               - var i = 0
               each items, key in content.index.service.tab.panel
                 - i++
-                .col-20.col-md-12
-                  .tab__panel.panel(class='tab__panel--' + key, class={"tab__panel--active": (i - 1) === 0}, id=key, role='tabpanel')
-                    .row
-                      .hidden-sm-down.col-24
+                .col-20.col-md-24.col-lg-12
+                  .tab__panel.panel(class={"tab__panel--active": (i - 1) === 0}, id=key, role='tabpanel')
+                    .hidden-sm-down.row
+                      .col-24
                         .panel__heading!= content.index.service.tab.control[i - 1].name
+                    .row.justify-content-around.panel__row(id='tab-panel--' + key)
                       each item in items
-                        .col-24.col-md-12.panel__item
+                        .col.col-24.col-md-auto.col-lg-12.panel__item
                           .panel__photo
                             i.ic(class=item.icon)
                           .panel__name!= item.name
