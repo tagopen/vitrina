@@ -4,28 +4,27 @@ footer.footer
       .col-10.col-md-4.col-lg-2
         .logo
           img.img-fluid.logo__img(src=content.index.logo.img.src, alt=content.index.logo.img.alt)/
-      .col.col-xl-20
-        .row
+      .col.col-xl-21
+        .row.justify-content-around
           each item in content.site.footer.cols
-            .col-24.col.col-md-8.col-lg-auto
+            .col-24.col.col-md-8(class=(Object.keys(item.list).length > 1) ? 'col-lg-10' : 'col-lg-auto')
               if (item.heading)
                 a.footer__heading(href=item.heading.link.href)!= item.heading.link.text
 
               .row
                 each lists in item.list
                   .col
-                    ul.hidden-sm-down.footer-list.footer__list
+                    ul.list-unstyled.hidden-sm-down.footer-list.footer__list
                       each link in lists
                         li.footer-list__item
                           a.footer-list__link(href=link.href)!= link.text
 
   small.copyright
     .container
-      .row.justify-content-between
-        .col-14.col-md-10
+      .row.justify-content-between.align-items-center
+        .col-12.offset-2.col-md-auto.offset-md-0
           .copyright__text!= content.site.footer.copyright.text
-        .col-10.col-md-8
-          .copyright__designed!= content.site.footer.copyright.designed.text
-            .copyright__designed-text
+        .col-10.col-md-auto
+          .copyright__text.copyright__text--designed!= content.site.footer.copyright.designed.text
             each item in content.site.footer.copyright.designed.icons
-              i.ic.copyright__icon(class=item.class)
+              i.ic.copyright__icon(class=item)

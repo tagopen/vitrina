@@ -109,8 +109,24 @@
 /* G E N E R A L    S T Y L E               */
 /* ---------------------------------------- */
 .ic {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   vertical-align: middle;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
@@ -118,6 +134,108 @@
   content: '';
   display: inline-block;
   vertical-align: middle;
+}
+
+.ic--arrow-down:before {
+  width: 23px;
+  height: 33px;
+  background: url(../img/sprite.png) -408px -448px no-repeat;
+}
+
+.ic--arrow-right:before {
+  width: 95px;
+  height: 43px;
+  background: url(../img/sprite.png) -275px -501px no-repeat;
+}
+
+.ic--blueprint:before {
+  width: 75px;
+  height: 75px;
+  background: url(../img/sprite.png) -323px -406px no-repeat;
+}
+
+.ic--brainlogo-xs:before {
+  width: 30px;
+  height: 32px;
+  background: url(../img/sprite.png) -551px -406px no-repeat;
+}
+
+.ic--brainlogo:before {
+  width: 133px;
+  height: 32px;
+  background: url(../img/sprite.png) -408px -406px no-repeat;
+}
+
+.ic--check:before {
+  width: 94px;
+  height: 96px;
+  background: url(../img/sprite.png) 0px -501px no-repeat;
+}
+
+.ic--collaboration:before {
+  width: 77px;
+  height: 85px;
+  background: url(../img/sprite.png) -236px -406px no-repeat;
+}
+
+.ic--compare:before {
+  width: 186px;
+  height: 186px;
+  background: url(../img/sprite.png) -214px -210px no-repeat;
+}
+
+.ic--compared:before {
+  width: 204px;
+  height: 186px;
+  background: url(../img/sprite.png) 0px -210px no-repeat;
+}
+
+.ic--deal:before {
+  width: 201px;
+  height: 187px;
+  background: url(../img/sprite.png) -416px -196px no-repeat;
+}
+
+.ic--location:before {
+  width: 66px;
+  height: 87px;
+  background: url(../img/sprite.png) -199px -501px no-repeat;
+}
+
+.ic--plaza:before {
+  width: 133px;
+  height: 85px;
+  background: url(../img/sprite.png) 0px -406px no-repeat;
+}
+
+.ic--premises:before {
+  width: 204px;
+  height: 186px;
+  background: url(../img/sprite.png) -416px 0px no-repeat;
+}
+
+.ic--search:before {
+  width: 200px;
+  height: 200px;
+  background: url(../img/sprite.png) 0px 0px no-repeat;
+}
+
+.ic--share:before {
+  width: 85px;
+  height: 88px;
+  background: url(../img/sprite.png) -104px -501px no-repeat;
+}
+
+.ic--shops:before {
+  width: 83px;
+  height: 85px;
+  background: url(../img/sprite.png) -143px -406px no-repeat;
+}
+
+.ic--task:before {
+  width: 196px;
+  height: 196px;
+  background: url(../img/sprite.png) -210px 0px no-repeat;
 }
 
 .body {
@@ -290,7 +408,7 @@
 
 .sub-heading {
   margin: 0.75rem 0;
-  font: 900 1rem/1.125rem "Muller", sans-serif;
+  font: 800 1rem/1.125rem "Muller", sans-serif;
   color: #424242;
   text-transform: uppercase;
   text-align: center;
@@ -614,7 +732,7 @@
     padding: 1.9375rem 0 2.3125rem;
   }
   .shop__btn-icon {
-    font-weight: 900;
+    font-weight: 800;
   }
   .client__img {
     max-width: 8.313rem;
@@ -784,5 +902,140 @@
   .about__text {
     font-size: 1.1875rem;
     line-height: 1.5rem;
+  }
+}
+
+/* ------------------------------------------ */
+/* S E C T I O N    F O O T E R    S T Y L E  */
+/* ------------------------------------------ */
+.footer {
+  padding: 1.5rem 0 0;
+  background: #323232;
+}
+
+.footer__heading {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #fff;
+  font: 800 0.75rem/1.375rem "Muller", sans-serif;
+  color: #fff;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer__heading:hover, .footer__heading:focus {
+  text-decoration: none;
+  color: #fff;
+  border-bottom-style: solid;
+}
+
+.footer__list {
+  margin: 0;
+}
+
+.footer-list__link {
+  font: 400 0.75rem/1.125rem "Muller", sans-serif;
+  color: #f1f1f1;
+  text-decoration: underline;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.footer-list__link:hover, .footer-list__link:focus {
+  color: #0873e0;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 3.375rem 0 0;
+  }
+  .footer__heading {
+    margin-bottom: 3.0625rem;
+    border: 0 none;
+    font-size: 0.938em;
+    line-height: 1.0625rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer {
+    padding: 3.75rem 0 0;
+  }
+  .footer__heading {
+    margin-bottom: 1.3125rem;
+  }
+  .footer-list__link {
+    line-height: 1.313rem;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .footer {
+    padding: 4.5rem 0 0;
+  }
+  .footer__heading {
+    margin-bottom: 3.125rem;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+  .footer-list__link {
+    line-height: 1.5rem;
+  }
+}
+
+/* ------------------------------------------------ */
+/* S E C T I O N    C O P Y R I G H T    S T Y L E  */
+/* ------------------------------------------------ */
+.copyright {
+  display: block;
+  margin-top: 2.125rem;
+  padding: 1.25rem 0;
+  background: #282828;
+}
+
+.copyright__text {
+  font: 400 0.625rem/0.75rem "Muller", sans-serif;
+  color: #f1f1f1;
+}
+
+.copyright__icon {
+  margin-left: 0.1875rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .copyright {
+    margin-top: 1.875rem;
+    padding: 1.4375rem 0;
+  }
+  .copyright__text {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+  .copyright__text--designed {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .copyright {
+    margin-top: 4rem;
+    padding: 1.9375rem 0 1.5rem;
+  }
+  .copyright__text {
+    font-size: 0.75em;
+    line-height: 0.875rem;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .copyright {
+    padding: 1.625rem 0 2.25rem;
+  }
+  .copyright__text {
+    font-size: 0.875rem;
+    line-height: 1rem;
   }
 }

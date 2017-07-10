@@ -1,5 +1,11 @@
 +comment('general style')
 +ic
+
+@each $sprite in $spritesheet-sprites
+  .ic--#{nth($sprite, 10)}
+    &:before
+      +bs($sprite)  
+
 .body
   min-height: 100vh
 .flex-grow
@@ -108,7 +114,7 @@
     text-transform: uppercase
 .sub-heading
   margin: 0.75rem 0
-  font: 900 1rem/1.125rem $main-font
+  font: 800 1rem/1.125rem $main-font
   color: $sub-heading-color
   text-transform: uppercase
   text-align: center
@@ -330,7 +336,7 @@
   .shop
     padding: 1.9375rem 0 2.3125rem
     &__btn-icon
-      font-weight: 900
+      font-weight: 800
   .client
     &__img
       max-width: 8.313rem
@@ -442,5 +448,96 @@
     &__text
       font-size: 1.1875rem
       line-height: 1.5rem
+
++comment("section footer style")
+.footer
+  padding: 1.5rem 0 0
+  background: $footer-bg
+  &__heading
+    display: inline-block
+    vertical-align: top
+    margin-bottom: 1rem
+    border-bottom: 1px dashed $footer-heading-border
+    font: 800 0.75rem/1.375rem $main-font
+    color: $footer-heading-color
+    transition: all .3s ease-out
+    text-transform: uppercase
+    text-decoration: none
+    &:hover,
+    &:focus
+      text-decoration: none
+      color: $footer-heading-color
+      border-bottom-style: solid
+  &__list
+    margin: 0
+.footer-list
+  &__link
+    font: 400 0.75rem/1.125rem $main-font
+    color: $footer-link-color
+    text-decoration: underline
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $link-color-hover
++r(768)
+  .footer
+    padding: 3.375rem 0 0
+    &__heading
+      margin-bottom: 3.0625rem
+      border: 0 none
+      font-size: 0.938em
+      line-height: 1.0625rem
++r(992)
+  .footer
+    padding: 3.75rem 0 0
+    &__heading
+      margin-bottom: 1.3125rem
+  .footer-list
+    &__link
+      line-height: 1.313rem
++r(1344)
+  .footer
+    padding: 4.5rem 0 0
+    &__heading
+      margin-bottom: 3.125rem
+      font-size: 1.125rem
+      line-height: 1.25rem
+  .footer-list
+    &__link
+      line-height: 1.5rem
++comment("section copyright style")
+.copyright
+  display: block
+  margin-top: 2.125rem
+  padding: 1.25rem 0
+  background: $copyright-bg
+  &__text
+    font: 400 0.625rem/0.75rem $main-font
+    color: $copyright-text-color
+  &__icon
+    margin-left: 0.1875rem
+
++r(768)
+  .copyright
+    margin-top: 1.875rem
+    padding: 1.4375rem 0
+    &__text
+      font-size: 0.875rem
+      line-height: 1rem
+      &--designed
+        text-align: right
++r(992)
+  .copyright
+    margin-top: 4rem
+    padding: 1.9375rem 0 1.5rem
+    &__text
+      font-size: 0.75em
+      line-height: 0.875rem
++r(1344)
+  .copyright
+    padding: 1.625rem 0 2.25rem
+    &__text
+      font-size: 0.875rem
+      line-height: 1rem
 
 
