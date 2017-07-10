@@ -26,4 +26,4 @@ header.header
     .row
       .d-md-flex.flex-row-reverse.justify-content-center.header__btn-group
         each item in content.index.header.btns
-          a.btn.header__btn(class=item.class, href=item.link)!= item.text
+          a.btn.header__btn.header__btn--inverse(class=item.class, href=item.link)!= item.text
