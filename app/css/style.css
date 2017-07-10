@@ -167,6 +167,11 @@
   }
 }
 
+.btn:hover, .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 /* ---------------------------------------- */
 /* H O M E    P A G E    S T Y L E          */
 /* ---------------------------------------- */
@@ -194,6 +199,11 @@
   text-align: center;
 }
 
+.sub-heading--orange {
+  border-bottom: 0.0625rem dashed #f9651e;
+  color: #f9651e;
+}
+
 @media only screen and (min-width: 768px) {
   .logo__img {
     width: 5rem;
@@ -210,11 +220,14 @@
   }
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 992px) {
   .logo__descr {
     margin: 2.875rem 0 2.125rem;
     font-size: 2.4375rem;
     line-height: 2.5625rem;
+  }
+  .sub-heading--orange {
+    border-bottom-width: 0.125rem;
   }
 }
 
@@ -231,6 +244,8 @@
   .sub-heading {
     font-size: 1.875rem;
     line-height: 2rem;
+    letter-spacing: 0.1875rem;
+    border-bottom-width: 0.1875rem;
   }
 }
 
@@ -265,7 +280,7 @@
 }
 
 .dropdown__toggle {
-  border-bottom: 1px dashed #fff;
+  border-bottom: 0.0625rem dashed #fff;
   color: #fff;
   text-decoration: none;
   -webkit-transition: all .3s ease-out;
@@ -274,7 +289,7 @@
 
 .dropdown__toggle:hover, .dropdown__toggle:focus {
   color: #fff;
-  border-bottom: 1px solid #fff;
+  border-bottom: 0.0625rem solid #fff;
   text-decoration: none;
 }
 
@@ -297,7 +312,7 @@
 }
 
 .tenantry__value--underline {
-  border-bottom: 1px dashed #fff;
+  border-bottom: 0.0625rem dashed #fff;
 }
 
 .tenantry__name {
@@ -316,8 +331,8 @@
 .btn--rounded {
   padding: 0.75rem 3.438rem;
   border: 0.188rem solid #fff;
-  -webkit-border-radius: 22px;
-          border-radius: 22px;
+  -webkit-border-radius: 1.375rem;
+          border-radius: 1.375rem;
   font: 700 0.813rem/0.9375rem "Muller", sans-serif;
   color: #fff;
   text-transform: uppercase;
@@ -382,17 +397,17 @@
   }
   .btn--rounded {
     padding: 1.6875rem 3.483rem;
-    -webkit-border-radius: 46px;
-            border-radius: 46px;
+    -webkit-border-radius: 2.875rem;
+            border-radius: 2.875rem;
   }
   .btn--default {
     padding: 1.6875rem 3.483rem;
-    -webkit-border-radius: 46px;
-            border-radius: 46px;
+    -webkit-border-radius: 2.875rem;
+            border-radius: 2.875rem;
   }
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 992px) {
   .header {
     padding: 2.25rem 0 1.6875rem;
   }
@@ -504,4 +519,97 @@
   background: #fff;
   -webkit-box-shadow: 0 2.688rem 3.875rem rgba(176, 176, 176, 0.31);
           box-shadow: 0 2.688rem 3.875rem rgba(176, 176, 176, 0.31);
+}
+
+/* ---------------------------------------- */
+/* S E C T I O N    S H O P    S T Y L E    */
+/* ---------------------------------------- */
+.shop {
+  background: #f6f6f6;
+  padding: 3.125em 0 1.75rem;
+}
+
+.shop__btn-group {
+  text-align: center;
+}
+
+.client {
+  margin: 1.875rem 0;
+  height: 100%;
+}
+
+.client__link {
+  margin: 0 auto;
+}
+
+.client__img {
+  max-width: 6.375rem;
+  -webkit-filter: grayscale(100%) brightness(0%) opacity(0.25);
+          filter: grayscale(100%) brightness(0%) opacity(0.25);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.client__img:hover, .client__img:focus {
+  -webkit-filter: grayscale(0) brightness(100%) opacity(1);
+          filter: grayscale(0) brightness(100%) opacity(1);
+}
+
+.btn--showall {
+  padding: 0.1875rem 0;
+  border-bottom: 0.125rem solid #acacac;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background: transparent;
+  font: 700 1rem/1.125rem "Muller", sans-serif;
+  color: #acacac;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  cursor: pointer;
+}
+
+.btn--showall:hover, .btn--showall:focus {
+  border-bottom-color: #006cac;
+  color: #006cac;
+}
+
+@media only screen and (min-width: 768px) {
+  .shop {
+    padding: 1.9375rem 0 2.3125rem;
+  }
+  .shop__btn-icon {
+    font-weight: 900;
+  }
+  .client__img {
+    max-width: 8.313rem;
+  }
+  .btn--showall {
+    padding: 0.625rem 0;
+    border-bottom-width: 0.188rem;
+    font-size: 1.25em;
+    line-height: 1.375rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .shop {
+    padding: 3.625rem 0;
+  }
+  .client {
+    margin: 1.5625rem 0;
+    width: 9.375rem;
+  }
+  .client__img {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .client {
+    width: 12.5rem;
+  }
+  .btn--showall {
+    font-size: 1.313rem;
+    line-height: 1.4375rem;
+  }
 }
