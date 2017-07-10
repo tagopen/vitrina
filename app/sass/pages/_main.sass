@@ -168,9 +168,10 @@
     text-decoration: none
     &:hover,
     &:focus
-      text-decoration: none
-      opacity: .9
+      background: $btn-default-bg-hover
       color: $btn-default-color
+      text-decoration: none
+      box-shadow: $btn-default-shadow-hover
   &__descr
     display: block
     padding-top: 0.1875rem
@@ -395,5 +396,44 @@
     &__item
       padding: 4.375rem 0 0
 
++comment("section about style")
+.about
+  padding: 1.6875rem 0
+  background: $about-bg
+  &__heading
+    font-size: 1.563rem
+    line-height: 1.6875rem
+  &__text
+    margin: 0.625rem 0
+    padding: 0
+    font: 400 0.625rem/0.75rem $main-font
+    color: $about-text-color
++r(768)
+  .about
+    padding: 2.375rem 0 3.125rem
+    &__heading
+      margin: 0.75rem 0 0.9375rem
+    &__text
+      font-size: 0.813rem
+      line-height: 0.9375rem
++r(992)
+  .about
+    padding: 1.875rem 0 2.375rem
+    &__heading
+      margin: 0.75rem 0 2.875rem
+    &__text
+      padding: 0.8125rem 0
+      font-size: 0.938rem
+      line-height: 1.0625rem
++r(1344)
+  .about
+    padding: 1.9375rem 0 6.063rem
+    &__heading
+      margin: 3.5625rem 0
+      font-size: 1.875rem
+      line-height: 2rem
+    &__text
+      font-size: 1.1875rem
+      line-height: 1.5rem
 
 
