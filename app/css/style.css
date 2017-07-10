@@ -167,9 +167,20 @@
   }
 }
 
+.btn {
+  position: relative;
+}
+
 .btn:hover, .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+/* icons */
+.ic--arrow-down:before {
+  width: 1.4375rem;
+  height: 2.125rem;
+  background: url(../img/icons/arrow-down.png) no-repeat;
 }
 
 /* ---------------------------------------- */
@@ -371,6 +382,14 @@
   color: #fff;
 }
 
+.btn__descr {
+  display: block;
+  padding-top: 0.1875rem;
+  font: 400 0.688rem/0.8125rem "Muller", sans-serif;
+  opacity: .44;
+  text-transform: none;
+}
+
 @media only screen and (min-width: 768px) {
   .header {
     padding: 1.625rem 0 1.5rem;
@@ -404,6 +423,9 @@
     padding: 1.6875rem 3.483rem;
     -webkit-border-radius: 2.875rem;
             border-radius: 2.875rem;
+  }
+  .btn__descr {
+    padding-top: 0.375rem;
   }
 }
 
@@ -611,5 +633,80 @@
   .btn--showall {
     font-size: 1.313rem;
     line-height: 1.4375rem;
+  }
+}
+
+/* ------------------------------------------------------ */
+/* S E C T I O N    P R E S E N T A T I O N    S T Y L E  */
+/* ------------------------------------------------------ */
+.presentation {
+  padding: 1.375rem 0 2.5rem;
+  border-top: 0.063rem solid #e8e8e8;
+  border-bottom: 0.063rem solid #e8e8e8;
+}
+
+.presentation__item {
+  margin: 0.5rem 0;
+  -webkit-box-shadow: 0 2.688rem 3.875rem rgba(190, 190, 190, 0.31);
+          box-shadow: 0 2.688rem 3.875rem rgba(190, 190, 190, 0.31);
+}
+
+.presentation__declimer {
+  padding: 1rem 0;
+  font: italic 400 0.625rem/0.75rem "Muller", sans-serif;
+  color: #282828;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.presentation__btn-group {
+  width: 100%;
+  text-align: center;
+}
+
+.presentation__btn-icon {
+  position: absolute;
+  top: 50%;
+  left: 2.3125rem;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media only screen and (min-width: 768px) {
+  .presentation {
+    padding: 1.875rem 0 3.125rem;
+  }
+  .presentation__item {
+    margin: 1.875rem 0 0.875rem;
+  }
+  .presentation__declimer {
+    padding: 1.875rem 0 2.5rem;
+    font-size: 0.813rem;
+    line-height: 0.9375rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .presentation {
+    padding: 3.0625rem 0;
+  }
+  .presentation__item {
+    margin: 1rem 0;
+  }
+  .presentation__declimer {
+    padding: 1.75rem 0;
+  }
+  .presentation__btn {
+    padding: 1.25rem 0;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .presentation {
+    padding: 3.875rem 0 4.5rem;
+  }
+  .presentation__item {
+    padding: 4.375rem 0 0;
   }
 }
