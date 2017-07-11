@@ -28,6 +28,29 @@
       e.preventDefault();
     });
   });
+  
+  // Tabs panel
+  $(function() {
+    $('.tab-control__link').on('click', function(e) {
+      e.preventDefault();
+      var $item = $(this).closest('.tab-control__item'),
+          $contentItem = $('.tab__panel'),
+          itemPostion = $(this).attr('href');
+
+          $contentItem.filter(itemPostion)
+                      .addClass('tab__panel--active')
+                      .parent()
+                      .siblings()
+                      .find('.tab__panel')
+                      .removeClass('tab__panel--active');
+
+          $(this).addClass('tab-control__link--active')
+                 .closest('.tab-control__item')
+                 .siblings()
+                 .find('.tab-control__link')
+                 .removeClass('tab-control__link--active');
+    });
+  });
 
   // Header slick slider
   if ($('#carousel-header').length) { 
@@ -51,6 +74,26 @@
   // Service slick slider
   if ($('#tab-panel--service1').length) {
     $('#tab-panel--service1').slick({
+      dotsClass: "slick-dots slick-dots--service",
+      dots: true,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      mobileFirst: true,
+      swipeToSlide: '15',
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: "unslick",
+        }
+      ]
+    });
+  }
+
+  // Service slick slider
+  if ($('#tab-panel--service2').length) {
+    $('#tab-panel--service2').slick({
       dotsClass: "slick-dots slick-dots--service",
       dots: true,
       arrows: false,

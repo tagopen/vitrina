@@ -6,10 +6,10 @@ section.process
     .row
       .col-24
         .tab(role='tabpanel')
-          ul.hidden-md-up.tab__control.tab-control(role='tablist')
+          ul.list-unstyled.tab__control.tab-control(role='tablist')
             each item, key in content.index.process.tab.control
               li.tab-control__item(role='presentation')
-                a.tab-control__link(href=item.target, role='tab')!= item.name
+                a.tab-control__link(class={"tab-control__link--active": key === 0}, href=item.target, role='tab')!= item.name
           .tab__content
             - var i = 0
             each items, key in content.index.process.tab.panel
