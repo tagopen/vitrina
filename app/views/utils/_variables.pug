@@ -12,6 +12,30 @@
           favicon: "favicon.png",
           appleTouchIcon: "apple-touch-icon.png"
         },
+        logo: {
+          img: {
+            src: "img/logo/logo-vitrina.png",
+            alt: "Vitrina Club Биржа ритейла"
+          }
+        },
+        navRight: {
+          links: [
+            {
+              favorite: {
+                text: "Избранное",
+                icon: "fa-star",
+                label: "5"
+              }
+            },
+            {
+              compare: {
+                text: "Сравнение",
+                icon: "fa-balance-scale",
+                label: "3"
+              }
+            }
+          ]
+        },
         footer: {
           cols: [
             {
@@ -321,7 +345,7 @@
               ],
               process2: [
                 {
-                  icon: "ic--premises",
+                  icon: "ic--search",
                   name: "Поиск арендатора",
                   descr: {
                     text: "Осуществляйте простой и удобный поиск в ",
@@ -332,14 +356,14 @@
                   }
                 },
                 {
-                  icon: "ic--compared",
+                  icon: "ic--compare",
                   name: "Сравнение арендаторов",
                   descr: {
                     text: "Сравнивайте арендаторов по важным характеристикам"
                   }
                 },
                 {
-                  icon: "ic--deal",
+                  icon: "ic--task",
                   name: "Письмо о намерениях",
                   descr: {
                     text: "ознакомьтесь и выберите подходящего арендатора"
@@ -492,4 +516,347 @@
           ]
         },
       }, //- index
+      catalog: {
+        hostname: "catalog.html",
+        title: "Каталог",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            siteName: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        },
+        navs: {
+          links: [
+            {
+              name: "Главная",
+              href: "#"
+            },
+            {
+              city: [
+                "Москва",
+                "Екатеринбург",
+                "Одинцово"
+              ]
+            }
+          ]
+        },
+        header: {
+          breadcrumbs: [
+            "Главная",
+            "Каталог торговых центров в г. Москва"
+          ],
+          serchCriteria: {
+            heading: "Выберите нужные вам критерии поиска",
+            number: "32"
+          },
+          search: {
+            heading: {
+              name: "Поиск по торговым центрам",
+              icon: "fa-search"
+            },
+            dropdowns: [
+              {
+                heading: {
+                  name: "Желательные якорные арендаторы",
+                  arrows: {
+                    up: "fa-angle-up",
+                    down: "fa-angle-down"
+                  },
+                  icon: "fa fa-anchor"
+                },
+                selects: {
+                  multipleSelect: [
+                    "kfc",
+                    "colin\'s"
+                  ],
+                  link: {
+                    href: "#",
+                    name: "или"
+                  }
+                },
+                hint: {
+                  name: "желательные "
+                }
+              },
+              {
+                heading: {
+                  name: "Нежелательные якорные арендаторы",
+                  arrows: {
+                    up: "fa-angle-up",
+                    down: "fa-angle-down"
+                  },
+                  icon: "fa fa-anchor"
+                },
+                multipleSelect: [
+                  "kfc",
+                  "colin\'s"
+                ],
+                hint: {
+                  name: "нежелательные - ",
+                  link: {
+                    href: "#",
+                    name: "Что это значит ?"
+                  }
+                }
+              },
+              {
+                heading: {
+                  name: "Торговая площадь",
+                  arrows: {
+                    up: "fa-angle-up",
+                    down: "fa-angle-down"
+                  },
+                  icon: "ic ic--plan",
+                },
+                select: [
+                  "> 100 000м<sub>2</sub>",
+                  "> 1000 мест"
+                ]
+              },
+              {
+                heading: {
+                  name: "Парковка",
+                  arrows: {
+                    up: "fa-angle-up",
+                    down: "fa-angle-down"
+                  },
+                  icon: "ic ic--car"
+                },
+                select: [
+                  "> 1000 мест",
+                  "> 10 000 мест",
+                  "> 100 000 мест"
+                ]
+              },
+            ]
+          },
+          sort: {
+            heading: "Сортировать по",
+            left: [
+              {
+                name: "Якорным арендаторам",
+                icons: {
+                  up: "fa-long-arrow-up",
+                  down: "fa-long-arrow-down",
+                }
+              },
+              {
+                name: "Площади",
+                icons: {
+                  up: "fa-long-arrow-up",
+                  down: "fa-long-arrow-down",
+                }
+              },
+              {
+                name: "Паркоместам",
+                icons: {
+                  up: "fa-long-arrow-up",
+                  down: "fa-long-arrow-down",
+                }
+              },
+            ],
+            right: [
+              {
+                name: "На карте",
+                icon: "fa fa-map-marker"
+              },
+              {
+                name: "На карте",
+                icon: "ic ic--plan"
+              },
+              {
+                name: "На карте",
+                icon: "ic ic--list"
+              },
+            ]
+          },
+          product: {
+            items: [
+              {
+                img: {
+                  link: "img/evropeyskiy.jpg",
+                  alt: "ТЦ Европейский"
+                },
+                name: "ТЦ Европейский",
+                city: "г. Москва",
+                tags: {
+                  name: "Якорные:",
+                  value: {
+                    links: [
+                      {
+                        name: "Ашан",
+                        href: "#"
+                      },
+                      {
+                        name: "McDonalds",
+                        href: "#"
+                      },
+                    ],
+                    label: "7"
+                  }
+                },
+                buildArea: {
+                  name: "Торговая пл.:",
+                  value: {
+                    number: "45 000",
+                    descr: "м2"
+                  }
+                },
+                freeArea: {
+                  name: "Свободная пл.:",
+                  value: {
+                    number: "14 000",
+                    descr: "м2"
+                  }
+                },
+                parking: {
+                  name: "Парковка:",
+                  value: {
+                    number: "250",
+                    descr: "мест"
+                  }
+                },
+                railway: {
+                  color: "blue"
+                },
+                btnGroup: {
+                  favorite: "fa-star",
+                  compare: "fa-balance-scale"
+                }
+              },
+              {
+                img: {
+                  link: "img/erevan.jpg",
+                  alt: "ТЦ Ереван Плаза"
+                },
+                name: "ТЦ Ереван Плаза",
+                city: "г. Москва",
+                tags: {
+                  name: "Якорные:",
+                  value: {
+                    links: [
+                      {
+                        name: "Ашан",
+                        href: "#"
+                      },
+                      {
+                        name: "McDonalds",
+                        href: "#"
+                      },
+                    ],
+                    label: "2"
+                  }
+                },
+                buildArea: {
+                  name: "Торговая пл.:",
+                  value: {
+                    number: "35 000",
+                    descr: "м2"
+                  }
+                },
+                freeArea: {
+                  name: "Свободная пл.:",
+                  value: {
+                    number: "24 000",
+                    descr: "м2"
+                  }
+                },
+                parking: {
+                  name: "Парковка:",
+                  value: {
+                    number: "550",
+                    descr: "мест"
+                  }
+                },
+                railway: {
+                  color: "blue"
+                },
+                btnGroup: {
+                  favorite: "fa-star",
+                  compare: "fa-balance-scale"
+                }
+              },
+              {
+                img: {
+                  link: "img/metropolis.jpg",
+                  alt: "ТЦ Метрополис"
+                },
+                name: "ТЦ Метрополис",
+                city: "г. Москва",
+                tags: {
+                  name: "Якорные:",
+                  value: {
+                    links: [
+                      {
+                        name: "Ашан",
+                        href: "#"
+                      },
+                      {
+                        name: "McDonalds",
+                        href: "#"
+                      },
+                    ],
+                    label: "3"
+                  }
+                },
+                buildArea: {
+                  name: "Торговая пл.:",
+                  value: {
+                    number: "55 000",
+                    descr: "м2"
+                  }
+                },
+                freeArea: {
+                  name: "Свободная пл.:",
+                  value: {
+                    number: "11 000",
+                    descr: "м2"
+                  }
+                },
+                parking: {
+                  name: "Парковка:",
+                  value: {
+                    number: "670",
+                    descr: "мест"
+                  }
+                },
+                railway: {
+                  color: "blue"
+                },
+                btnGroup: {
+                  favorite: "fa-star",
+                  compare: "fa-balance-scale"
+                }
+              },
+            ],
+            btn: {
+              name: "Показать еще 8 из 54 предложений",
+              href: "#"
+            }
+          },
+          details: {
+            heading: "Описание",
+            text: "«Европейский» удобно расположен между Дорогомиловской улицей и площадью Киевского Вокзала (рядом со станцией метро Киевская). Необычное треугольное здание центра, площадью 180 000 м², построено по проекту известного архитектора Ю.П. Платонова по принципу русских торгов...",
+            link: {
+              name: "Показать полностью",
+              href: "#"
+            }
+          }
+        }
+      }
     }
