@@ -1,0 +1,17 @@
+header.intro
+  .container
+    .row
+      .col-24
+        include ../components/_breadcrumb.pug
+    .row.justify-content-between.align-items-center
+      if (page.intro.heading)
+        .d-inline-flex
+          .intro__item
+            h1.heading.intro__heading!= page.intro.heading
+      if (page.intro.choice)
+        .d-inline-flex
+          .intro__item.choice
+            span.hidden-sm-down.choice__text!= page.intro.choice.text
+            button.btn.choice__btn.btn--blue(type='button')
+              span.choice__num!= page.intro.choice.btn.number
+              span.hidden-sm-down.choice__val!= page.intro.choice.btn.text

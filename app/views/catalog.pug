@@ -1,0 +1,23 @@
+extends base/_layout.pug
+block variables
+
+block styles
+
+  // Select2 Bootstrap Theme CSS
+  link(rel='stylesheet' href='css/select2.css')
+block scripts
+  // Select2 JavaScript
+  script(src='js/select2.js')
+
+block header
+  include components/_nav.pug
+  include partials/_header-inside.pug
+block content
+  include partials/_filter.pug
+  include partials/_sort.pug
+  include partials/_category.pug
+  include partials/_details.pug
+block footer
+  include partials/_footer.pug
+block modal
+  include partials/_modal.pug

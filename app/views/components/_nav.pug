@@ -1,21 +1,29 @@
-nav.navbar
-  div.container
-    //Brand and toggle get grouped for better mobile display
-    div.navbar-header
-      button.navbar-toggle(type='button' data-toggle='collapse' data-target='.navbar-ex1-collapse')
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.logo(href='#')
-        img.img-responsive.logo__img(src='img/logo/logo.png' alt='logo')
-    // Collect the nav links, forms, and other content for toggling
-    div.collapse.navbar-collapse.navbar-ex1-collapse
-      ul.nav.nav-navbar
-        each value, i in content.site.nav.links
-          li.nav-navbar__item(class= {"nav-navbar__item--active": i === 0})
-            a.nav-navbar__link(href= value.href)= value.displayName
-      ul.nav.nav-navbar.navbar-right
-         each value, i in content.site.navRight.links
-          li.nav-navbar__item(class= {"nav-navbar__item--active": i === 0})
-            a.nav-navbar__link(href= value.href)= value.displayName
+nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+  button.hidden-md-up.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  .logo.logo.logo--vitrina
+    a.logo__link(href="/")
+      img.img-fuid.logo__img.logo__img--vitrina(src=content.site.logo.img.src, alt=content.site.logo.img.alt)/
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.navbar-toggleable-sm.mr-auto
+      each item, i in content.catalog.nav.links
+        li.nav-item
+          if (item.city)
+            .dropdown
+              a#dropdown-navbar.dropdown__toggle.dropdown__toggle--plane(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')!= item.city[0].name
+              .dropdown-menu(aria-labelledby='dropdown-navbar')
+                each link, count in item.city
+                  if (count > 0)
+                    a.dropdown-item(href=link.href)!= link.name
+          else
+            a.nav-link(class={"nav-link--active": i === 0}, href=item.href)!= item.name
+              if (i === 0) 
+                span.sr-only (current)
+  ul.navbar-nav.ml-auto
+    each item, key in content.site.navRight.links
+      li.nav-item
+        a.nav-link(href=item.href)
+          span.link-up
+            span.hidden-md-down.hidden-sm-down.link-up__name!= item.text
+            span.link-up__icon.fa(class=item.icon, class={'hidden-lg-up' : key === 'compare'}, class='link-up__icon' + key)
+            span.link-up__number!= item.number

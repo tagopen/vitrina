@@ -1,0 +1,36 @@
+section.sort
+  .container
+    .row.justify-content-between
+      .col-10.col-md-24.col-lg-auto
+        .sort__heading!= content.catalog.sort.heading
+      .col-14.hidden-md-up
+        .dropdown
+          a#dropdown-sort.dropdown__toggle.dropdown__toggle--plane(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')!= content.catalog.sort.left[0].name
+            i.fa(class=content.catalog.sort.left[0].icons.down)
+          .dropdown-menu.dropdown-menu--right(aria-labelledby='dropdown-sort')
+            each link, i in content.catalog.sort.left
+              if (i > 0)
+                a.dropdown-item(href=link.href)!= link.name
+                  i.fa(class=link.icons.up)
+                  i.fa(class=link.icons.down)
+      .col.hidden-sm-down
+        .row.justify-content-start
+          each item, i in content.catalog.sort.left
+            .d-inline-flex.pl-2.pr-2
+              a.sort__link.sorting(href="#" class={'sort__link--down' : i === 0})
+                span.sorting__name
+                  != item.name
+                  if (i === 0)
+                    i.sorting__icon(class=item.icons.down)
+                  else
+                    i.sorting__icon.sorting__icon--up(class=item.icons.up)
+                    i.sorting__icon.sorting__icon--down(class=item.icons.down)
+      .col
+        .row.justify-content-between.justify-content-sm-around.justify-content-md-end
+          each item, i in content.catalog.sort.right
+            .d-inline-flex.pl-2.pr-2
+              a.sort__link.view(id=item.id, class={'view--active': i === 1},href="#")
+                span.view__name
+                  i.view__icon(class=item.icon)
+                  != item.name
+

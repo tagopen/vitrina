@@ -1,0 +1,39 @@
+section.filter
+  .container
+    .row.justify-content-between
+      .col-24
+        .search
+          .search__heading
+            i.search__icon(class=content.catalog.search.control.heading.icon)
+            != content.catalog.search.control.heading.name
+          form.form-inline.search__form
+            input.form-control.search__input(tupe='text', placeholder=content.catalog.search.control.input.placeholder)
+      each item, i in content.catalog.search.items
+        .col.col-md-12.col-lg-auto
+          .disperse.justify-content-between
+            .disperse__item
+              a.disperse__heading
+                i.disperse__icon(class=item.heading.icon, class={'disperse__icon--grey' : i === 1})
+                label.hidden-sm-down.disperse__text!= item.heading.name
+              .disperse__content
+                .disperse__group
+                  if (item.selects)
+                    select.disperse__select.disperse__select--desirable(multiple="multiple")
+                      each option in item.selects.multipleSelect
+                        option.disperse__option!= option
+                  if (item.multipleSelect)
+                    select.disperse__select.disperse__select--undesirable(multiple="multiple")
+                      each option in item.multipleSelect
+                        option.disperse__option!= option
+                  if (item.select)
+                    each select, key in item.select
+                      select.disperse__select(class='disperse__select--' + key)
+                        each option in select
+                          option.disperse__option!= option
+                if (item.hint)
+                  .hidden-md-down.disperse__hint!= item.hint.name
+                    if (item.hint.tooltip)
+                      a.disperse__link(href=item.hint.tooltip.href, data-toggle="tooltip", data-placement="bottom", title=item.hint.tooltip.title,  data-animation="false")!= item.hint.tooltip.name
+
+
+

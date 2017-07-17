@@ -1,0 +1,10 @@
+section.details
+  .container.details__container
+    .row.justify-content-center
+      .col-22.col-lg-20
+        h2.sub-heading.details__heading!= content.catalog.details.heading
+    .row.justify-content-center
+      .col-22.col-lg-20
+        p.details__text!= content.catalog.details.text
+        .details__link-group
+          a.details__link(href=content.catalog.details.link.href)!= content.catalog.details.link.name

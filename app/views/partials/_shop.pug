@@ -6,7 +6,7 @@ section.shop
           span.sub-heading.sub-heading--orange!= content.index.shop.heading.orange
     #carousel-shop.row.align-items-center.justify-content-around
       each item in content.index.shop.items
-        .col-9.col-md-6.col-lg-auto.shop__item
+        .col-md-6.col-lg-auto.shop__item
           .d-flex.align-items-center.client
             a.client__link(href=item.link.href)
               img.img-fluid.client__img(src=item.img.src, alt=item.img.alt)

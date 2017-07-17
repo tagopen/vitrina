@@ -1,0 +1,8 @@
+if (page.breadcrumbs)
+  ol.breadcrumbs(aria-label='breadcrumb')
+    each item, i in page.breadcrumbs
+      li.breadcrumbs__item(class={'breadcrumbs__item--active' : i === (page.breadcrumbs.length - 1)})
+        if (i !== (page.breadcrumbs.length - 1))
+          a.breadcrumbs__link(href=item.href)!= item.name
+        else
+          != item.name

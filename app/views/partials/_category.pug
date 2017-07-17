@@ -1,0 +1,59 @@
+mixin cols(i)
+  if (i < 3)
+    .col-24.col-md-8.category__layout
+      if block
+        block
+  else
+    .hidden-sm-down.col-24.col-md-8.col-lg-6.category__layout
+      if block
+        block
+section.category
+  .container
+    .row.align-items-md-stretch
+      each item, i in content.catalog.category.items
+        +cols(i)
+          .product
+            a.product__photo(href=item.href)
+              img.img-fluid.product__img(src=item.img.link, alt=item.img.alt)
+            .product__content
+              a.product__name(href=item.href)!= item.name
+              .product__descr!= item.city
+              .product__options.option
+                each option in item.options
+                  .row
+                    .col
+                      .option__name!= option.name
+                    .col
+                      if (option.value.links)
+                        .option__value.tags
+                          each link, num in option.value.links
+                            a.tags__link(href=link.href)!= link.name
+                              if (num !== (option.value.links.length - 1) )
+                                != option.value.delimeter
+                          .option__label!= option.value.label
+
+                      else
+                        .option__value
+                          span.option__number!= option.value.number
+                          span.option__descr!= option.value.descr
+              .product__btn-group
+                .row.align-items-center.justify-content-between
+                  .col
+                    .product__railway.railway
+                      if (item.railway.link)
+                        a.railway__link(href=item.railway.link.href)!= item.railway.link.name
+                      else
+                        span.railway__icon(class='railway__icon--' + item.railway.icon.color)!= item.railway.icon.name
+                        != item.railway.name
+                  .col
+                    .product__btn-group
+                      each btn, key in item.btnGroup
+                        button.btn.product__btn(class=key, type='button')
+                          i.fa(class=btn, class=key + '--icon')
+    .row.justify-content-center
+      .col-24
+        .category__button-group.show-all
+          a.show-all__link(href=content.catalog.category.btn.href)!= content.catalog.category.btn.name
+            i.show-all__icon(class=content.catalog.category.btn.icon)
+
+
