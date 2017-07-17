@@ -310,12 +310,12 @@
   bottom: -2.375rem
 .tab
   &__panel
-    background: $panel-bg
-    box-shadow: $panel-shadow
     display: none
     &--active
       display: block
 .panel
+  background: $panel-bg
+  box-shadow: $panel-shadow
   &__row
     margin: 0
   &__item
@@ -340,8 +340,8 @@
     text-align: center
   &__link
     display: inline-block
-    margin: 0.4375rem 0
-    padding: 1.0625rem
+    margin: 0.4375rem
+    padding: 1.0625rem 1.438rem
     min-width: 13.25rem
     border: 0.063rem dashed $panel-control-border
     border-radius: 1.4375rem
@@ -349,6 +349,7 @@
     color: $panel-control-link-color
     opacity: .6
     text-decoration: none
+    letter-spacing: 0.125rem
     &:hover,
     &:focus
       border-color: $link-color
@@ -367,23 +368,31 @@
       margin-bottom: 2.5rem
   .tab
     &__panel
-      display: block
       padding: 3.125rem 0 1.5rem
       height: 100%
+  .panel
+    display: block
   .tab-control
+    text-align: center
+    &__item
+      display: inline-flex
     &__link
       font-size: 0.938rem
       line-height: 1.0625rem
 +r(992)
-  .tab
-    &__panel
-      box-shadow: $panel-shadow
   .panel
     &__name
       font-size: 1.063rem
       line-height: 1.188rem
   .panel
     &__descr
+      font-size: 1.063rem
+      line-height: 1.188rem
+  .tab-control
+    &__link
+      padding: 1.25rem 4.188rem
+      border-width: 0.188rem
+      border-radius: 2.063rem
       font-size: 1.063rem
       line-height: 1.188rem
 +r(1344)
@@ -396,6 +405,110 @@
   .panel
     &__descr
       font-size: 1.125rem
+      line-height: 1.375rem
+  .tab-control
+    &__link
+      padding: 1.25rem 5rem
+      font-size: 1.25rem
+      line-height: 1.375rem
+      border-radius: 2.063rem
+
++comment("section process style")
+.process
+  padding: 1rem 0 0
+  &__heading
+    margin: 1.25rem 0
+.deal
+  &__item
+    padding: 1.625rem 0
+  &__photo
+    text-align: center
+  &__name
+    padding: 1.563rem 0 0.5625rem
+    font: 500 1.125rem/1.25rem $main-font
+    color: $process-name-color
+    text-align: center
+  &__descr
+    padding: 0.5625rem 0
+    font: 400 0.75rem/0.875rem $main-font
+    color: $process-descr-color
+    text-align: center
+  &__link
+    color: $link-color
+    text-decoration: underline
+    &:hover,
+    &:focus
+      color: $link-color-hover
+      text-decoration: underline
+  &__btn-group
+    text-align: center
+.step-indicator
+  text-align: center
+  &__item
+    display: inline-flex
+    margin: 0.3125rem
+    font: 700 0.688rem/0.75rem $main-font
+    color: $process-indicator-color
+    border-bottom: 1px solid $process-indicator-border
+    text-transform: uppercase
+    &--active
+      opacity: .43
+      border: 0 none
++r(768)
+  .process
+    padding: 2.1875rem 0 2.938rem
+    &__heading
+      margin: 0.9375rem 0
+  .deal
+    padding: 1.25rem 0
+    &__name
+      font-size: 1.125rem
+      line-height: 2rem
+    &__descr
+      font-size: 0.75rem
+      line-height: 0.875rem
++r(992)
+  .process
+    padding: 3.5rem 0
+    &__heading
+      padding: 2.5rem 0
+  .deal
+    &__item
+      padding: 1.75rem 0
+    &__photo
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        display: block
+        width: 3.313rem
+        height: 1.5rem
+        right: -5rem
+        top: 50%
+        transform: translateX(-50%)
+        background: url(../img/icons/arrow-right.png)
+        background-size: contain
+      &--none
+        &:before
+          content: none
+    &__name
+      font-size: 1.25rem
+      line-height: 1.375rem
+    &__descr
+      font-size: 0.938rem
+      line-height: 1.125rem
++r(1344)
+  .deal
+    &__photo
+      &:before
+        width: 5.938rem
+        height: 2.688rem
+        right: -9.375rem
+    &__name
+      font-size: 1.875rem
+      line-height: 2rem
+    &__descr
+      font-size: 1.25rem
       line-height: 1.375rem
 +comment("section shop style")
 .shop
@@ -637,5 +750,78 @@
     &__text
       font-size: 0.875rem
       line-height: 1rem
++comment('page catalog style')
+
++comment('section category style')
+.category
+  &__layout
+    &--list
+      .product__photo
+        float: left
+.product
+  align-items: stretch
+.disperse
+  &__select
+    width: 100% 
++comment('section details style')
+.details
+  padding: 1.563rem 0 2.688rem
+  background-color: $details-bg
+  &__container
+    background-color: $details-container-bg
+    padding: 
+      top: 1.625rem
+      bottom: 1.625rem
+    box-shadow: 0 3px 15px rgba(0,0,0,.1)
+  &__heading
+    font: 700 1.25rem/1.375rem $main-font
+    text-transform: none
+    text-align: left
+    letter-spacing: 0.125rem
+  &__text
+    font: 400 0.875rem/1rem $main-font
+    text-align: justify
+    letter-spacing: 0.0625rem
+  &__link-group
+    text-align: right
+  &__link
+    font: 300 0.875rem/1rem $main-font
+    color: $details-link
+    text-decoration: underline
+    letter-spacing: 0.0625rem
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $details-link-hover
++r(768)
+  .details
+    &__container
+      padding: 
+        top: 2.5rem
+        bottom: 2.5rem
+    &__heading
+      margin: 0.625rem 0 1.375rem
++r(992)
+  .details
+    padding: 1.75rem 0 3.125em
+    &__text
+      font-size: 1rem
+      line-height: 1.125rem
+    &__link
+        font-size: 1rem
+        line-height: 1.125rem
++r(1344)
+  .details
+    &__heading
+      margin: 0.625rem 0 1.875rem
+      font-size: 1.875rem
+      line-height: 2rem
+    &__text
+      font-size: 1.188rem
+      line-height: 1.313rem
+    &__link
+        font-size: 1.188rem
+        line-height: 1.313rem
+
 
 

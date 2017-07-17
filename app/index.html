@@ -41,6 +41,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Font-Awesome CSS-->
     <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- Flex Carousel CSS-->
+    <link rel="stylesheet" href="css/flexslider.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- endbuild-->
@@ -203,98 +205,86 @@
         <div class="container">
           <div class="row">
             <div class="col-24">
-              <h2 class="sub-heading service__heading">Процесс заключения сделки в 3 шага</h2>
+              <h2 class="sub-heading process__heading">Процесс заключения сделки в 3 шага</h2>
             </div>
           </div>
-          <div class="row">
-            <div class="col-24">
-              <div class="tab" role="tabpanel">
-                <ul class="list-unstyled tab__control tab-control" role="tablist">
-                  <li class="tab-control__item" role="presentation"><a class="tab-control__link tab-control__link--active" href="#process1" role="tab">Для торговых центров</a></li>
-                  <li class="tab-control__item" role="presentation"><a class="tab-control__link" href="#process2" role="tab">Для арендаторов</a></li>
-                </ul>
-                <div class="tab__content">
-                  <div class="tab__panel process tab__panel--active" id="process1" role="tabpanel">
-                    <div class="ol step-indicator">
-                      <li class="step-indicator__item step-indicator__item--active">1шаг</li>
-                      <li class="step-indicator__item">2шаг</li>
-                      <li class="step-indicator__item">3шаг</li>
-                    </div>
-                    <div class="row">
-                      <div class="col-24 col-md-8">
-                        <div class="process__item">
-                          <div class="process__photo">
-                            <div class="process__icon"><i class="ic ic--premises"></i></div>
+          <div class="row justify-content-center">
+            <div class="tab" role="tabpanel">
+              <ul class="list-unstyled tab__control tab-control" role="tablist">
+                <li class="tab-control__item" role="presentation"><a class="tab-control__link tab-control__link--active" href="#process1" role="tab">Для торговых центров</a></li>
+                <li class="tab-control__item" role="presentation"><a class="tab-control__link" href="#process2" role="tab">Для арендаторов</a></li>
+              </ul>
+              <div class="tab__content">
+                <div class="row">
+                  <div class="col-24">
+                    <div class="tab__panel deal tab__panel--active" id="process1" role="tabpanel">
+                      <div class="row justify-content-between">
+                        <div class="col-24 col-md-7">
+                          <div class="deal__item">
+                            <div class="deal__photo"><i class="ic deal__icon ic--premises"></i></div>
+                            <div class="deal__name">Поиск помещения</div>
+                            <div class="deal__descr">Осуществляйте простой и удобный поиск в <a class="deal__link" href="#">каталоге торговых центров</a>
+                            </div>
                           </div>
-                          <div class="process__name">Поиск помещения</div>
-                          <div class="process__descr">Осуществляйте простой и удобный поиск в <a class="process__link" href="#">каталоге торговых центров</a>
+                        </div>
+                        <div class="col-24 col-md-7">
+                          <div class="deal__item">
+                            <div class="deal__photo"><i class="ic deal__icon ic--compared"></i></div>
+                            <div class="deal__name">Сравнение ТЦ</div>
+                            <div class="deal__descr">Сравнивайте торговые центры по важным характеристикам
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-24 col-md-7">
+                          <div class="deal__item">
+                            <div class="deal__photo deal__photo--none"><i class="ic deal__icon ic--deal"></i></div>
+                            <div class="deal__name">Заключение сделки</div>
+                            <div class="deal__descr">заполните и отправьте нам письмо о намерениях
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-24 col-md-8">
-                        <div class="process__item">
-                          <div class="process__photo">
-                            <div class="process__icon"><i class="ic ic--compared"></i></div>
-                          </div>
-                          <div class="process__name">Сравнение ТЦ</div>
-                          <div class="process__descr">Сравнивайте торговые центры по важным характеристикам
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-24 col-md-8">
-                        <div class="process__item">
-                          <div class="process__photo">
-                            <div class="process__icon"><i class="ic ic--deal"></i></div>
-                          </div>
-                          <div class="process__name">Заключение сделки</div>
-                          <div class="process__descr">заполните и отправьте нам письмо о намерениях
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-24">
-                        <div class="process__btn-group"><a class="btn" href="#">заключить сделку</a></div>
+                      <div class="deal__btn-group"><a class="btn btn--default deal__btn" href="#">заключить сделку</a></div>
+                      <div class="ol hidden-md-up list-unstyled step-indicator">
+                        <li class="step-indicator__item step-indicator__item--active">1шаг</li>
+                        <li class="step-indicator__item">2шаг</li>
+                        <li class="step-indicator__item">3шаг</li>
                       </div>
                     </div>
                   </div>
-                  <div class="tab__panel process" id="process2" role="tabpanel">
-                    <div class="ol step-indicator">
-                      <li class="step-indicator__item step-indicator__item--active">1шаг</li>
-                      <li class="step-indicator__item">2шаг</li>
-                      <li class="step-indicator__item">3шаг</li>
-                    </div>
-                    <div class="row">
-                      <div class="col-24 col-md-8">
-                        <div class="process__item">
-                          <div class="process__photo">
-                            <div class="process__icon"><i class="ic ic--premises"></i></div>
+                  <div class="col-24">
+                    <div class="tab__panel deal" id="process2" role="tabpanel">
+                      <div class="row justify-content-between">
+                        <div class="col-24 col-md-7">
+                          <div class="deal__item">
+                            <div class="deal__photo"><i class="ic deal__icon ic--search"></i></div>
+                            <div class="deal__name">Поиск арендатора</div>
+                            <div class="deal__descr">Осуществляйте простой и удобный поиск в <a class="deal__link" href="#">каталоге арендаторов</a>
+                            </div>
                           </div>
-                          <div class="process__name">Поиск арендатора</div>
-                          <div class="process__descr">Осуществляйте простой и удобный поиск в <a class="process__link" href="#">каталоге арендаторов</a>
+                        </div>
+                        <div class="col-24 col-md-7">
+                          <div class="deal__item">
+                            <div class="deal__photo"><i class="ic deal__icon ic--compare"></i></div>
+                            <div class="deal__name">Сравнение арендаторов</div>
+                            <div class="deal__descr">Сравнивайте арендаторов по важным характеристикам
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-24 col-md-7">
+                          <div class="deal__item">
+                            <div class="deal__photo deal__photo--none"><i class="ic deal__icon ic--task"></i></div>
+                            <div class="deal__name">Письмо о намерениях</div>
+                            <div class="deal__descr">ознакомьтесь и выберите подходящего арендатора
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-24 col-md-8">
-                        <div class="process__item">
-                          <div class="process__photo">
-                            <div class="process__icon"><i class="ic ic--compared"></i></div>
-                          </div>
-                          <div class="process__name">Сравнение арендаторов</div>
-                          <div class="process__descr">Сравнивайте арендаторов по важным характеристикам
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-24 col-md-8">
-                        <div class="process__item">
-                          <div class="process__photo">
-                            <div class="process__icon"><i class="ic ic--deal"></i></div>
-                          </div>
-                          <div class="process__name">Письмо о намерениях</div>
-                          <div class="process__descr">ознакомьтесь и выберите подходящего арендатора
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-24">
-                        <div class="process__btn-group"><a class="btn" href="#">Выбрать арендатора</a></div>
+                      <div class="deal__btn-group"><a class="btn btn--default deal__btn" href="#">Выбрать арендатора</a></div>
+                      <div class="ol hidden-md-up list-unstyled step-indicator">
+                        <li class="step-indicator__item step-indicator__item--active">1шаг</li>
+                        <li class="step-indicator__item">2шаг</li>
+                        <li class="step-indicator__item">3шаг</li>
                       </div>
                     </div>
                   </div>
@@ -312,34 +302,34 @@
             </div>
           </div>
           <div class="row align-items-center justify-content-around" id="carousel-shop">
-            <div class="col-9 col-md-6 col-lg-auto shop__item">
+            <div class="col-md-6 col-lg-auto shop__item">
               <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/evropejskij.png" alt="Европейский торгово-развлекательный центр"></a></div>
             </div>
-            <div class="col-9 col-md-6 col-lg-auto shop__item">
+            <div class="col-md-6 col-lg-auto shop__item">
               <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/rio.png" alt="РИО"></a></div>
             </div>
-            <div class="col-9 col-md-6 col-lg-auto shop__item">
+            <div class="col-md-6 col-lg-auto shop__item">
               <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/skypark.png" alt="Торговый центр SkyPark"></a></div>
             </div>
-            <div class="col-9 col-md-6 col-lg-auto shop__item">
+            <div class="col-md-6 col-lg-auto shop__item">
               <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/colored.png" alt="Цветной универмаг"></a></div>
             </div>
-            <div class="col-9 col-md-6 col-lg-auto shop__item">
+            <div class="col-md-6 col-lg-auto shop__item">
               <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/willing.png" alt="Охотный ряд торговый центр"></a></div>
             </div>
-            <div class="col-9 col-md-6 col-lg-auto shop__item">
+            <div class="col-md-6 col-lg-auto shop__item">
               <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/park.png" alt="Ритейл парк"></a></div>
             </div>
-            <div class="col-9 col-md-6 col-lg-auto shop__item">
+            <div class="col-md-6 col-lg-auto shop__item">
               <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/vavilon.png" alt="Золотой вавилон"></a></div>
             </div>
-            <div class="col-9 col-md-6 col-lg-auto shop__item">
-              <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/metropolis.png" alt="Метрополос"></a></div>
+            <div class="col-md-6 col-lg-auto shop__item">
+              <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/category-3.png" alt="Метрополос"></a></div>
             </div>
-            <div class="col-9 col-md-6 col-lg-auto shop__item">
+            <div class="col-md-6 col-lg-auto shop__item">
               <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/megapolis.png" alt="Мегаполис"></a></div>
             </div>
-            <div class="col-9 col-md-6 col-lg-auto shop__item">
+            <div class="col-md-6 col-lg-auto shop__item">
               <div class="d-flex align-items-center client"><a class="client__link" href="#"><img class="img-fluid client__img" src="img/logo/company/cum.png" alt="ЦУМ"></a></div>
             </div>
           </div>
@@ -463,10 +453,8 @@
     <script src="js/bootstrap.js"></script>
     <!-- Old browsers reject JavaScript-->
     <script src="js/jquery.reject.js"></script>
-    <!-- Slick-Slider JavaScript-->
-    <script src="js/slick.js"></script>
-    <!-- Fancybox JavaScript-->
-    <script src="js/jquery.fancybox.js"></script>
+    <!-- Flex Carousel JavaScript-->
+    <script src="js/jquery.flexslider.js"></script>
     <!-- Custom JavaScript-->
     <script src="js/main.js"></script>
     <!-- endbuild-->
