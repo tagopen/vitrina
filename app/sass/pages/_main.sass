@@ -754,6 +754,92 @@
 .disperse
   &__select
     width: 100% 
++comment('section sort style')
+.sort
+  padding: 0.75rem 0 0
+  background-color: $sort-bg
+  &__heading
+    margin: 0
+    font: 600 0.688rem/0.8125rem $main-font
+    color: $sort-heading-color
+  &__link
+    padding: 0.5rem 0
+.dropdown
+  &--plane
+    display: block
+  &__toggle
+    &--plane
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: $dropdown-plane-bg
+      background-image: $dropdown-plane-bgi
+      border: 0.063rem solid $dropdown-plane-border
+      border-radius:  0.9375rem
+      padding: 0.5rem 1rem
+      font: 600 0.625rem/0.75rem $main-font
+      color: $dropdown-plane-color
+      transition: all .3s ease-out
+      cursor: pointer
+      &:hover,
+      &:focus
+        border: 0.063rem solid $dropdown-plane-border
+        color: $dropdown-plane-color
+        text-decoration: none
+        opacity: .85
+.sorting
+  font: 600 0.688rem/0.8125rem $main-font
+  color: $sorting-color
+  transition: all .3s ease-out
+  &:hover,
+  &:focus
+    color: $sorting-active-color
+    text-decoration: none
+  &--active
+    color: $sorting-active-color
+    &:hover,
+    &:focus
+      color: $sorting-active-color
+      opacity: 1
+  &--down
+    .sorting__icon--up
+      display: none
+  &--up
+    .sorting__icon--down
+      display: none
+  &__name
+    margin-right: 0.1875rem
+  &__icon
+    font-size: 0.625rem
+.view
+  font: 600 0.688rem/0.8125rem $main-font
+  color: $view-color
+  transition: all .3s ease-out
+  &:hover,
+  &:focus
+    color: $view-active-color
+    text-decoration: none
+  &--active
+    color: $view-active-color
+    .view__icon
+      color: $view-icon-active
+  &__icon
+    margin-right: 0.375rem
++r(768)
+  .sort
+    padding: 1.25rem 0 0
++r(992)
+  .sort
+    &__heading
+      font-size: 0.75rem
+      line-height: 0.875rem
+  .sorting
+    font-size: 0.75rem
+    line-height: 0.875rem
+  .view
+    font-size: 0.75rem
+    line-height: 0.875rem
 +comment('section category style')
 .category
   padding: 0.625rem 0 0.25rem

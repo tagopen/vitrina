@@ -147,6 +147,15 @@
       .removeClass('faq__question--active');
     });
   });
+
+  $(function() {
+    $('.sorting').on('click', function (e) {
+      $('.sorting').removeClass('sorting--active')
+      .filter($(this))
+      .addClass('sorting--active');
+      e.preventDefault();
+    });
+  });
   
   $(function () {
     $('#list-view').click(function( e ) {
