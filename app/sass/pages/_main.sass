@@ -764,30 +764,6 @@
     color: $sort-heading-color
   &__link
     padding: 0.5rem 0
-.dropdown
-  &--plane
-    display: block
-  &__toggle
-    &--plane
-      position: relative
-      display: flex
-      justify-content: center
-      align-items: center
-      background-color: $dropdown-plane-bg
-      background-image: $dropdown-plane-bgi
-      border: 0.063rem solid $dropdown-plane-border
-      border-radius:  0.9375rem
-      padding: 0.5rem 1rem
-      font: 600 0.625rem/0.75rem $main-font
-      color: $dropdown-plane-color
-      transition: all .3s ease-out
-      cursor: pointer
-      &:hover,
-      &:focus
-        border: 0.063rem solid $dropdown-plane-border
-        color: $dropdown-plane-color
-        text-decoration: none
-        opacity: .85
 .sorting
   font: 600 0.688rem/0.8125rem $main-font
   color: $sorting-color
@@ -812,6 +788,34 @@
     margin-right: 0.1875rem
   &__icon
     font-size: 0.625rem
+
+.dropdown
+  &-menu
+    &--fullwidth
+      width: 100%
+  &--sorting
+    display: block
+  &__toggle
+    &--sorting
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: $dropdown-plane-bg
+      background-image: $dropdown-plane-bgi
+      border: 0.063rem solid $dropdown-plane-border
+      border-radius:  0.9375rem
+      padding: 0.5rem 1rem
+      font: 600 0.625rem/0.75rem $main-font
+      color: $dropdown-plane-color
+      transition: all .3s ease-out
+      cursor: pointer
+      &:hover,
+      &:focus
+        border: 0.063rem solid $dropdown-plane-border
+        color: $dropdown-plane-color
+        text-decoration: none
+        opacity: .85
 .view
   font: 600 0.688rem/0.8125rem $main-font
   color: $view-color

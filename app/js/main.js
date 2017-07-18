@@ -149,8 +149,8 @@
   });
 
   $(function() {
-    $('.sorting').on('click', function (e) {
-      $('.sorting').removeClass('sorting--active')
+    $('.sorting--filter').on('click', function (e) {
+      $('.sorting--filter').removeClass('sorting--active')
       .filter($(this))
       .addClass('sorting--active');
       e.preventDefault();
