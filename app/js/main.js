@@ -28,13 +28,21 @@
 
   // Selectize
   $(function () {
-    $(".disperse__select--desirable").select2({
-      maximumInputLength: 2
-    });
-    $(".disperse__select--undesirable").select2({
-      theme: "red"
-    });
-    $(".disperse__select--area, .disperse__select--parking").select2();
+    if ($(".disperse__select--desirable").length) {
+      $(".disperse__select--desirable").select2({
+        maximumInputLength: 2
+      });
+    }
+
+    if ($(".disperse__select--undesirable").length) {
+      $(".disperse__select--undesirable").select2({
+        theme: "red"
+      });
+    }
+
+    if ($(".disperse__select--area, .disperse__select--parking").length) {
+      $(".disperse__select--area, .disperse__select--parking").select2();
+    }
   });
 
   // Video preview

@@ -1,11 +1,11 @@
-nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+nav.navbar.navbar-toggleable-sm
   button.hidden-md-up.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
     span.navbar-toggler-icon
   .logo.logo.logo--vitrina
     a.logo__link(href="/")
       img.img-fuid.logo__img.logo__img--vitrina(src=content.site.logo.img.src, alt=content.site.logo.img.alt)/
   #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav.navbar-toggleable-sm.mr-auto
+    ul.navbar-nav.mr-auto
       each item, i in content.catalog.nav.links
         li.nav-item
           if (item.city)

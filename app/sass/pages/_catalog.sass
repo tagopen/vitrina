@@ -1,0 +1,585 @@
++comment('page catalog style')
++comment('section intro style')
+.intro
+  padding: 1.25rem 0 1rem
+  background: $intro-bg $intro-bgi-xs no-repeat scroll 50% 50%
+  &__heading
+    margin: 0
+    font: 700 0.875rem/1rem $main-font
+    color: $intro-heading-color
+    text-transform: uppercase
+    text-align: left
+    letter-spacing: 0.0625rem
+.choice
+  text-align: right
+  &__text
+    font: 500 0.875rem/1rem $main-font
+    color: $choice-text-color
+.btn--blue
+  border-radius: 1.188rem
+  background-color: $btn-blue-bg
+  font: 500 0.875rem/1rem $main-font
+  color: $btn-blue-color
+  transition: all .3s ease-out
+  &:hover,
+  &:focus
+    background-color: $btn-blue-bg-hover
++r(768)
+  .intro
+    padding: 2rem 0 1.625rem
+    background-image: $intro-bgi
+    background-size: cover
+  .choice
+    &__text
+      padding: 0 0.75rem
+  .btn--blue
+    padding: 0.6875rem 1.188rem
++r(992)
+  .intro
+    &__heading
+      font-size: 1rem
+      line-height: 1.125rem
+  .choice
+  .btn--blue
+    padding: 0.875rem 1.688rem
+    border-radius: 1.563rem
++r(1344)
+  .intro
+    &__heading
+      font-size: 1.25rem
+      line-height: 1.375rem
+    .choice
+      &__text
+        font-size: 1.125rem
+        line-height: 1.25rem
+    .btn--blue
+      border-radius: 1.813rem
+      font-size: 1.125rem
+      line-height: 1.25rem
+
+
+
++cm('breadcrumbs')
+.breadcrumbs    
+  padding: 0
+  margin-bottom: 1.25rem
+  list-style: none
+  &__item
+    position: relative
+    display: inline
+    padding-right: 1rem
+    font: 400 0.75rem/0.875rem $main-font
+    color: $breadcrumbs-color
+    line-height: 0.125rem
+    &:before
+      content: '\003e'
+      position: absolute
+      display: block
+      left: -0.5rem
+      top: 50%
+      transform: translate(-50%, -50%)
+    &:first-of-type
+      &:before
+        content: none
+  &__link
+    color: inherit
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $breadcrumbs-color-hover
++comment('section filter style')
+.disperse
+  &__select
+    width: 100% 
++comment('section sort style')
+.sort
+  padding: 0.75rem 0 0
+  background-color: $sort-bg
+  &__heading
+    margin: 0
+    font: 600 0.688rem/0.8125rem $main-font
+    color: $sort-heading-color
+  &__link
+    padding: 0.5rem 0
+.sorting
+  font: 600 0.688rem/0.8125rem $main-font
+  color: $sorting-color
+  transition: all .3s ease-out
+  &:hover,
+  &:focus
+    color: $sorting-active-color
+    text-decoration: none
+  &--active
+    color: $sorting-active-color
+    &:hover,
+    &:focus
+      color: $sorting-active-color
+      opacity: 1
+  &--down
+    .sorting__icon--up
+      display: none
+  &--up
+    .sorting__icon--down
+      display: none
+  &__name
+    margin-right: 0.1875rem
+  &__icon
+    font-size: 0.625rem
+
+.dropdown
+  &-menu
+    &--fullwidth
+      width: 100%
+  &--sorting
+    display: block
+  &__toggle
+    &--sorting
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: $dropdown-plane-bg
+      background-image: $dropdown-plane-bgi
+      border: 0.063rem solid $dropdown-plane-border
+      border-radius:  0.9375rem
+      padding: 0.5rem 1rem
+      font: 600 0.625rem/0.75rem $main-font
+      color: $dropdown-plane-color
+      transition: all .3s ease-out
+      cursor: pointer
+      &:hover,
+      &:focus
+        border: 0.063rem solid $dropdown-plane-border
+        color: $dropdown-plane-color
+        text-decoration: none
+        opacity: .85
+.view
+  font: 600 0.688rem/0.8125rem $main-font
+  color: $view-color
+  transition: all .3s ease-out
+  &:hover,
+  &:focus
+    color: $view-active-color
+    text-decoration: none
+  &--active
+    color: $view-active-color
+    .view__icon
+      color: $view-icon-active
+  &__icon
+    margin-right: 0.375rem
++r(768)
+  .sort
+    padding: 1.25rem 0 0
++r(992)
+  .sort
+    &__heading
+      font-size: 0.75rem
+      line-height: 0.875rem
+  .sorting
+    font-size: 0.75rem
+    line-height: 0.875rem
+  .view
+    font-size: 0.75rem
+    line-height: 0.875rem
++comment('section category style')
+.category
+  padding: 0.625rem 0 0.25rem
+  background-color: $category-bg
+.product
+  margin: 0.5rem 0
+  background-color: $product-bg
+  align-items: stretch
+  transition: all .3s ease-out
+  &:hover
+    box-shadow: 0 0 0.0625rem 0.0625rem $product-border-hover, 0 0 1rem 0.0625rem rgba($product-border-hover, .25)
+  &__content
+    padding: 1rem 1.25rem
+  &__photo
+    display: block
+    overflow: hidden
+    text-align: center
+    &:hover,
+    &:focus
+      text-decoration: none
+  &__img
+    transform: scale(1.05)
+    filter: grayscale(0) blur(0)
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      transform: scale(1.25)
+      filter: grayscale(100%) blur(0.1875rem)
+  &__name
+    display: block
+    padding: 0.875rem 0 0.25rem
+    font: 700 0.875rem/1rem $main-font
+    color: $product-name-color
+    letter-spacing: 0.0625rem
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $product-name-color-hover
+      text-decoration: none
+  &__descr
+    padding: 0.125rem 0
+    font: 400 0.563rem/0.6875rem $main-font
+    color: $product-descr-color
+    letter-spacing: 0.0625rem
+  &__btn-group
+    text-align: right
+  &__btn
+    margin: 0 0.25rem
+    padding: 0
+    background: none
+    cursor: pointer
+.option
+  padding: 0.625rem 0 0.9375rem
+  &__item
+    padding: 0.25rem 0
+  &__name
+    font: 400 0.563rem/0.6875rem $main-font
+    color: $option-key-color
+    letter-spacing: 0.0625rem
+  &__value
+    font: 700 0.563rem/0.6875rem $main-font
+    color: $option-value-color
+  &__descr
+    font-weight: 400
+    color: $option-descr-color
+.tags
+  position: relative
+  &__link
+    font: 700 0.563rem/0.6875rem $main-font
+    color: $tags-link-color
+    text-decoration: underline
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $tags-link-color-hover
+  &__quantity
+    position: absolute
+    display: inline-flex
+    vertical-align: middle
+    align-items: center
+    justify-content: center
+    right: -0.1875rem
+    top: 50%
+    transform: translateY(-50%)
+    width: 0.875rem
+    height: 0.875rem
+    background-color: $tags-quantity-bg
+    border-radius: 50%
+    font: 700 0.563rem/0.563rem $main-font
+    color: $tags-quantity-color
+    text-transform: uppercase
+.railway
+  font: 700 0.688rem/0.8125rem $main-font
+  color: $railway-color
+  text-align: left
+  letter-spacing: 0.0625rem
+  &__icon
+    display: inline-flex
+    vertical-align: middle
+    align-items: center
+    justify-content: center
+    margin-right: 0.6875rem
+    width: 0.875rem
+    height: 0.875rem
+    border-radius: 50%
+    background-color: $railway-icon-bg
+    font: 700 0.563rem/0.563rem $main-font
+    color: $railway-icon-color
+    &--blue
+      background-color: $railway-icon-bg
+    &--gray
+      background-color: $railway-icon-bg-gray
+    &--green
+      background-color: $railway-icon-bg-green
+  &__link
+    border-bottom: 1px dashed $railway-link-border
+    font: 700 0.563rem/0.75rem $main-font
+    color: $railway-link-color
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      text-decoration: none
+      color: $railway-link-color-hover
+      border-bottom: 1px solid $railway-link-border-hover
+.favorite
+  color: $favorite-icon-color
+  &--active
+    color: $favorite-icon-color-active
+  &__icon
+    font-weight: bold
+    color: inherit
+.compare
+  color: $compare-icon-color
+  &--active
+    color: $compare-icon-color-active
+  &__icon
+    font-weight: bold
+    color: inherit
+.show-all
+  padding: 1rem 0
+  text-align: center
+  &__link
+    position: relative
+    display: inline-block
+    border-bottom: 3px solid $show-all-link-border
+    font: 900 0.813rem/1rem $main-font
+    color: $show-all-link-color
+    text-transform: uppercase
+    transition: all .3s ease-out
+    letter-spacing: 0.0625rem
+    &:hover,
+    &:focus
+      border-bottom-color: $show-all-link-border-hover
+      color: $show-all-link-color-hover
+      text-decoration: none
+  &__icon
+    position: absolute
+    top: 50%  
+    transform: translateY(-50%)
+    right: -2rem
+    color: inherit
+    font-weight: 900
+    font-size: 1.75rem
++r(768)
+  .category
+    &__layout
+      &--list
+        .product    
+          display: flex
+          flex-wrap: wrap
+          justify-content: center
+          align-items: center
+          &__content
+            flex: 0 0 50%
+            max-width: 50%
+          &__photo
+            flex: 0 0 41.66667%
+            max-width: 41.66667%
+            max-height: none
+          &__img
+            position: relative
+            height: auto
+            max-width: none
+            left: -25%
+  .product
+    &__photo
+      max-height: 8.25rem
+  .tags
+    &__quantity
+      right: -0.875rem
+  .show-all
+    &__link
+      font-size: 1.125rem
+      line-height: 1.5rem
+    &__icon
+      font-size: 2.125rem
++r(992)
+  .category
+    padding: 6.25rem 0 1.563rem
+    &__layout
+      &--big
+        .product
+          &__content
+            padding: 1.125rem 1.875rem 1.25rem
+          &__photo
+            max-height: 9.375rem
+          &__name
+            font-size: 1rem
+            line-height: 1.125rem
+          &__descr
+            font-size: 0.688rem
+            line-height: 0.8125rem
+          &__btn
+            font-size: 1.25rem
+        .option
+          &__name
+            font-size: 0.688rem
+            line-height: 0.8125rem
+          &__value
+            font-size: 0.688rem
+            line-height: 0.8125rem
+        .tags
+          &__link
+            font-size: 0.688rem
+            line-height: 0.8125rem
+          &__quantity
+            width: 1rem
+            height: 1rem
+            right: -0.625rem
+            font-size: 0.813rem
+            line-height: 0.9375rem
+        .railway
+          font-size: 0.813rem
+          line-height: 0.9375rem
+          &__icon
+            width: 1rem
+            height: 1rem
+            font-size: 0.688rem
+            line-height: 0.8125rem
+  .product
+    &:hover
+      box-shadow: 0 0 0.0625rem 0.125rem $product-border-hover, 0 0 1rem 0.0625rem rgba($product-border-hover, .25)
+  .show-all
+    padding: 3.125rem 0 1.125rem
+    &__link
+      padding-bottom: 0.5rem
++r(1344)
+  .category
+    padding: 0.625rem 0
+    &__layout
+      &--big
+        .product
+          &__content
+            padding: 1.75rem 2.5rem 1.875rem
+          &__photo
+            max-height: 12.5rem
+          &__name
+            font-size: 1.25rem
+            line-height: 1.375rem
+          &__descr
+            font-size: 0.875rem
+            line-height: 1rem
+          &__btn
+            font-size: 1.625rem
+        .option
+          &__name
+            font-size: 0.875rem
+            line-height: 1rem
+          &__value
+            font-size: 0.875rem
+            line-height: 1rem
+        .tags
+          &__link
+            font-size: 0.875rem
+            line-height: 1rem
+          &__quantity
+            width: 1.313rem
+            height: 1.313rem
+            right: 0
+            font-size: 0.875rem
+            line-height: 1rem
+        .railway
+          font-size: 1rem
+          line-height: 1.125rem
+          &__icon
+            width: 1.313rem
+            height: 1.313rem
+            font-size: 0.875rem
+            line-height: 1rem
+  .product
+    margin: 0.75rem 0
+    &__photo
+      max-height: 10.63rem
+    &__name
+      font-size: 1.125rem
+      line-height: 1.25rem
+    &__descr
+      font-size: 0.75rem
+      line-height: 0.875rem
+    &__btn
+      margin: 0 0.5rem
+      font-size: 21px
+  .option
+    padding: 1.25rem 0 1.875rem
+    &__item
+      padding: 0.5rem 0
+    &__name
+      font-size: 0.75rem
+      line-height: 0.875rem
+    &__value
+      font-size: 0.75rem
+      line-height: 0.875rem
+  .tags
+    &__link
+      font-size: 0.75rem
+      line-height: 0.875rem
+    &__quantity
+      width: 1.125rem
+      height: 1.125rem
+      right: -0.3125rem
+      font-size: 0.75rem
+      line-height: 0.875rem
+  .railway
+    font-size: 1rem
+    line-height: 1.125rem
+    &__icon
+      width: 1.125rem
+      height: 1.125rem
+      font-size: 0.75rem
+      line-height: 0.875rem
+    &__link
+      font-size: 0.875rem
+      line-height: 1.25rem
+  .show-all
+    &__link
+      font-size: 1.5rem
+      line-height: 1.625rem
+    &__icon
+      right: -2.875rem
+      top: auto
+      bottom: 0
+      transform: translateY(0)
+      font-size: 2.5rem
++comment('section details style')
+.details
+  padding: 1.563rem 0 2.688rem
+  background-color: $details-bg
+  &__container
+    background-color: $details-container-bg
+    padding: 
+      top: 1.625rem
+      bottom: 1.625rem
+    box-shadow: 0 3px 15px rgba(0,0,0,.1)
+  &__heading
+    font: 700 1.25rem/1.375rem $main-font
+    text-transform: none
+    text-align: left
+    letter-spacing: 0.125rem
+  &__text
+    font: 400 0.875rem/1rem $main-font
+    text-align: justify
+    letter-spacing: 0.0625rem
+  &__link-group
+    text-align: right
+  &__link
+    font: 300 0.875rem/1rem $main-font
+    color: $details-link
+    text-decoration: underline
+    letter-spacing: 0.0625rem
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $details-link-hover
++r(768)
+  .details
+    &__container
+      padding: 
+        top: 2.5rem
+        bottom: 2.5rem
+    &__heading
+      margin: 0.625rem 0 1.375rem
++r(992)
+  .details
+    padding: 1.75rem 0 3.125em
+    &__text
+      font-size: 1rem
+      line-height: 1.125rem
+    &__link
+        font-size: 1rem
+        line-height: 1.125rem
++r(1344)
+  .details
+    &__heading
+      margin: 0.625rem 0 1.875rem
+      font-size: 1.875rem
+      line-height: 2rem
+    &__text
+      font-size: 1.188rem
+      line-height: 1.313rem
+    &__link
+        font-size: 1.188rem
+        line-height: 1.313rem
