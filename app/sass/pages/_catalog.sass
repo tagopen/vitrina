@@ -1,4 +1,147 @@
 +comment('page catalog style')
+
++comment('section navbar style')
++cm('bootstrap why you don\'t use bem?')
+.navbar
+  padding: 0.75rem 0
+  &__row
+    width: 100% 
+.navbar-light
+  .navbar-toggler
+    border-color: transparent
+  .navbar-nav 
+    .nav-link
+      font: 700 0.75rem/1rem $main-font
+      color: $nav-link-color
+      text-transform: uppercase
+      &:hover,
+      &:focus
+        color: $nav-link-color-hover
+        background: $nav-item-bg-hover
+.navbar-toggler
+  &:focus
+    outline: none
+.navbar-collapse
+  width: 100%
+.nav-item
+  text-align: center
+.dropdown
+  &--navbar
+    padding: 0
+    width: 100%
+  &__toggle
+    &--navbar
+      color: $nav-link-color
+      border: none 
+    &:hover,
+    &:focus
+      color: $nav-link-color-hover
+      border: none 
+    &:active
+      background: none
+  &__text
+    border-bottom: 0.0625rem dashed $dropdown-navbar-color
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      border-bottom: 0.0625rem dashed $nav-link-color-hover
+.dropdown-menu
+  &--navbar
+    border: 0 none
+    text-align: center
+.logo
+  &--inside
+    width: 2.125rem
+    overflow: hidden
+  &__img
+    &--inside
+      width: auto
+.user-btn
+  margin-bottom: 0
+  padding: 0
+  list-style: none
+  text-align: right
+  &__item
+    display: inline-flex
+    padding: 0 1.25rem
+    border-left: 0.0625rem dashed $user-btn-border
+    &:first-of-type
+      border-left-color: transparent
+    &:last-of-type
+      padding-right: 0
+  &__link
+    position: relative
+    font: 500 0.813rem/0.9375rem $main-font
+    color: $user-btn-name-color
+    text-transform: uppercase
+    transition: all .3s ease-out
+    &:active
+      opacity: .7
+      color: $user-btn-name-color-hover
+  &__icon
+    position: relative
+    font-size: 1.5rem
+    &--favorite
+      color: $user-btn-favorite
+    &--compare
+      color: $user-btn-compare
+  &__number
+    position: absolute
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 1rem
+    height: 1rem
+    top: -0.375rem
+    right: -0.5rem
+    border-radius: 50%
+    background: $user-btn-number-bg $user-btn-number-bgi no-repeat scroll 0 0
+    font: 500 0.625rem/0.75rem $main-font
+    color: $user-btn-number-color
++rx(767)
+  .navbar
+    &__container
+      width: 100%
++r(768)
+  .logo
+    &--inside
+      width: auto
+  .nav-link
+    padding-top: 0
+    padding-bottom: 0
+  .dropdown
+    &__toggle
+      &--navbar
+        color: $dropdown-navbar-color
+    &__icon
+      margin-right: 0.5rem
+  .dropdown-menu
+    text-align: left
+    border: 1px solid rgba(0, 0, 0, 0.15)
++r(992)
+  .user-btn
+    &__item
+      padding: 0 2.5rem
+    &__icon
+      position: absolute
+      top: -1rem
+      right: -0.75rem
+      &--compare
+        width: 1rem
+        height: 1rem
+        top: -0.625rem
+        border-radius: 50% 
+        background: $user-btn-icon-compare-bg $user-btn-icon-compare-bgi no-repeat scroll 0 0
+        &:before
+          content: none
+    &__number
+      margin: auto
+      top: 0.125rem
+      left: 0
+      bottom: 0
+      right: 0
+      background: none
+      color: $user-btn-number-reverse-color
 +comment('section intro style')
 .intro
   padding: 1.25rem 0 1rem
@@ -56,8 +199,6 @@
       border-radius: 1.813rem
       font-size: 1.125rem
       line-height: 1.25rem
-
-
 
 +cm('breadcrumbs')
 .breadcrumbs    
@@ -307,6 +448,9 @@
       border-bottom: 1px solid $railway-link-border-hover
 .favorite
   color: $favorite-icon-color
+  &:active
+    color: $favorite-icon-color-active
+    opacity: .7
   &--active
     color: $favorite-icon-color-active
   &__icon
@@ -314,6 +458,9 @@
     color: inherit
 .compare
   color: $compare-icon-color
+  &:active
+    color: $compare-icon-color-active
+    opacity: .7
   &--active
     color: $compare-icon-color-active
   &__icon

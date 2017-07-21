@@ -130,10 +130,6 @@
           }
         }
 
-        > .container {
-          padding-right: 0;
-          padding-left: 0;
-        }
       }
 
       @include media-breakpoint-up($next) {

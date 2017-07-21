@@ -5067,10 +5067,6 @@ tbody.collapse.show {
     position: static;
     float: none;
   }
-  .navbar-toggleable > .container {
-    padding-right: 0;
-    padding-left: 0;
-  }
 }
 
 @media (min-width: 576px) {
@@ -5128,10 +5124,6 @@ tbody.collapse.show {
   .navbar-toggleable-sm .navbar-nav .dropdown-menu {
     position: static;
     float: none;
-  }
-  .navbar-toggleable-sm > .container {
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 
@@ -5191,10 +5183,6 @@ tbody.collapse.show {
     position: static;
     float: none;
   }
-  .navbar-toggleable-md > .container {
-    padding-right: 0;
-    padding-left: 0;
-  }
 }
 
 @media (min-width: 992px) {
@@ -5252,10 +5240,6 @@ tbody.collapse.show {
   .navbar-toggleable-lg .navbar-nav .dropdown-menu {
     position: static;
     float: none;
-  }
-  .navbar-toggleable-lg > .container {
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 
@@ -5328,11 +5312,6 @@ tbody.collapse.show {
 .navbar-toggleable-xl .navbar-nav .dropdown-menu {
   position: static;
   float: none;
-}
-
-.navbar-toggleable-xl > .container {
-  padding-right: 0;
-  padding-left: 0;
 }
 
 .navbar-toggleable-xl .navbar-nav {

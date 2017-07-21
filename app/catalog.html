@@ -53,25 +53,36 @@
 <![endif]-->
   </head>
   <body class="body d-flex flex-column">
-    <nav class="navbar navbar-toggleable-sm">
-      <button class="hidden-md-up navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="logo logo logo--vitrina"><a class="logo__link" href="/"><img class="img-fuid logo__img logo__img--vitrina" src="img/logo/logo-vitrina.png" alt="Vitrina Club Биржа ритейла"/></a></div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item"><a class="nav-link nav-link--active" href="#">Каталог<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <div class="dropdown"><a class="dropdown__toggle dropdown__toggle--plane" id="dropdown-navbar" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Москва</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown-navbar"><a class="dropdown-item" href="#">Екатеринбург</a><a class="dropdown-item" href="#">Одинцово</a>
-              </div>
-            </div>
-          </li>
-        </ul>
+    <nav class="navbar navbar-toggleable-sm navbar-light">
+      <div class="container navbar__container">
+        <div class="row justify-content-between justify-content-md-start navbar__row align-items-center">
+          <div class="d-inline-flex pl-2 pr-2">
+            <div class="logo logo logo--inside"><a class="logo__link" href="/"><img class="img-fuid logo__img logo__img--inside" src="img/logo/logo-vitrina.png" alt="Vitrina Club Биржа ритейла"/></a></div>
+          </div>
+          <div class="d-inline-flex pl-2 pr-2">
+            <button class="hidden-md-up navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          </div>
+          <div class="d-inline-flex pl-2 pr-2 flex-md-last">
+            <ul class="user-btn ml-auto">
+              <li class="user-btn__item"><a class="user-btn__link" href="#"><span class="hidden-md-down hidden-sm-down user-btn__name">Избранное</span><span class="user-btn__icon fa fa-star user-btn__icon--favorite"><span class="user-btn__number">5</span></span></a></li>
+              <li class="user-btn__item"><a class="user-btn__link" href="#"><span class="hidden-md-down hidden-sm-down user-btn__name">Сравнение</span><span class="user-btn__icon fa fa-balance-scale user-btn__icon--compare"><span class="user-btn__number">3</span></span></a></li>
+            </ul>
+          </div>
+          <div class="hidden-md-up w-100"></div>
+          <div class="collapse navbar-collapse col" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link nav-link--active" href="#">Каталог<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown dropdown--navbar nav-link"><a class="dropdown__toggle dropdown__toggle--navbar" id="dropdown-navbar" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plane dropdown__icon"></i><span class="dropdown__text">Москва</span></a>
+                  <div class="dropdown-menu dropdown-menu--navbar" aria-labelledby="dropdown-navbar"><a class="dropdown-item" href="#">Екатеринбург</a><a class="dropdown-item" href="#">Одинцово</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#"><span class="link-up"><span class="hidden-md-down hidden-sm-down link-up__name">Избранное</span><span class="link-up__icon fa fa-star link-up__iconfavorite"></span><span class="link-up__number">5</span></span></a></li>
-        <li class="nav-item"><a class="nav-link" href="#"><span class="link-up"><span class="hidden-md-down hidden-sm-down link-up__name">Сравнение</span><span class="link-up__icon fa fa-balance-scale hidden-lg-up link-up__iconcompare"></span><span class="link-up__number">3</span></span></a></li>
-      </ul>
     </nav>
     <header class="intro">
       <div class="container">
@@ -108,7 +119,7 @@
                 <div class="search__heading"><i class="search__icon fa fa-search"></i>Поиск по торговым центрам
                 </div>
                 <form class="form-inline search__form">
-                  <input class="form-control search__input" tupe="text" placeholder="ТРЦ Европейский">
+                  <input class="form-control search__input" type="text" placeholder="ТРЦ Европейский">
                 </form>
               </div>
             </div>

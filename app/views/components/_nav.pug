@@ -1,29 +1,37 @@
-nav.navbar.navbar-toggleable-sm
-  button.hidden-md-up.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-    span.navbar-toggler-icon
-  .logo.logo.logo--vitrina
-    a.logo__link(href="/")
-      img.img-fuid.logo__img.logo__img--vitrina(src=content.site.logo.img.src, alt=content.site.logo.img.alt)/
-  #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav.mr-auto
-      each item, i in content.catalog.nav.links
-        li.nav-item
-          if (item.city)
-            .dropdown
-              a#dropdown-navbar.dropdown__toggle.dropdown__toggle--plane(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')!= item.city[0].name
-              .dropdown-menu(aria-labelledby='dropdown-navbar')
-                each link, count in item.city
-                  if (count > 0)
-                    a.dropdown-item(href=link.href)!= link.name
-          else
-            a.nav-link(class={"nav-link--active": i === 0}, href=item.href)!= item.name
-              if (i === 0) 
-                span.sr-only (current)
-  ul.navbar-nav.ml-auto
-    each item, key in content.site.navRight.links
-      li.nav-item
-        a.nav-link(href=item.href)
-          span.link-up
-            span.hidden-md-down.hidden-sm-down.link-up__name!= item.text
-            span.link-up__icon.fa(class=item.icon, class={'hidden-lg-up' : key === 'compare'}, class='link-up__icon' + key)
-            span.link-up__number!= item.number
+nav.navbar.navbar-toggleable-sm.navbar-light
+  .container.navbar__container
+    .row.justify-content-between.justify-content-md-start.navbar__row.align-items-center
+      .d-inline-flex.pl-2.pr-2
+        .logo.logo.logo--inside
+          a.logo__link(href="/")
+            img.img-fuid.logo__img.logo__img--inside(src=content.site.logo.img.src, alt=content.site.logo.img.alt)/
+      .d-inline-flex.pl-2.pr-2
+        button.hidden-md-up.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+      .d-inline-flex.pl-2.pr-2.flex-md-last
+        ul.user-btn.ml-auto
+          each item, key in content.site.navRight.links
+            li.user-btn__item
+              a.user-btn__link(href=item.href)
+                span.hidden-md-down.hidden-sm-down.user-btn__name!= item.text
+                span.user-btn__icon.fa(class=item.icon, class='user-btn__icon--' + key)
+                  span.user-btn__number!= item.number
+      .hidden-md-up.w-100
+      #navbarSupportedContent.collapse.navbar-collapse.col
+        ul.navbar-nav.mr-auto
+          each item, i in content.catalog.nav.links
+            li.nav-item
+              if (item.city)
+                .dropdown.dropdown--navbar.nav-link
+                  a#dropdown-navbar.dropdown__toggle.dropdown__toggle--navbar(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    i.fa.fa-plane.dropdown__icon
+                    span.dropdown__text
+                      != item.city[0].name
+                  .dropdown-menu.dropdown-menu--navbar(aria-labelledby='dropdown-navbar')
+                    each link, count in item.city
+                      if (count > 0)
+                        a.dropdown-item(href=link.href)!= link.name
+              else
+                a.nav-link(class={"nav-link--active": i === 0}, href=item.href)!= item.name
+                  if (i === 0) 
+                    span.sr-only (current)
