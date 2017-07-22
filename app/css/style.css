@@ -1407,12 +1407,16 @@
 
 .dropdown__text {
   border-bottom: 0.0625rem dashed rgba(40, 40, 40, 0.29);
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
 }
 
 .dropdown__text:hover, .dropdown__text:focus {
   border-bottom: 0.0625rem dashed #383838;
+}
+
+.dropdown__item {
+  font: 700 0.75rem/1rem "Muller", sans-serif;
+  color: #282828;
+  text-transform: uppercase;
 }
 
 .dropdown-menu--navbar {

@@ -30,7 +30,7 @@ nav.navbar.navbar-toggleable-sm.navbar-light
                   .dropdown-menu.dropdown-menu--navbar(aria-labelledby='dropdown-navbar')
                     each link, count in item.city
                       if (count > 0)
-                        a.dropdown-item(href=link.href)!= link.name
+                        a.dropdown-item.dropdown__item(href=link.href)!= link.name
               else
                 a.nav-link(class={"nav-link--active": i === 0}, href=item.href)!= item.name
                   if (i === 0) 

@@ -41,10 +41,14 @@
       background: none
   &__text
     border-bottom: 0.0625rem dashed $dropdown-navbar-color
-    transition: all .3s ease-out
     &:hover,
     &:focus
       border-bottom: 0.0625rem dashed $nav-link-color-hover
+  &__item
+    font: 700 0.75rem/1rem $main-font
+    color: $nav-link-color
+    text-transform: uppercase
+
 .dropdown-menu
   &--navbar
     border: 0 none
