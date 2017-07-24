@@ -1689,10 +1689,11 @@
 }
 
 .disperse__heading--active .disperse__icon {
+  color: #4796cc;
   border-bottom-color: #4796cc;
 }
 
-.disperse__heading--active .disperse__icon--after:after {
+.disperse__heading--active .disperse__icon:after {
   background: #4796cc;
 }
 

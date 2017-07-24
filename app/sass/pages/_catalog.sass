@@ -188,7 +188,6 @@
     &--open
       &:before
         background: $disperse-heading-active-color
-
   &__heading
     font-size: 1.5rem
     color: $disperse-heading-color
@@ -210,10 +209,10 @@
     &--active
       color: $disperse-heading-active-color
       .disperse__icon
+        color: $disperse-heading-active-color
         border-bottom-color: $disperse-heading-active-color
-        &--after
-          &:after
-            background: $disperse-heading-active-color
+        &:after
+          background: $disperse-heading-active-color
     &--open
       color: $disperse-heading-active-color
       &:hover,
