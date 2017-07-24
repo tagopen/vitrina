@@ -26,22 +26,118 @@
     $('[data-toggle="tooltip"]').tooltip();
   });
 
+  // Disperse tabs
+
+  $(function () {
+    $('.disperse__heading--control').on('click', function(e) {
+      var $this = $(this),
+          $tab = $this.closest('.disperse'),
+          $controls = $tab.find('.disperse__heading--control'),
+          $contents = $tab.find('.disperse__col'),
+          item = $this.attr('href');
+
+      $contents
+        .removeClass('disperse__col--active')
+        .filter(item)
+        .addClass('disperse__col--active');
+
+      $controls
+        .removeClass('disperse__heading--active')
+        .filter($this)
+        .addClass('disperse__heading--active');
+
+      e.preventDefault();
+    });
+  });
+
+  //Disperse dropdown
+  $(function() {
+    $('.disperse__heading--slide').on('click', function(e) {
+      if ($(window).width() < 992) {
+        var $this    = $(this),
+            $item    = $this.closest('.disperse__item'),
+            $heading = $item.find('.disperse__heading'),
+            $content = $item.find('.disperse__content');
+
+        $item.toggleClass('disperse__item--open');
+        $heading.toggleClass('disperse__heading--open');
+        $content.stop().fadeToggle().toggleClass('disperse__content--open');
+      }
+
+      e.preventDefault();
+    });
+  });
+
   // Selectize
   $(function () {
+    $.fn.select2.amd.define('select2/i18n/ru',[],function () {
+    // Russian
+      return {
+        errorLoading: function () {
+          return 'Результат не может быть загружен.';
+        },
+        inputTooLong: function (args) {
+          var overChars = args.input.length - args.maximum;
+          var message = 'Пожалуйста, удалите ' + overChars + ' символ';
+          if (overChars >= 2 && overChars <= 4) {
+            message += 'а';
+          } else if (overChars >= 5) {
+            message += 'ов';
+          }
+          return message;
+        },
+        inputTooShort: function (args) {
+          var remainingChars = args.minimum - args.input.length;
+
+          var message = 'Пожалуйста, введите ' + remainingChars + ' или более символов';
+
+          return message;
+        },
+        loadingMore: function () {
+          return 'Загружаем ещё ресурсы…';
+        },
+        maximumSelected: function (args) {
+          var message = 'Вы можете выбрать ' + args.maximum + ' элемент';
+
+          if (args.maximum  >= 2 && args.maximum <= 4) {
+            message += 'а';
+          } else if (args.maximum >= 5) {
+            message += 'ов';
+          }
+
+          return message;
+        },
+        noResults: function () {
+          return 'Ничего не найдено';
+        },
+        searching: function () {
+          return 'Поиск…';
+        }
+      };
+    });
+
     if ($(".disperse__select--desirable").length) {
       $(".disperse__select--desirable").select2({
-        maximumInputLength: 2
+        language: 'ru',
+        maximumSelectionLength: 2,
+        tags: true,
+        tokenSeparators: [',', ' '],
       });
     }
 
     if ($(".disperse__select--undesirable").length) {
       $(".disperse__select--undesirable").select2({
+        language: 'ru',
+        tags: true,
+        tokenSeparators: [',', ' '],
         theme: "red"
       });
     }
 
     if ($(".disperse__select--area, .disperse__select--parking").length) {
-      $(".disperse__select--area, .disperse__select--parking").select2();
+      $(".disperse__select--area, .disperse__select--parking").select2({
+        language: 'ru'
+      });
     }
   });
 

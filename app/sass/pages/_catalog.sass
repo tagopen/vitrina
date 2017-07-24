@@ -146,6 +146,270 @@
       right: 0
       background: none
       color: $user-btn-number-reverse-color
++comment('section filter style')
+.filter
+
+.search
+  &__heading
+    margin: 0.375rem 0
+    font: 700 0.75rem/0.875rem $main-font
+    color: $search-heading
+    letter-spacing: 0.0625rem
+  &__icon
+    margin-right: 0.25rem
+  &__input
+    padding: 0 1.625rem
+    width: 100%
+    background-color: $search-input-bg
+    border: 0.063rem solid $search-input-border
+    border-radius: 0
+    font: 700 0.875rem/2.75rem $main-font
+    color: $search-input-color
+    &::placeholder
+      opacity: 1
+      transition: all .3s ease-out
+    &:focus
+      &::placeholder
+        opacity: 0
+.disperse
+  padding: 0.625rem 0
+  width: 100%
+  &__item
+    &:before
+      content: none
+      display: block
+      position: absolute
+      width: 0.438rem
+      height: 0.438rem
+      top: 0.625rem
+      right: 1rem
+      border-radius: 50%
+      background: $disperse-heading-color
+    &--open
+      &:before
+        background: $disperse-heading-active-color
+
+  &__heading
+    font-size: 1.5rem
+    color: $disperse-heading-color
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $disperse-heading-hover-color
+      text-decoration: none
+      .disperse__icon
+        border-bottom-color: $disperse-heading-hover-color
+    &:after
+      content: $disperse-icon-down
+      display: inline-block
+      font: normal normal normal 14px/1 FontAwesome
+      font-size: 0.75rem
+      text-rendering: auto
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+    &--active
+      color: $disperse-heading-active-color
+      .disperse__icon
+        border-bottom-color: $disperse-heading-active-color
+        &--after
+          &:after
+            background: $disperse-heading-active-color
+    &--open
+      color: $disperse-heading-active-color
+      &:hover,
+      &:focus
+        opacity: .7
+      &:after
+        content: $disperse-icon-up
+
+  &__icon
+    position: relative
+    padding: 0.4375rem 0
+    border-bottom: 0.125rem dashed $disperse-heading-color
+    &--grey
+      color: $disperse-heading-color
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        width: 0.125rem
+        height: 100%
+        background: $disperse-heading-color
+        left: 50%
+        top: 0
+        transform: rotate(45deg)
+  &__text
+    display: inline
+  &__col
+    margin: 1rem 0
+    display: none
+    &--active
+      display: block
+  &__group
+    position: relative
+  &__control
+    position: absolute
+    top: 50%
+    left: 40%
+    background-color: $select2-selection-bg
+    border-bottom: 0.063rem dashed $select2-selection-border
+    transform: translate(-50%, -50%)
+    font: 700 0.75rem/0.875rem $main-font
+    color: $select2-selection-color
+    text-transform: uppercase
+    &:hover,
+    &:focus
+      color: $select2-selection-color
+      text-decoration: none
+  &__hint
+    margin-top: 0.5rem
+    font: 500 0.625rem/0.75rem $main-font
+    color: $disperse-hint-color
+    text-transform: uppercase
+  &__link 
+    font: 400 0.75rem/0.875rem $main-font
+    color: $disperse-hint-link-color
+    text-decoration: underline
+    text-transform: none
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $disperse-hint-link-color
+      opacity: .9
++cm('Oh God, why?')
+.select2-container
+  width: 100% !important
+  .select2-selection--single,
+  .select2-selection--multiple
+    padding-right: 2.75rem
+    min-height: 2.25rem
+    overflow: hidden
+    background-color: $select2-selection-bg
+    border: 0.063rem solid $select2-border
+    border-radius: 0
+    &:before
+      content: ''
+      position: absolute
+      width: 0.0625rem
+      height: 70%
+      top: 0
+      bottom: 0
+      right: 2.688rem
+      margin: auto
+      background: $select2-selection-line-bg
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      width: 0
+      height: 0
+      top: 50%
+      right: 1.125rem
+      transform: translateY(-50%)
+      border-style: solid
+      border-width: 0.3125rem 0.3125rem 0 0.3125rem
+      border-color: $select2-border transparent transparent transparent
+      transition: all .3s ease-out
+    .select2-selection
+      &:focus
+        outline: none
+      &__arrow
+        display: none
+  &--open
+    .select2-selection--single,
+    .select2-selection--multiple
+      &:after
+        transform: rotate(180deg)
+        transform-origin: 50% 0
+  .select2-selection--multiple 
+    .select2-selection__choice
+      position: relative
+      padding: 0.5rem 0.5rem 0.25rem
+      padding-right: 1.5rem
+      background-color: $select2-choice-bg
+      border: 0 none
+      border-radius: 0.25rem
+      font: 700 0.75rem/0.75rem $main-font
+      color: $select2-choice-color
+      text-transform: uppercase
+    .select2-selection__choice__remove
+      position: absolute
+      width: 0.563rem
+      height: 0.563rem
+      top: 50%
+      transform: translateY(-50%)
+      right: 0.5rem
+      font-size: 1.5rem
+      line-height: 0.75rem
+      color: $select2-remove-color
+      transition: all .3s ease-out
+      z-index: 4
+  .select2-selection--single 
+    .select2-selection__rendered
+      font: 500 0.813rem/2.25rem $main-font
+  &--default
+    .select2-selection--multiple 
+      li.select2-selection__choice
+        &:first-of-type
+          float: right
+  &--red
+    .select2-selection--multiple 
+      .select2-selection__choice
+        background: $select2-choice-red-bg
++r(768)
+  .disperse
+    &__item
+      &:before
+        content: ''
+    &__col
+      display: block
+      margin: 0.5rem 0
+    &__heading
+      padding: 0.375rem 0
+      font: 700 0.875rem/0.875rem $main-font
+    &__icon
+      border: 0 none
+    &__text
+      padding: 0 0.625rem
+    &__content
+      display: none
+      &--open
+        display: block
+    &__icon
+      &--grey
+        &:after
+          width: 0.0625rem
+  .select2-container
+    .select2-selection--single,
+    .select2-selection--multiple
+      min-height: 2.875rem
+
+    .select2-selection--multiple 
+      .select2-selection__choice
+        padding: 0.75rem 1.5rem 0.625rem 0.75rem
+    .select2-selection--single
+      .select2-selection__rendered
+        line-height: 3rem 
++r(992)
+  .disperse
+    &__item
+      &:before
+        content: none
+    &__content
+      display: block
+    &__heading
+      font-size: 0.875rem
+      line-height: 1rem
+      color: $disperse-heading-active-color
+      &:after
+        content: none
+    &__text
+      padding: 0 0.25rem
+    &__control
+      left: 38%
++r(1344)
+  .disperse
+    &__heading
 +comment('section intro style')
 .intro
   padding: 1.25rem 0 1rem

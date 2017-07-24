@@ -7,33 +7,43 @@ section.filter
             i.search__icon(class=content.catalog.search.control.heading.icon)
             != content.catalog.search.control.heading.name
           form.form-inline.search__form
-            input.form-control.search__input(type='text', placeholder=content.catalog.search.control.input.placeholder)
-      each item, i in content.catalog.search.items
-        .col.col-md-12.col-lg-auto
-          .disperse.justify-content-between
-            .disperse__item
-              a.disperse__heading
-                i.disperse__icon(class=item.heading.icon, class={'disperse__icon--grey' : i === 1})
-                label.hidden-sm-down.disperse__text!= item.heading.name
-              .disperse__content
-                .disperse__group
-                  if (item.selects)
-                    select.disperse__select.disperse__select--desirable(multiple="multiple")
-                      each option in item.selects.multipleSelect
-                        option.disperse__option!= option
-                  if (item.multipleSelect)
-                    select.disperse__select.disperse__select--undesirable(multiple="multiple")
-                      each option in item.multipleSelect
-                        option.disperse__option!= option
-                  if (item.select)
-                    each select, key in item.select
-                      select.disperse__select(class='disperse__select--' + key)
-                        each option in select
-                          option.disperse__option!= option
-                if (item.hint)
-                  .hidden-md-down.disperse__hint!= item.hint.name
-                    if (item.hint.tooltip)
-                      a.disperse__link(href=item.hint.tooltip.href, data-toggle="tooltip", data-placement="bottom", title=item.hint.tooltip.title,  data-animation="false")!= item.hint.tooltip.name
+            input.search__input(type='text', placeholder=content.catalog.search.control.input.placeholder)
+      .col-24
+        .disperse
+          .hidden-md-up.row.justify-content-between
+            each item, i in content.catalog.search.items
+              .d-inline-flex.pr-2.pl-2
+                a.disperse__heading.disperse__heading--control(href='#' + item.heading.id, class={'disperse__heading--active' : i === 0})
+                  i.disperse__icon(class=item.heading.icon, class={'disperse__icon--grey' : i === 1})
+                  label.hidden-sm-down.disperse__text!= item.heading.name
+          .row.justify-content-between
+            each item, i in content.catalog.search.items
+              .col.col-md-12.col-lg-auto.col-xl.disperse__col(class={'disperse__col--active' : i === 0}, id=item.heading.id)
+                .disperse__item(data-tab="general", class={'disperse__item--open' : i < 2})
+                  a.hidden-sm-down.disperse__heading.disperse__heading--slide(href='#' + item.heading.id, class={'disperse__heading--open' : i < 2})
+                    i.disperse__icon(class=item.heading.icon, class={'disperse__icon--grey' : i === 1})
+                    label.hidden-sm-down.disperse__text!= item.heading.name
+                  .disperse__content(class={'disperse__content--open' : i < 2})
+                    .disperse__group
+                      if (item.selects)
+                        select.disperse__select.disperse__select--desirable(multiple="multiple")
+                          each option in item.selects.multipleSelect
+                            option.disperse__option!= option
+                        a.disperse__control(href=item.selects.link.href)!= item.selects.link.name
+
+                      if (item.multipleSelect)
+                        select.disperse__select.disperse__select--undesirable(multiple="multiple")
+                          each option in item.multipleSelect
+                            option.disperse__option!= option
+                      if (item.select)
+                        each select, key in item.select
+                          select.disperse__select(class='disperse__select--' + key)
+                            each option in select
+                              option.disperse__option!= option
+                    if (item.hint)
+                      .hidden-md-down.disperse__hint!= item.hint.name
+                        if (item.hint.tooltip)
+                          a.disperse__link(href=item.hint.tooltip.href, data-toggle="tooltip", data-placement="bottom", title=item.hint.tooltip.title,  data-animation="false")!= item.hint.tooltip.name
 
 
 

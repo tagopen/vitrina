@@ -119,72 +119,84 @@
                 <div class="search__heading"><i class="search__icon fa fa-search"></i>Поиск по торговым центрам
                 </div>
                 <form class="form-inline search__form">
-                  <input class="form-control search__input" type="text" placeholder="ТРЦ Европейский">
+                  <input class="search__input" type="text" placeholder="ТРЦ Европейский">
                 </form>
               </div>
             </div>
-            <div class="col col-md-12 col-lg-auto">
-              <div class="disperse justify-content-between">
-                <div class="disperse__item"><a class="disperse__heading"><i class="disperse__icon fa fa-anchor"></i>
-                    <label class="hidden-sm-down disperse__text">Желательные якорные арендаторы</label></a>
-                  <div class="disperse__content">
-                    <div class="disperse__group">
-                      <select class="disperse__select disperse__select--desirable" multiple="multiple">
-                        <option class="disperse__option">kfc</option>
-                        <option class="disperse__option">colin's</option>
-                      </select>
-                    </div>
-                    <div class="hidden-md-down disperse__hint">желательные 
+            <div class="col-24">
+              <div class="disperse">
+                <div class="hidden-md-up row justify-content-between">
+                  <div class="d-inline-flex pr-2 pl-2"><a class="disperse__heading disperse__heading--control disperse__heading--active" href="#disperse1"><i class="disperse__icon fa fa-anchor"></i>
+                      <label class="hidden-sm-down disperse__text">Желательные якорные арендаторы</label></a></div>
+                  <div class="d-inline-flex pr-2 pl-2"><a class="disperse__heading disperse__heading--control" href="#disperse2"><i class="disperse__icon fa fa-anchor disperse__icon--grey"></i>
+                      <label class="hidden-sm-down disperse__text">Нежелательные якорные арендаторы</label></a></div>
+                  <div class="d-inline-flex pr-2 pl-2"><a class="disperse__heading disperse__heading--control" href="#disperse3"><i class="disperse__icon fa fa-map-o"></i>
+                      <label class="hidden-sm-down disperse__text">Торговая площадь</label></a></div>
+                  <div class="d-inline-flex pr-2 pl-2"><a class="disperse__heading disperse__heading--control" href="#disperse4"><i class="disperse__icon fa fa-car"></i>
+                      <label class="hidden-sm-down disperse__text">Парковка</label></a></div>
+                </div>
+                <div class="row justify-content-between">
+                  <div class="col col-md-12 col-lg-auto col-xl disperse__col disperse__col--active" id="disperse1">
+                    <div class="disperse__item disperse__item--open" data-tab="general"><a class="hidden-sm-down disperse__heading disperse__heading--slide disperse__heading--open" href="#disperse1"><i class="disperse__icon fa fa-anchor"></i>
+                        <label class="hidden-sm-down disperse__text">Желательные якорные арендаторы</label></a>
+                      <div class="disperse__content disperse__content--open">
+                        <div class="disperse__group">
+                          <select class="disperse__select disperse__select--desirable" multiple="multiple">
+                            <option class="disperse__option">kfc</option>
+                            <option class="disperse__option">colin's</option>
+                            <option class="disperse__option">kfc 2</option>
+                            <option class="disperse__option">colin's 2</option>
+                          </select><a class="disperse__control" href="#">или</a>
+                        </div>
+                        <div class="hidden-md-down disperse__hint">желательные 
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col col-md-12 col-lg-auto">
-              <div class="disperse justify-content-between">
-                <div class="disperse__item"><a class="disperse__heading"><i class="disperse__icon fa fa-anchor disperse__icon--grey"></i>
-                    <label class="hidden-sm-down disperse__text">Нежелательные якорные арендаторы</label></a>
-                  <div class="disperse__content">
-                    <div class="disperse__group">
-                      <select class="disperse__select disperse__select--undesirable" multiple="multiple">
-                        <option class="disperse__option">kfc</option>
-                        <option class="disperse__option">colin's</option>
-                      </select>
-                    </div>
-                    <div class="hidden-md-down disperse__hint">нежелательные - <a class="disperse__link" href="#" data-toggle="tooltip" data-placement="bottom" title="Нежелательные якорные арендаторы" data-animation="false">Что это значит ?</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col col-md-12 col-lg-auto">
-              <div class="disperse justify-content-between">
-                <div class="disperse__item"><a class="disperse__heading"><i class="disperse__icon fa fa-map-o"></i>
-                    <label class="hidden-sm-down disperse__text">Торговая площадь</label></a>
-                  <div class="disperse__content">
-                    <div class="disperse__group">
-                      <select class="disperse__select disperse__select--area">
-                        <option class="disperse__option">от 5 м<sub>2</sub></option>
-                        <option class="disperse__option">20 м<sub>2</sub></option>
-                        <option class="disperse__option">50 м<sub>2</sub></option>
-                        <option class="disperse__option">100 м<sub>2</sub></option>
-                        <option class="disperse__option">> 100м<sub>2</sub></option>
-                      </select>
+                  <div class="col col-md-12 col-lg-auto col-xl disperse__col" id="disperse2">
+                    <div class="disperse__item disperse__item--open" data-tab="general"><a class="hidden-sm-down disperse__heading disperse__heading--slide disperse__heading--open" href="#disperse2"><i class="disperse__icon fa fa-anchor disperse__icon--grey"></i>
+                        <label class="hidden-sm-down disperse__text">Нежелательные якорные арендаторы</label></a>
+                      <div class="disperse__content disperse__content--open">
+                        <div class="disperse__group">
+                          <select class="disperse__select disperse__select--undesirable" multiple="multiple">
+                            <option class="disperse__option">kfc</option>
+                            <option class="disperse__option">colin's</option>
+                            <option class="disperse__option">kfc 2</option>
+                            <option class="disperse__option">colin's 2</option>
+                          </select>
+                        </div>
+                        <div class="hidden-md-down disperse__hint">нежелательные - <a class="disperse__link" href="#" data-toggle="tooltip" data-placement="bottom" title="Нежелательные якорные арендаторы" data-animation="false">Что это значит ?</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col col-md-12 col-lg-auto">
-              <div class="disperse justify-content-between">
-                <div class="disperse__item"><a class="disperse__heading"><i class="disperse__icon fa fa-car"></i>
-                    <label class="hidden-sm-down disperse__text">Парковка</label></a>
-                  <div class="disperse__content">
-                    <div class="disperse__group">
-                      <select class="disperse__select disperse__select--parking">
-                        <option class="disperse__option">> 1 000 мест</option>
-                        <option class="disperse__option">< 1 000 мест</option>
-                      </select>
+                  <div class="col col-md-12 col-lg-auto col-xl disperse__col" id="disperse3">
+                    <div class="disperse__item" data-tab="general"><a class="hidden-sm-down disperse__heading disperse__heading--slide" href="#disperse3"><i class="disperse__icon fa fa-map-o"></i>
+                        <label class="hidden-sm-down disperse__text">Торговая площадь</label></a>
+                      <div class="disperse__content">
+                        <div class="disperse__group">
+                          <select class="disperse__select disperse__select--area">
+                            <option class="disperse__option">от 5 м<sub>2</sub></option>
+                            <option class="disperse__option">20 м<sub>2</sub></option>
+                            <option class="disperse__option">50 м<sub>2</sub></option>
+                            <option class="disperse__option">100 м<sub>2</sub></option>
+                            <option class="disperse__option">> 100м<sub>2</sub></option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-md-12 col-lg-auto col-xl disperse__col" id="disperse4">
+                    <div class="disperse__item" data-tab="general"><a class="hidden-sm-down disperse__heading disperse__heading--slide" href="#disperse4"><i class="disperse__icon fa fa-car"></i>
+                        <label class="hidden-sm-down disperse__text">Парковка</label></a>
+                      <div class="disperse__content">
+                        <div class="disperse__group">
+                          <select class="disperse__select disperse__select--parking">
+                            <option class="disperse__option">> 1 000 мест</option>
+                            <option class="disperse__option">< 1 000 мест</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
