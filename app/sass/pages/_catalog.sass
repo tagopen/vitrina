@@ -392,6 +392,7 @@
 +r(992)
   .disperse
     &__item
+      display: block !important
       &:before
         content: none
     &__content
@@ -593,6 +594,9 @@
 .category
   padding: 0.625rem 0 0.25rem
   background-color: $category-bg
+  &__layout
+    &--hidden
+      display: none
 .product
   margin: 0.5rem 0
   background-color: $product-bg
@@ -750,6 +754,9 @@
       border-bottom-color: $show-all-link-border-hover
       color: $show-all-link-color-hover
       text-decoration: none
+
+    &--hidden
+      display: none
   &__icon
     position: absolute
     top: 50%  
@@ -760,6 +767,10 @@
     font-size: 1.75rem
 +r(768)
   .category
+    &__col
+      &--map
+        height: 44.38rem
+        overflow-y: scroll
     &__layout
       &--list
         .product    
@@ -779,6 +790,7 @@
             height: auto
             max-width: none
             left: -25%
+      &--map
   .product
     &__photo
       max-height: 8.25rem
@@ -834,6 +846,68 @@
             height: 1rem
             font-size: 0.688rem
             line-height: 0.8125rem
+      &--map
+        .product    
+          display: flex
+          flex-wrap: wrap
+          justify-content: center
+          align-items: center
+          &__content
+            padding: 0.625rem
+            flex: 0 0 50%
+            max-width: 50%
+          &__photo
+            flex: 0 0 41.66667%
+            max-width: 41.66667%
+            max-height: none
+          &__img
+            position: relative
+            height: auto
+            max-width: 160%
+            left: -25%
+          &__name
+            padding: 0.125rem 0
+            font-size: 0.75rem
+            line-height: 0.875rem
+          &__descr
+            font-size: 0.5rem
+            line-height: 0.625rem
+          &__btn
+            margin: 0 0.1875rem
+            font-size: 1rem
+            line-height: 1.125rem
+        .option
+          padding: 0.25rem 0
+          &__item
+            padding: 0.125rem 0
+          &__name
+            font-size: 0.5rem
+            line-height: 0.625rem
+          &__value
+            font-size: 0.5rem
+            line-height: 0.625rem
+        .tags
+          &__link
+            font-size: 0.5rem
+            line-height: 0.625rem
+          &__quantity
+            width: 0.688rem
+            height: 0.688rem
+            right: -0.875rem
+            font-size: 0.5rem
+            line-height: 0.625rem
+
+        .railway
+          font-size: 0.5625rem
+          line-height: 0.6875rem
+          &__icon
+            width: 0.75rem
+            height: 0.75rem
+            font-size: 0.5625rem
+            line-height: 0.6875rem
+
+
+
   .product
     &:hover
       box-shadow: 0 0 0.0625rem 0.125rem $product-border-hover, 0 0 1rem 0.0625rem rgba($product-border-hover, .25)

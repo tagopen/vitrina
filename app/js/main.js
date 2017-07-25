@@ -191,13 +191,13 @@
 
       // hide elements on resize
       if ($('.show-all__link--catalog').is(':visible')) {
-        $item.hide();
+        $item.addClass('category__layout--hidden');
         if( $( window ).width() <= 767 ) {
-          $('.category__layout:lt(4)').show();
+          $('.category__layout:lt(4)').removeClass('category__layout--hidden');
         } else if( $( window ).width() <= 991 ) {
-         $('.category__layout:lt(6)').show();
+         $('.category__layout:lt(6)').removeClass('category__layout--hidden');
         } else {
-          $('.category__layout:lt(7)').show();
+          $('.category__layout:lt(7)').removeClass('category__layout--hidden');
         }
       }
 
@@ -213,8 +213,11 @@
         });
 
         totalProducts();
-        if (visibleItems == totalSize)
-          $('.show-all__link--catalog').hide();
+        if (visibleItems >= totalSize) {
+          $('.show-all__link--catalog').addClass('show-all__link--hidden');
+        } else {
+          $('.show-all__link--catalog').removeClass('show-all__link--hidden');
+        }
 
         e.preventDefault();
       }));
@@ -271,27 +274,34 @@
       $('.view').removeClass('view--active');
       $(this).addClass('view--active');
 
-      localStorage.setItem('display', 'list');
+      $(window).triggerHandler('resize');
 
       e.preventDefault();
     });
 
     $('#map-view').click(function( e ) {
+      var $this = $(this);
+
       $('.map--category').removeClass('hidden-xs-up');
-      $('.category__col').attr('class', 'col col-24 col-md-10 col-lg-8 category__col category__col--map');
+      $('.category__col').attr('class', 'col col-24 col-md-10 col-lg-11 col-xl-8 category__col category__col--map');
 
       $('.category__layout').attr('class', 'category__layout category__layout--map col col-24 col-md-24');
 
       $('.view').removeClass('view--active');
-      $(this).addClass('view--active');
+      $this.addClass('view--active');
+
+      $('.show-all__link--catalog').addClass('show-all__link--hidden');
 
       localStorage.setItem('display', 'map');
+
+      $(window).triggerHandler('resize');
 
       e.preventDefault();
     });
 
     $('#grid-view').click(function( e ) {
       var $cols = $('.category__layout');
+
       $cols.each(function(i, item) {
         if (i < 3) {
           $(this).attr('class', 'category__layout category__layout--grid category__layout--big col-24 col-sm-16 col-md-8');

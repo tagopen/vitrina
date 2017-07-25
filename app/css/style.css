@@ -1940,6 +1940,9 @@
 }
 
 @media only screen and (min-width: 992px) {
+  .disperse__item {
+    display: block !important;
+  }
   .disperse__item:before {
     content: none;
   }
@@ -2245,6 +2248,10 @@
   background-color: #f6f6f6;
 }
 
+.category__layout--hidden {
+  display: none;
+}
+
 .product {
   margin: 0.5rem 0;
   background-color: #fff;
@@ -2512,6 +2519,10 @@
   text-decoration: none;
 }
 
+.show-all__link--hidden {
+  display: none;
+}
+
 .show-all__icon {
   position: absolute;
   top: 50%;
@@ -2525,6 +2536,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .category__col--map {
+    height: 44.38rem;
+    overflow-y: scroll;
+  }
   .category__layout--list .product {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2627,6 +2642,94 @@
     height: 1rem;
     font-size: 0.688rem;
     line-height: 0.8125rem;
+  }
+  .category__layout--map .product {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .category__layout--map .product__content {
+    padding: 0.625rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .category__layout--map .product__photo {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 41.66667%;
+        -ms-flex: 0 0 41.66667%;
+            flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+    max-height: none;
+  }
+  .category__layout--map .product__img {
+    position: relative;
+    height: auto;
+    max-width: 160%;
+    left: -25%;
+  }
+  .category__layout--map .product__name {
+    padding: 0.125rem 0;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+  .category__layout--map .product__descr {
+    font-size: 0.5rem;
+    line-height: 0.625rem;
+  }
+  .category__layout--map .product__btn {
+    margin: 0 0.1875rem;
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+  .category__layout--map .option {
+    padding: 0.25rem 0;
+  }
+  .category__layout--map .option__item {
+    padding: 0.125rem 0;
+  }
+  .category__layout--map .option__name {
+    font-size: 0.5rem;
+    line-height: 0.625rem;
+  }
+  .category__layout--map .option__value {
+    font-size: 0.5rem;
+    line-height: 0.625rem;
+  }
+  .category__layout--map .tags__link {
+    font-size: 0.5rem;
+    line-height: 0.625rem;
+  }
+  .category__layout--map .tags__quantity {
+    width: 0.688rem;
+    height: 0.688rem;
+    right: -0.875rem;
+    font-size: 0.5rem;
+    line-height: 0.625rem;
+  }
+  .category__layout--map .railway {
+    font-size: 0.5625rem;
+    line-height: 0.6875rem;
+  }
+  .category__layout--map .railway__icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    font-size: 0.5625rem;
+    line-height: 0.6875rem;
   }
   .product:hover {
     -webkit-box-shadow: 0 0 0.0625rem 0.125rem #4384ca, 0 0 1rem 0.0625rem rgba(67, 132, 202, 0.25);
