@@ -4,14 +4,15 @@ header.intro
       .col-24
         include ../components/_breadcrumb.pug
     .row.justify-content-between.align-items-center
-      if (page.intro.heading)
-        .col-18.col-md-13.col-lg-auto
-          .intro__item
-            h1.heading.intro__heading!= page.intro.heading
-      if (page.intro.choice)
-        .col-6.col-md-11.col-lg-auto
-          .intro__item.choice
-            span.hidden-sm-down.choice__text!= page.intro.choice.text
-            button.btn.choice__btn.btn--blue(type='button')
-              span.choice__num!= page.intro.choice.btn.number
-              span.hidden-sm-down.choice__val!= page.intro.choice.btn.text
+      if (page.intro)
+        if (page.intro.heading)
+          .col-18.col-md-13.col-lg-auto
+            .intro__item
+              h1.heading.intro__heading!= page.intro.heading
+        if (page.intro.choice)
+          .col-6.col-md-11.col-lg-auto
+            .intro__item.choice
+              span.hidden-sm-down.choice__text!= page.intro.choice.text
+              button.btn.choice__btn.btn--blue(type='button')
+                span.choice__num!= page.intro.choice.btn.number
+                span.hidden-sm-down.choice__val!= page.intro.choice.btn.text
