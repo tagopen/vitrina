@@ -39,9 +39,10 @@ const path = {
     html:           dirs.src + '/*.html',
     js:             dirs.src + '/js/**/*.js',
     style:          dirs.src + '/sass/**/*.+(scss|sass)',
-    template:       dirs.src + '/views/*.pug',
+    template:       dirs.src + '/views/**/*.pug',
+    pug:            dirs.src + '/views/*.pug',
     img:            dirs.src + '/img/**/*.*',
-    spritePng:      dirs.src + 'img/icons/**/*.png',
+    spritePng:      dirs.src + '/img/icons/**/*.png',
     fonts:          dirs.src + '/fonts/**/*.{woff,woff2}',
     mail:           dirs.src + '/mail/**/*'
   },
@@ -63,20 +64,20 @@ gulp.task('sass', () => {
    .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('scripts', ['bower'], () => {
- return gulp.src([
-     'bower_components/jquery/dist/jquery.js',
-     'bower_components/fancybox/dist/jquery.fancybox.js',
-     'bower_components/slick-carousel/slick/slick.js',
-     'bower_components/bootstrap/dist/js/bootstrap.js',
-     'bower_components/matchHeight/dist/jquery.matchHeight.js'
-   ])
- .pipe($.plumber())
- .pipe(gulp.dest(path.src.js));
+gulp.task('scripts', () => {
+  return gulp.src([
+    'node_modules/tether/dist/js/tether.js',
+    'node_modules/bootstrap/dist/js/bootstrap.js',
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/select2/dist/js/select2.js'
+  ])
+  .pipe($.plumber())
+  .pipe(gulp.dest(path.src.js));
 });
 
 gulp.task('pug', () => {
- return gulp.src(path.watch.template)
+ return gulp.src(path.watch.pug)
  .pipe($.plumber())
  .pipe($.data(function (file) {
    return {
@@ -99,18 +100,15 @@ gulp.task('fonts', () => {
    .pipe(browserSync.stream());
 });
 
-gulp.task('bower', () => {
-  return $.bower();
-});
-
 gulp.task('sprite', function() {
  gulp.src(path.watch.spritePng)
    .pipe($.plumber())
    .pipe($.spritesmith({
      imgName: 'sprite.png',
      //imgPath: 'app/img/sprite.png',
-     //retinaSrcFilter: ['app/img/icons/*@2x.png'],
-     //retinaImgName: 'sprite@2x.png',
+     retinaSrcFilter: ['app/img/icons/*@2x.png'],
+     retinaImgName: 'sprite@2x.png',
+     retinaDest: 'app/img/sprite@2x.png',
      cssName: '_sprite.sass',
      cssFormat: 'sass',
      padding: 10
@@ -124,7 +122,6 @@ gulp.task('sprite', function() {
    ));
 });
 
-//gulp.task('svgSprite', function () {
 //  return gulp.src('app/img/icons/**/*.svg')
 //    .pipe($.svgmin({
 //      js2svg: {
