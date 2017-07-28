@@ -184,6 +184,72 @@
       &--info
         font-size: 1rem
         line-height: 1.125rem
++comment("section personal style")
+.personal
+  padding: 1.25rem
+  align-items: center
+  overflow: hidden
+  &__content
+    display: flex
+    justify-content: between
+    align-items: center
+    margin: 0 -0.5rem
+  &__item
+    flex-basis: 0
+    flex-grow: 1
+    max-width: 100%
+    padding: 0 0.5rem
+    &--left
+      flex: 0 0 37.5%
+      max-width: 37.5%
+  &__heading
+    position: relative
+    padding-bottom: 0.25rem
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      height: 0.188rem
+      left: 0
+      right: -10rem
+      top: 100%
+      background-color: #555
+  &__name
+    padding-top: 1rem
+    font: 500 0.875rem/1rem $main-font
+    color: $personal-name-color
+  &__post
+    padding-top: 1rem
+    font: 500 0.625rem/0.75rem $main-font
+    color: $personal-post-color
+  &__group
+    padding-top: 1rem
++r(768)
+  .personal
+    &__content
+      align-items: flex-end
+    &__heading
+      font-size: 1rem
+      line-height: 1.125rem
+    &__name
+      font-size: 1rem
+      line-height: 1.125rem
+    &__post
+      font-size: 0.75rem
+      line-height: 0.875rem
++r(1344)
+  .personal
+    padding: 2.5rem 3.125rem 1.25rem
+    &__content
+      align-items: center
+    &__name
+      padding-top: 2rem
+      font-size: 1.375rem
+      line-height: 1.5rem
+    &__post
+      padding-top: 1.25rem
+      font-size: 0.938rem
+      line-height: 1.063rem
 +comment("section category style")
 .slider
   &__img
