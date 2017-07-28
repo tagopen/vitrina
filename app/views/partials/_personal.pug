@@ -1,0 +1,10 @@
+if (page.personal)
+  .personal
+    .personal__photo
+      img.img-fluid.personal__img(src=page.personal.img.src, alt=page.personal.img.alt)
+    .personal__content
+      h3.h3-heading.personal__heading
+      .personal__name!= page.personal.name
+      .personal__post!= page.personal.post
+    .personal__group
+      button.btn.btn--green!= page.personal.btn

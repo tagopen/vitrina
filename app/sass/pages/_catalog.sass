@@ -614,6 +614,7 @@
     &:focus
       text-decoration: none
   &__img
+    margin: 0 auto
     transform: scale(1.05)
     filter: grayscale(0) blur(0)
     transition: all .3s ease-out
@@ -642,8 +643,6 @@
   &__btn
     margin: 0 0.25rem
     padding: 0
-    background: none
-    cursor: pointer
 .option
   padding: 0.625rem 0 0.9375rem
   &__item
@@ -652,6 +651,8 @@
     font: 400 0.563rem/0.6875rem $main-font
     color: $option-key-color
     letter-spacing: 0.0625rem
+    &--dark
+      color: $option-key-dark-color
   &__value
     font: 700 0.563rem/0.6875rem $main-font
     color: $option-value-color
@@ -718,20 +719,24 @@
       color: $railway-link-color-hover
       border-bottom: 1px solid $railway-link-border-hover
 .favorite
+  background: none
   color: $favorite-icon-color
+  cursor: pointer
   &:active
     color: $favorite-icon-color-active
-    opacity: .7
+    opacity: .6
   &--active
     color: $favorite-icon-color-active
   &__icon
     font-weight: bold
     color: inherit
 .compare
+  background: none
   color: $compare-icon-color
+  cursor: pointer
   &:active
     color: $compare-icon-color-active
-    opacity: .7
+    opacity: .6
   &--active
     color: $compare-icon-color-active
   &__icon

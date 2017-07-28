@@ -1,0 +1,15 @@
+nav.navbar.navbar-toggleable-sm.navbar-light
+  .container.navbar__container
+    .row.justify-content-center.navbar__row.align-items-center
+      .d-inline-flex.pl-2.pr-2
+        button.hidden-md-up.navbar-toggler.navbar-toggler--content(type='button', data-toggle='collapse', data-target='#navbarSeecond', aria-controls='navbarSeecond', aria-expanded='false', aria-label='Toggle navigation')!= page.navCategory.toggle
+          span.navbar-toggler-icon
+      .col-24
+        #navbarSeecond.collapse.navbar-collapse
+          ul.navbar-nav.nav-fill.w-100.align-items-center
+            if (page.navCategory)
+              each item, i in page.navCategory.links
+                li.nav-item
+                  a.nav-link.nav-link--content(class={"nav-link--active": i === 0}, href=item.href)!= item.name
+                    if (i === 0) 
+                      span.sr-only (current)

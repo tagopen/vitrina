@@ -1,0 +1,30 @@
+.platform
+  .justify-content-between
+    .d-inline-flex.pl-2.pr-2
+      h3.h3-heading!= content.product.platform.heading
+    .d-inline-flex.pl-2.pr-2
+      a.platform__link(href=content.product.platform.shawAll.href)!= content.product.platform.shawAll.text
+  .table-responsive
+    table.table.platform__table.table--borderless
+      thead
+        tr
+          each item in content.product.platform.table.thead
+            if (item.icon)
+              th.table__heading
+                i.table__icon(class=item.icon)
+            else
+              th.table__heading!= item.name
+      tbody
+        each items in content.product.platform.table.tbody
+          tr
+            each item, key in items
+              td.table__cell
+                if (key == 'img')
+                  img.img-fluid(src=item.src, alt=item.alt)
+                else if (key == 'name')
+                  a.table__link(href=item.href)!= item.name
+                else if (key == 'status')
+                  each value, key in item
+                    span.table__status(class='table__status--' + key)!= value
+                else
+                  span.table__text!= item

@@ -70,51 +70,53 @@
 
   // Selectize
   $(function () {
-    $.fn.select2.amd.define('select2/i18n/ru',[],function () {
-    // Russian
-      return {
-        errorLoading: function () {
-          return 'Результат не может быть загружен.';
-        },
-        inputTooLong: function (args) {
-          var overChars = args.input.length - args.maximum;
-          var message = 'Пожалуйста, удалите ' + overChars + ' символ';
-          if (overChars >= 2 && overChars <= 4) {
-            message += 'а';
-          } else if (overChars >= 5) {
-            message += 'ов';
+    if ($.fn.select2) {
+      $.fn.select2.amd.define('select2/i18n/ru',[],function () {
+      // Russian
+        return {
+          errorLoading: function () {
+            return 'Результат не может быть загружен.';
+          },
+          inputTooLong: function (args) {
+            var overChars = args.input.length - args.maximum;
+            var message = 'Пожалуйста, удалите ' + overChars + ' символ';
+            if (overChars >= 2 && overChars <= 4) {
+              message += 'а';
+            } else if (overChars >= 5) {
+              message += 'ов';
+            }
+            return message;
+          },
+          inputTooShort: function (args) {
+            var remainingChars = args.minimum - args.input.length;
+
+            var message = 'Пожалуйста, введите ' + remainingChars + ' или более символов';
+
+            return message;
+          },
+          loadingMore: function () {
+            return 'Загружаем ещё ресурсы…';
+          },
+          maximumSelected: function (args) {
+            var message = 'Вы можете выбрать ' + args.maximum + ' элемент';
+
+            if (args.maximum  >= 2 && args.maximum <= 4) {
+              message += 'а';
+            } else if (args.maximum >= 5) {
+              message += 'ов';
+            }
+
+            return message;
+          },
+          noResults: function () {
+            return 'Ничего не найдено';
+          },
+          searching: function () {
+            return 'Поиск…';
           }
-          return message;
-        },
-        inputTooShort: function (args) {
-          var remainingChars = args.minimum - args.input.length;
-
-          var message = 'Пожалуйста, введите ' + remainingChars + ' или более символов';
-
-          return message;
-        },
-        loadingMore: function () {
-          return 'Загружаем ещё ресурсы…';
-        },
-        maximumSelected: function (args) {
-          var message = 'Вы можете выбрать ' + args.maximum + ' элемент';
-
-          if (args.maximum  >= 2 && args.maximum <= 4) {
-            message += 'а';
-          } else if (args.maximum >= 5) {
-            message += 'ов';
-          }
-
-          return message;
-        },
-        noResults: function () {
-          return 'Ничего не найдено';
-        },
-        searching: function () {
-          return 'Поиск…';
-        }
-      };
-    });
+        };
+      });
+    }
 
     if ($(".disperse__select--desirable").length) {
       $(".disperse__select--desirable").select2({
@@ -327,6 +329,89 @@
       $('#map-view').trigger('click');
     } else {
       $('#grid-view').trigger('click');
+    }
+  });
+
+  // Featured Slider
+  if ($('.slider--plan')) {
+    $('.slider--plan').slick({
+      dots: false,
+      arrows: true,
+      slidesToShow: 3,
+      slidestoScroll: 1,
+      swipeToSlide: '15',
+      prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous<i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+      nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next<i class="fa fa-angle-right" aria-hidden="true"></i></button>',
+      responsive: [
+        {
+          breakpoint: 1343,
+          settings: {
+            slidesToShow: 3,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
+    });
+  }
+  // Featured Slider
+  if ($('.slider--featured')) {
+    $('.slider--featured').slick({
+      dots: true,
+      arrows: false,
+      infinite: true,
+      slidesToShow: 1,
+      speed: 500,
+      mobileFirst: true,
+      swipeToSlide: '15',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: "unslick",
+        }
+      ]
+    });
+  }
+
+  // Catalog slider
+  $(function () {
+    if ($('.slider--big')) {
+      $('.slider--big').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        swipeToSlide: '15',
+        fade: true,
+        asNavFor: '.slider--small',
+        prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous<i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+        nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next<i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+      });
+    }
+
+    if ($('.slider--small')) {
+      $('.slider--small').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.slider--big',
+        dots: false,
+        focusOnSelect: true,
+        responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 3,
+            },
+          }
+        ]
+      });
     }
   });
 

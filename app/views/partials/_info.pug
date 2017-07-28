@@ -1,0 +1,34 @@
+if (page.info)
+  .info
+    .d-flex.justify-content-between
+      .d-inline-flex
+        h3.h3-heading!= page.info.heading
+      .d-inline-flex.info__group
+        a.info__link.pdf(href=page.info.btnGroup.pdf.href)
+          i(class=page.info.btnGroup.pdf.icon)
+        a.info__link.print(href=page.info.btnGroup.print.href, onclick="window.print();")
+          i(class=page.info.btnGroup.print.icon)
+    .option
+      each option in page.info.options
+        .option__item
+          .row
+            .col
+              .option__name.option__name--dark!= option.name
+            .col
+              if (option.value.links)
+                .option__value.tags
+                  each link, num in option.value.links
+                    a.tags__link(href=link.href)!= link.name
+                    if (num !== (option.value.links.length - 1) )
+                      != option.value.delimeter
+              else if (option.value.railway)
+                .railway
+                  if (option.value.railway.link)
+                    a.railway__link(href=option.value.railway.link.href)!= option.value.railway.link.name
+                  else
+                    span.railway__icon(class='railway__icon--' + option.value.railway.icon.color)!= option.value.railway.icon.name
+                    != option.value.railway.name
+              else
+                .option__value
+                  span.option__number!= option.value.number
+                  span.option__descr!= option.value.descr

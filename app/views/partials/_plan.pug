@@ -1,0 +1,8 @@
+.plan
+  h3.h3-heading.plan__heading!= content.product.plan.heading
+  #carousel-plan.slider.slider--plan
+    each item in content.product.plan.items
+      .slider__item
+        a.plan__item
+          img.img-fluid.plan__img(src=item.img.src, alt=item.img.alt)
+          span.plan__name!= item.name

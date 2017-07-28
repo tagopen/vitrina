@@ -1,3 +1,10 @@
+mixin introCol($color)
+  if ($color !== "btn--green")
+    .col-6.col-md-11.col-lg-auto
+      block
+  else
+    .col-24.col-md-11.col-lg-auto
+      block
 header.intro
   .container
     .row
@@ -5,14 +12,28 @@ header.intro
         include ../components/_breadcrumb.pug
     .row.justify-content-between.align-items-center
       if (page.intro)
-        if (page.intro.heading)
+        if ((page.intro.heading) || (page.intro.street))
           .col-18.col-md-13.col-lg-auto
             .intro__item
-              h1.heading.intro__heading!= page.intro.heading
+              if (page.intro.heading)
+                h1.heading.intro__heading!= page.intro.heading
+              if (page.intro.street)
+                address.intro__street.street
+                  i.street__icon(class=page.intro.street.icon)
+                  != page.intro.street.text
         if (page.intro.choice)
-          .col-6.col-md-11.col-lg-auto
+          +introCol(page.intro.choice.btn.color)
             .intro__item.choice
-              span.hidden-sm-down.choice__text!= page.intro.choice.text
-              button.btn.choice__btn.btn--blue(type='button')
-                span.choice__num!= page.intro.choice.btn.number
-                span.hidden-sm-down.choice__val!= page.intro.choice.btn.text
+              .row.flex-row-reverse.flex-md-row
+                if (page.intro.choice.btnGroup)
+                  .d-inline-flex.pl-2.pr-2.intro__btn-group
+                    each btn, key in page.intro.choice.btnGroup
+                      button.btn(class=key, type='button')
+                        i.fa(class=btn, class=key + '--icon')
+                .col
+                  if (page.intro.choice.text)
+                    span.hidden-sm-down.choice__text!= page.intro.choice.text
+                  button.btn.choice__btn(type='button', class=page.intro.choice.btn.color)
+                    span.choice__num!= page.intro.choice.btn.number
+                    if (page.intro.choice.btn.text)
+                      span.hidden-sm-down.choice__val!= page.intro.choice.btn.text

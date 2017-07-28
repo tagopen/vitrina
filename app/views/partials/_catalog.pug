@@ -1,0 +1,11 @@
+if (page.catalog)
+  .catalog
+    .catalog__slider.slider.slider--big
+      each item in page.catalog.big
+        .slider__item
+          img.img-fluid.slider__img(src=item.src, alt=item.alt)
+     
+    .catalog__slider.slider.slider--small 
+      each item in page.catalog.small
+        .slider__item
+          img.img-fluid.slider__img(src=item.src, alt=item.alt)

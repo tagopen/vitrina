@@ -3,10 +3,10 @@ section.featured
   .container
     .row.justify-content-center
       .col-24
-        h2.sub-heading!= page.featured.heading
-    .row.justify-content-center.align-items-md-stretch
+        h2.sub-heading.featured__container!= page.featured.heading
+    .row.justify-content-md-center.align-items-md-stretch.slider.slider--featured
       each item, i in page.featured.items
-        .col-24.col-sm-16.col-md-6
+        .col-sm-16.col-md-6
           .product
             a.product__photo(href=item.href)
               img.img-fluid.product__img(src=item.img.link, alt=item.img.alt)
@@ -46,7 +46,7 @@ section.featured
                       each btn, key in item.btnGroup
                         button.btn.product__btn(class=key, type='button')
                           i.fa(class=btn, class=key + '--icon')
-    .row.justify-content-center
+    .hidden-sm-down.row.justify-content-center
       .col-24.col-sm-16.col-md-auto
         .featured__button-group.show-all
           a.show-all__link.show-all__link--catalog(href=page.featured.btn.href)!= page.featured.btn.name
