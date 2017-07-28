@@ -299,6 +299,13 @@
   .slick-prev--group
     right: 4.5rem
     left: auto
++comment("section platform style")
+.platform
+  &__heading
+  &__table
+    th,
+    td
+      text-align: center
 +comment("section plan style")
 .plan
   padding: 1.25rem
@@ -320,13 +327,51 @@
     text-align: center
 +r(768)
   .plan
-    padding: 2.5rem
+    padding: 2.813rem 2.813rem 1rem
+    &__heading
+      padding-bottom: 1.825rem
++comment("section legal-info style")
+.legal-info
+  padding: 1.25rem 
+  &__heading
+    padding-bottom: 1.25rem
+  &__icon
+    margin-right: 1rem
+  &__links
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__link    
+    font: 400 0.75rem/0.875rem $main-font
+    color: $legal-link-color
+    text-decoration: underline
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $legal-link-color-hover
+    &--download
+      font: 400 0.75rem/0.875rem $main-font
+      color: $legal-link-download-color
+      &:hover,
+      &:focus
+       color: $legal-link-download-color-hover
+  &__term
+    padding-top: 1.5rem
+    font: 500 0.75rem/0.875rem $main-font
+    color: $legal-term-color
+    &--value
+      color: $legal-term-value-color
++r(768)
+  .legal-info
+    padding: 2.813rem 2.813rem 1rem
     &__heading
       padding-bottom: 1.625rem
-+comment("section platform style")
-.platform
-  &__heading
-  &__table
-    th,
-    td
-      text-align: center
+    &__link    
+      font-size: 1rem
+      line-height: 1.125rem
+      &--download
+        font-size: 0.875rem
+        line-height: 1rem
+    &__term
+      font-size: 1rem
+      line-height: 1.125rem
