@@ -1,0 +1,19 @@
+extends base/_layout.pug
+block variables
+
+block styles
+block scripts
+
+block header
+  include components/_nav.pug
+  include partials/_header-inside.pug
+  include components/_nav-second.pug
+block content
+  include partials/_product-no-video.pug
+  include partials/_featured.pug
+  include partials/_details.pug
+
+block footer
+  include partials/_footer.pug
+block modal
+  include partials/_modal.pug
