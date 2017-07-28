@@ -353,7 +353,8 @@
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 2,
+            arrows: false
           }
         }
       ]

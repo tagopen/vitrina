@@ -283,20 +283,46 @@
     background-color: $slick-arrow-bg
     color: $slick-arrow-color
 .slick-prev
-  left: 1rem
+  left: 0
+  &--group
+    left: 1rem
 .slick-next
-  right: 1rem
+  right: 0
+  &--group
+    right: 1rem
 .slick-icon
   font-size: 2.5rem
 +r(768)
-
   .slick-prev--group,
   .slick-next--group
     top: 70%
   .slick-prev--group
     right: 4.5rem
     left: auto
-
++comment("section plan style")
+.plan
+  padding: 1.25rem
+  &__heading
+    padding-bottom: 1.25rem
+  &__img
+    margin: 0 auto
+  &__item
+    text-decoration: none
+    &:hover,
+    &:focus
+      outline: none
+      text-decoration: none
+  &__name
+    display: block
+    padding: 0.625rem 0
+    font: 400 0.563rem/0.6875rem $main-font
+    color: $plan-name-color
+    text-align: center
++r(768)
+  .plan
+    padding: 2.5rem
+    &__heading
+      padding-bottom: 1.625rem
 +comment("section platform style")
 .platform
   &__heading

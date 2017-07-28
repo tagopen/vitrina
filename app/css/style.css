@@ -3671,10 +3671,18 @@
 }
 
 .slick-prev {
+  left: 0;
+}
+
+.slick-prev--group {
   left: 1rem;
 }
 
 .slick-next {
+  right: 0;
+}
+
+.slick-next--group {
   right: 1rem;
 }
 
@@ -3690,6 +3698,47 @@
   .slick-prev--group {
     right: 4.5rem;
     left: auto;
+  }
+}
+
+/* ---------------------------------------- */
+/* S E C T I O N    P L A N    S T Y L E    */
+/* ---------------------------------------- */
+.plan {
+  padding: 1.25rem;
+}
+
+.plan__heading {
+  padding-bottom: 1.25rem;
+}
+
+.plan__img {
+  margin: 0 auto;
+}
+
+.plan__item {
+  text-decoration: none;
+}
+
+.plan__item:hover, .plan__item:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.plan__name {
+  display: block;
+  padding: 0.625rem 0;
+  font: 400 0.563rem/0.6875rem "Muller", sans-serif;
+  color: #a5a5a5;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .plan {
+    padding: 2.5rem;
+  }
+  .plan__heading {
+    padding-bottom: 1.625rem;
   }
 }
 
