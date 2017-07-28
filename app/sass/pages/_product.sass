@@ -267,6 +267,8 @@
         content: ''
         +coverdiv
         background: $slick-product-current
+  &--featured
+    margin: 0
 .slick-prev,
 .slick-next
   top: 50%
@@ -445,3 +447,10 @@
     &__term
       font-size: 1rem
       line-height: 1.125rem
++comment('section featured style')
+.featured
+  padding: 1.25rem 0
+  background-color: $featured-bg
+  &__heading
+    text-transform: none
+    text-align: left

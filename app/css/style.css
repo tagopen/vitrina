@@ -3654,6 +3654,10 @@
   background: rgba(0, 0, 0, 0.45);
 }
 
+.slider--featured {
+  margin: 0;
+}
+
 .slick-prev,
 .slick-next {
   top: 50%;
@@ -3943,4 +3947,17 @@
     font-size: 1rem;
     line-height: 1.125rem;
   }
+}
+
+/* ---------------------------------------------- */
+/* S E C T I O N    F E A T U R E D    S T Y L E  */
+/* ---------------------------------------------- */
+.featured {
+  padding: 1.25rem 0;
+  background-color: #f6f6f6;
+}
+
+.featured__heading {
+  text-transform: none;
+  text-align: left;
 }
