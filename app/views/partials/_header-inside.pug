@@ -26,7 +26,7 @@ header.intro
             .intro__item.choice
               .row.flex-row-reverse.flex-md-row
                 if (page.intro.choice.btnGroup)
-                  .d-inline-flex.pl-2.pr-2.shoice__btn-group
+                  .d-inline-flex.pl-2.pr-2.choice__btn-group
                     each btn, key in page.intro.choice.btnGroup
                       button.btn(class=key, type='button')
                         i.fa(class=btn, class=key + '--icon')

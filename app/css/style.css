@@ -476,6 +476,12 @@
   background: url(../img/sprite.png) -630px -288px no-repeat;
 }
 
+.ic--pdf:before {
+  width: 19px;
+  height: 21px;
+  background: url(../img/sprite.png) -663px -512px no-repeat;
+}
+
 .ic--plaza:before {
   width: 133px;
   height: 85px;
@@ -486,6 +492,12 @@
   width: 204px;
   height: 186px;
   background: url(../img/sprite.png) 0px -210px no-repeat;
+}
+
+.ic--print:before {
+  width: 23px;
+  height: 21px;
+  background: url(../img/sprite.png) -670px -470px no-repeat;
 }
 
 .ic--rgb:before {
@@ -2642,7 +2654,7 @@
 }
 
 .tags__link {
-  font: 700 0.563rem/0.6875rem "Muller", sans-serif;
+  font: inherit;
   color: #1e67a0;
   text-decoration: underline;
   -webkit-transition: all .3s ease-out;
@@ -2906,10 +2918,6 @@
     font-size: 0.688rem;
     line-height: 0.8125rem;
   }
-  .category__layout--big .tags__link {
-    font-size: 0.688rem;
-    line-height: 0.8125rem;
-  }
   .category__layout--big .tags__quantity {
     width: 1rem;
     height: 1rem;
@@ -2994,10 +3002,6 @@
     font-size: 0.5rem;
     line-height: 0.625rem;
   }
-  .category__layout--map .tags__link {
-    font-size: 0.5rem;
-    line-height: 0.625rem;
-  }
   .category__layout--map .tags__quantity {
     width: 0.688rem;
     height: 0.688rem;
@@ -3056,10 +3060,6 @@
     font-size: 0.875rem;
     line-height: 1rem;
   }
-  .category__layout--big .tags__link {
-    font-size: 0.875rem;
-    line-height: 1rem;
-  }
   .category__layout--big .tags__quantity {
     width: 1.313rem;
     height: 1.313rem;
@@ -3106,10 +3106,6 @@
     line-height: 0.875rem;
   }
   .option__value {
-    font-size: 0.75rem;
-    line-height: 0.875rem;
-  }
-  .tags__link {
     font-size: 0.75rem;
     line-height: 0.875rem;
   }
@@ -3398,6 +3394,103 @@
   .navbar-light .navbar-nav .nav-link--content {
     font-size: 0.938rem;
     line-height: 1.063rem;
+  }
+}
+
+/* ---------------------------------------- */
+/* S E C T I O N    I N F O    S T Y L E    */
+/* ---------------------------------------- */
+@media only screen and (min-width: 992px) {
+  .option__name--dark {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+/* -------------------------------------------------------- */
+/* S E C T I O N    P R O D U C T - T H U M B    S T Y L E  */
+/* -------------------------------------------------------- */
+.product-thumb {
+  padding: 0.625rem 0;
+  background-color: #f6f6f6;
+}
+
+.product-thumb__item {
+  margin: 0.625rem 0;
+  background-color: #fff;
+}
+
+/* ---------------------------------------- */
+/* S E C T I O N    I N F O    S T Y L E    */
+/* ---------------------------------------- */
+.h3-heading {
+  margin: 0;
+  font: 700 0.813rem/0.9375rem "Muller", sans-serif;
+  color: #555;
+}
+
+.info {
+  padding: 1.25rem;
+}
+
+.info__link {
+  margin-left: 1rem;
+}
+
+.info__option {
+  padding: 0.75rem 0 0;
+}
+
+.option__name--info {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+
+.option__value--info {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .h3-heading {
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+  .info {
+    padding: 2.813rem;
+  }
+  .info__option {
+    padding: 1.875rem 0;
+  }
+  .option__name--info {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+  .option__value--info {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .option__name--info {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+  .option__value--info {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .option__name--info {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+  .option__value--info {
+    font-size: 1rem;
+    line-height: 1.125rem;
   }
 }
 
