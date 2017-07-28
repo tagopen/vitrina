@@ -340,8 +340,8 @@
       slidesToShow: 3,
       slidestoScroll: 1,
       swipeToSlide: '15',
-      prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous<i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-      nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next<i class="fa fa-angle-right" aria-hidden="true"></i></button>',
+      prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous<i class="slick-icon fa fa-angle-left" aria-hidden="true"></i></button>',
+      nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next<i class="slick-icon fa fa-angle-right" aria-hidden="true"></i></button>',
       responsive: [
         {
           breakpoint: 1343,
@@ -386,13 +386,13 @@
         slidesToScroll: 1,
         dots: false,
         arrows: true,
-        infinite: true,
         speed: 500,
+        infinite: true,
         swipeToSlide: '15',
         fade: true,
         asNavFor: '.slider--small',
-        prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous<i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-        nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next<i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+        prevArrow: '<button type="button" data-role="none" class="slick-prev slick-prev--group" aria-label="Previous" tabindex="0" role="button">Previous<i class="slick-icon fa fa-angle-left" aria-hidden="true"></i></button>',
+        nextArrow: '<button type="button" data-role="none" class="slick-next slick-next--group" aria-label="Next" tabindex="0" role="button">Next<i class="slick-icon fa fa-angle-right" aria-hidden="true"></i></button>'
       });
     }
 
@@ -402,6 +402,7 @@
         slidesToScroll: 1,
         asNavFor: '.slider--big',
         dots: false,
+        arrows: false,
         focusOnSelect: true,
         responsive: [
           {

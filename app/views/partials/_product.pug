@@ -1,27 +1,28 @@
 section.product-thumb
   .container
-    .row
-      .col-24.col-lg-14
-        .product-thumb__item
+    .row.align-items-stretch
+      .col-24.col-md-12.col-lg-14.mt-2.mb-2
+        .product-thumb__item.product-thumb__item--height
           include ./_info.pug
       .col-24.col-md-12.col-lg-10
-        .product-thumb__item
+        .product-thumb__item.mt-2.mb-2
           include ./_personal.pug
-      .col-24.col-md-12.col-lg-10
-        .product-thumb__item
+        .product-thumb__item.mt-2.mb-2
           include ./_video.pug
-      .col-24.col-lg-14
+      .col-24.col-md-12.col-lg-14.mt-2.mb-2
         .product-thumb__item
           include ./_map.pug
-      .col-24.col-md-12.col-lg-10
+      .col-24.col-md-12.col-lg-10.mt-2.mb-2
         .product-thumb__item
           include ./_catalog.pug
-      .col-24
+
+    .row
+      .col-24.mt-2.mb-2
         .product-thumb__item
           include ./_platform.pug
-      .col-24.col-md-12
+      .col-24.col-md-12.mt-2.mb-2
         .product-thumb__item
           include ./_plan.pug
-      .col-24.col-md-12
+      .col-24.col-md-12.mt-2.mb-2
         .product-thumb__item
           include ./_legal-info.pug

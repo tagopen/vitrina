@@ -5,7 +5,7 @@ nav.navbar.navbar-toggleable-sm.navbar-light.navbar--content
         button.hidden-md-up.navbar-toggler.navbar-toggler--content(type='button', data-toggle='collapse', data-target='#navbarSeecond', aria-controls='navbarSeecond', aria-expanded='false', aria-label='Toggle navigation')!= page.navCategory.toggle
           span.navbar-toggler-icon.navbar-toggler-icon--content
       .col-24
-        #navbarSeecond.collapse.navbar-collapse
+        #navbarSeecond.collapse.navbar-collapse.navbar-collapse--content
           ul.navbar-nav.nav-fill.w-100
             if (page.navCategory)
               each item, i in page.navCategory.links

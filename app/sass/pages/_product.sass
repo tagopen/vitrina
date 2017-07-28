@@ -57,7 +57,6 @@
 .navbar-light 
   .navbar-toggler
     &--content 
-      margin-bottom: 1rem
       padding: 0.5rem 2rem
       width: 100%
       background: $navbar-toggler-content-bgi
@@ -70,6 +69,9 @@
       &:hover,
       &:focus
         color: $navbar-toggler-content-color
+  .navbar-collapse
+    &--content
+      margin-top: 1rem
   .navbar-nav
     .nav-link
       &--content
@@ -88,9 +90,10 @@
   align-content: stretch
   align-items: center
   justify-content: center
-  .nav-item
-    width: auto
 +r(768)
+  .nav-fill
+    .nav-item
+      width: auto
   .navbar-light 
     .navbar-nav
       .nav-link
@@ -125,8 +128,9 @@
   padding: 0.625rem 0
   background-color: $product-thumb-bg
   &__item
-    margin: 0.625rem 0
     background-color: $product-thumb-item-bg
+    &--height
+      height: 100%
 +comment("section info style")
 .h3-heading
   margin: 0
@@ -152,9 +156,9 @@
     font-size: 1rem
     line-height: 1.125rem
   .info
-    padding: 2.813rem
+    padding: 1rem 2.813rem
     &__option
-      padding: 1.875rem 0
+      padding: 1rem 0
   .option
     &__name
       &--info
@@ -187,6 +191,7 @@
 +comment("section personal style")
 .personal
   padding: 1.25rem
+  height: 100%
   align-items: center
   overflow: hidden
   &__content
@@ -252,8 +257,46 @@
       line-height: 1.063rem
 +comment("section category style")
 .slider
+  position: relative
   &__img
     margin: 0 auto
+  &--small
+    .slick-current
+      position: relative
+      &:before
+        content: ''
+        +coverdiv
+        background: $slick-product-current
+.slick-prev,
+.slick-next
+  top: 50%
+  height: 2.5rem
+  width: 2.5rem
+  transform: translateY(-50%)
+  background-color: $slick-arrow-bg
+  font-size: 0
+  line-height: 0
+  color: $slick-arrow-color
+  z-index: 25
+  &:hover,
+  &:focus
+    background-color: $slick-arrow-bg
+    color: $slick-arrow-color
+.slick-prev
+  left: 1rem
+.slick-next
+  right: 1rem
+.slick-icon
+  font-size: 2.5rem
++r(768)
+
+  .slick-prev--group,
+  .slick-next--group
+    top: 70%
+  .slick-prev--group
+    right: 4.5rem
+    left: auto
+
 +comment("section platform style")
 .platform
   &__heading
