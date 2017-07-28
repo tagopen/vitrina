@@ -1158,7 +1158,7 @@
 }
 
 .deal__link:hover, .deal__link:focus {
-  color: #0873e0;
+  color: #0762c0;
   text-decoration: underline;
 }
 
@@ -1533,7 +1533,7 @@
 }
 
 .footer-list__link:hover, .footer-list__link:focus {
-  color: #0873e0;
+  color: #0762c0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2254,6 +2254,7 @@
 .intro {
   padding: 1.25rem 0 1rem;
   background: #dee5ef url(../img/header-inside-bg-xs.jpg) no-repeat scroll 50% 50%;
+  background-size: cover;
 }
 
 .intro__heading {
@@ -3244,6 +3245,79 @@
 /* ---------------------------------------- */
 /* P R O D U C T    P A G E    S T Y L E    */
 /* ---------------------------------------- */
+/* ---------------------------------------- */
+/* S E C T I O N    I N T R O    S T Y L E  */
+/* ---------------------------------------- */
+.intro__street {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.street {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font: 500 0.688rem/0.75rem "Muller", sans-serif;
+  color: rgba(0, 0, 0, 0.66);
+}
+
+.street__icon {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.44);
+}
+
+.choice__btn {
+  max-width: 18.563rem;
+}
+
+.btn--green {
+  background-color: #a4df4f;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  width: 100%;
+  font: 700 0.625rem/0.875rem "Muller", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: normal;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.btn--green:hover, .btn--green:focus {
+  opacity: .7;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn--green {
+    padding: 1rem 1.25rem;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .street {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+  .btn--green {
+    padding: 1.25rem 1.875rem;
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
 /* ---------------------------------------------- */
 /* S E C T I O N    C A T E G O R Y    S T Y L E  */
 /* ---------------------------------------------- */

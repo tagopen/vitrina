@@ -1,5 +1,52 @@
 +comment("product page style")
 
++comment("section intro style")
+.intro
+  &__street
+    margin: 0
+    padding: 1rem 0
+.street
+  display: flex
+  align-items: flex-end
+  font: 500 0.688rem/0.75rem $main-font
+  color: $street-color
+  &__icon
+    display: inline-flex
+    margin-right: 0.5rem
+    font-size: 1.5rem
+    color: $street-icon-color
+.choice
+  &__btn
+    max-width: 18.563rem
+.btn
+  &--green
+    background-color: $btn-green-bg
+    border-radius: 0
+    width: 100%
+    font: 700 0.625rem/0.875rem $main-font
+    color: $btn-green-color
+    text-transform: uppercase
+    white-space: normal
+    cursor: pointer
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      opacity: .7
++r(768)
+  .btn
+   &--green
+     padding: 1rem 1.25rem
+     font-size: 0.75rem
+     line-height: 0.875rem
++r(992)
+  .street
+    font-size: 0.75rem
+    line-height: 0.875rem
+  .btn
+   &--green
+     padding: 1.25rem 1.875rem
+     font-size: 0.875rem
+     line-height: 1rem
 +comment("section category style")
 .slider
   &__img
