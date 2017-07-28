@@ -4,8 +4,6 @@
 +cm('bootstrap why you don\'t use bem?')
 .navbar
   padding: 0.75rem 0
-  &__row
-    width: 100% 
 .navbar-light
   .navbar-toggler
     border-color: transparent
@@ -23,11 +21,12 @@
     outline: none
 .navbar-collapse
   width: 100%
-.nav-item
+.nav-item 
+  width: 100%
   text-align: center
 .dropdown
   &--navbar
-    padding: 0
+    padding: 0.5em 1em
     width: 100%
   &__toggle
     &--navbar
@@ -107,6 +106,9 @@
     &__container
       width: 100%
 +r(768)
+  .navbar
+    &__row 
+      width: 100%
   .logo
     &--inside
       width: auto
@@ -476,20 +478,15 @@
   list-style: none
   &__item
     position: relative
-    display: inline
-    padding-right: 1rem
+    display: inline-block
     font: 400 0.75rem/0.875rem $main-font
     color: $breadcrumbs-color
     line-height: 0.125rem
-    &:before
+    &:after
       content: '\003e'
-      position: absolute
-      display: block
-      left: -0.5rem
-      top: 50%
-      transform: translate(-50%, -50%)
-    &:first-of-type
-      &:before
+      margin: 0 0.125rem
+    &:last-of-type
+      &:after
         content: none
   &__link
     color: inherit

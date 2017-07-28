@@ -31,7 +31,9 @@
     transition: all .3s ease-out
     &:hover,
     &:focus
-      opacity: .7
+      background-color: $btn-green-bg-hover
+      color: $btn-green-color-hover
+      box-shadow: $btn-green-box-shadow-hover
 +r(768)
   .btn
    &--green
@@ -47,6 +49,70 @@
      padding: 1.25rem 1.875rem
      font-size: 0.875rem
      line-height: 1rem
++comment("section nav content style")
+.navbar
+  &--content
+    background-color: $navbar-content-bg
+    box-shadow: $navbar-content-box-shadow
+.navbar-light 
+  .navbar-toggler
+    &--content 
+      margin-bottom: 1rem
+      padding: 0.5rem 2rem
+      width: 100%
+      background: $navbar-toggler-content-bgi
+      border: 0.063rem solid $navbar-toggler-content-border
+      border-radius: 0
+      box-shadow: $navbar-toggler-content-shadow
+      font: 700 0.625rem/0.75rem $main-font
+      color: $navbar-toggler-content-color
+      text-transform: uppercase
+      &:hover,
+      &:focus
+        color: $navbar-toggler-content-color
+  .navbar-nav
+    .nav-link
+      &--content
+        padding: 0.5rem 1rem
+        font: 400 0.75rem/0.875rem $main-font
+        transition: all .3s ease-out
+        &:hover,
+        &:focus
+          color: $nav-content-link-color-hover
+          background: $nav-content-link-bg-hover
+.navbar-toggler-icon
+  &--content
+    margin-top: -0.1875rem
+    margin-left: 0.5rem
+.nav-fill
+  align-content: stretch
+  align-items: center
+  justify-content: center
+  .nav-item
+    width: auto
++r(768)
+  .navbar-light 
+    .navbar-nav
+      .nav-link
+        &--content
+          font-size: 0.5rem
+          line-height: 0.75rem
+          color: $nav-content-link-color
++r(992)
+  
+  .navbar-light 
+    .navbar-nav
+      .nav-link
+        &--content
+          font-size: 0.75rem
+          line-height: 0.875rem
++r(1344)
+  .navbar-light 
+    .navbar-nav
+      .nav-link
+        &--content
+          font-size: 0.938rem
+          line-height: 1.063rem
 +comment("section category style")
 .slider
   &__img

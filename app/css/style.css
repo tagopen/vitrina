@@ -1639,10 +1639,6 @@
   padding: 0.75rem 0;
 }
 
-.navbar__row {
-  width: 100%;
-}
-
 .navbar-light .navbar-toggler {
   border-color: transparent;
 }
@@ -1667,11 +1663,12 @@
 }
 
 .nav-item {
+  width: 100%;
   text-align: center;
 }
 
 .dropdown--navbar {
-  padding: 0;
+  padding: 0.5em 1em;
   width: 100%;
 }
 
@@ -1802,6 +1799,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .navbar__row {
+    width: 100%;
+  }
   .logo--inside {
     width: auto;
   }
@@ -2341,25 +2341,18 @@
 
 .breadcrumbs__item {
   position: relative;
-  display: inline;
-  padding-right: 1rem;
+  display: inline-block;
   font: 400 0.75rem/0.875rem "Muller", sans-serif;
   color: #424242;
   line-height: 0.125rem;
 }
 
-.breadcrumbs__item:before {
+.breadcrumbs__item:after {
   content: '\003e';
-  position: absolute;
-  display: block;
-  left: -0.5rem;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  margin: 0 0.125rem;
 }
 
-.breadcrumbs__item:first-of-type:before {
+.breadcrumbs__item:last-of-type:after {
   content: none;
 }
 
@@ -3295,7 +3288,10 @@
 }
 
 .btn--green:hover, .btn--green:focus {
-  opacity: .7;
+  background-color: #fff;
+  color: #a4df4f;
+  -webkit-box-shadow: 0 0 0 0.25rem #a4df4f;
+          box-shadow: 0 0 0 0.25rem #a4df4f;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3315,6 +3311,93 @@
     padding: 1.25rem 1.875rem;
     font-size: 0.875rem;
     line-height: 1rem;
+  }
+}
+
+/* ----------------------------------------------------- */
+/* S E C T I O N    N A V    C O N T E N T    S T Y L E  */
+/* ----------------------------------------------------- */
+.navbar--content {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.05);
+}
+
+.navbar-light .navbar-toggler--content {
+  margin-bottom: 1rem;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ededed), to(white));
+  background: -webkit-linear-gradient(bottom, #ededed 0%, white 100%);
+  background: linear-gradient(to top, #ededed 0%, white 100%);
+  border: 0.063rem solid #b8bdc4;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-shadow: 0.031rem 0.056rem 0.063rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0.031rem 0.056rem 0.063rem rgba(0, 0, 0, 0.05);
+  font: 700 0.625rem/0.75rem "Muller", sans-serif;
+  color: #9aa1a4;
+  text-transform: uppercase;
+}
+
+.navbar-light .navbar-toggler--content:hover, .navbar-light .navbar-toggler--content:focus {
+  color: #9aa1a4;
+}
+
+.navbar-light .navbar-nav .nav-link--content {
+  padding: 0.5rem 1rem;
+  font: 400 0.75rem/0.875rem "Muller", sans-serif;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.navbar-light .navbar-nav .nav-link--content:hover, .navbar-light .navbar-nav .nav-link--content:focus {
+  color: white;
+  background: #b9b9b9;
+}
+
+.navbar-toggler-icon--content {
+  margin-top: -0.1875rem;
+  margin-left: 0.5rem;
+}
+
+.nav-fill {
+  -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-fill .nav-item {
+  width: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-light .navbar-nav .nav-link--content {
+    font-size: 0.5rem;
+    line-height: 0.75rem;
+    color: #b9b9b9;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-light .navbar-nav .nav-link--content {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .navbar-light .navbar-nav .nav-link--content {
+    font-size: 0.938rem;
+    line-height: 1.063rem;
   }
 }
 
