@@ -301,16 +301,86 @@
     left: auto
 +comment("section platform style")
 .platform
+  padding: 1.25rem 
   &__heading
+  &__link
+    font: 500 0.625rem/0.75rem $main-font
+    color: $platform-link-color
+    text-decoration: underline
+    text-align: right
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $platform-link-color-hover
   &__table
     th,
     td
+      vertical-align: middle
       text-align: center
+.table
+  &__icon
+    color: $table-icon-color
+  &__heading
+    font: 500 0.688rem/0.8125rem $main-font
+    color: $table-heading-color
+  &__cell
+    font: 400 0.688rem/0.8125rem $main-font
+    color: $table-cell-color
+  &__value
+    color: $table-value-color
+  &__link
+    color: $table-link-color
+    text-decoration: underline
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      color: $table-link-color-hover
+      text-decoration: underline
+      outline: none
+.status
+  display: inline-block
+  padding: 0.625rem
+  border-radius: 0.25rem
+  font: 400 0.563rem/0.6875rem $main-font
+  color: $status-color
+  white-space: nowrap
+  &--green
+    background: $status-bg-green
+  &--red
+    background: $status-bg-red
+  &--gray
+    background: $status-bg-gray
+    color: $status-color-gray
++r(768)
+  .platform
+    &__link
+      font-size: 0.75rem
+      line-height: 0.875rem
++r(992)
+  .platform
+    padding: 2.5rem 1.75rem
+  .status
+    padding: 0.75rem 0.9375rem
+    font-size: 0.688rem
+    line-height: 0.75rem
++r(1344)
+  .platform
+    &__table
+      margin-top: 2.5rem
+  .table
+    &__cell
+      font-size: 0.813rem
+      line-height: 0.9375rem
+
+
 +comment("section plan style")
 .plan
   padding: 1.25rem
   &__heading
     padding-bottom: 1.25rem
+  &__link  
+    text-decoration: underline
+    text-align: right
   &__img
     margin: 0 auto
   &__item

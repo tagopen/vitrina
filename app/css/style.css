@@ -3710,9 +3710,111 @@
 /* ---------------------------------------------- */
 /* S E C T I O N    P L A T F O R M    S T Y L E  */
 /* ---------------------------------------------- */
+.platform {
+  padding: 1.25rem;
+}
+
+.platform__link {
+  font: 500 0.625rem/0.75rem "Muller", sans-serif;
+  color: #2e79b1;
+  text-decoration: underline;
+  text-align: right;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.platform__link:hover, .platform__link:focus {
+  color: #40a9f8;
+}
+
 .platform__table th,
 .platform__table td {
+  vertical-align: middle;
   text-align: center;
+}
+
+.table__icon {
+  color: #a3a0a3;
+}
+
+.table__heading {
+  font: 500 0.688rem/0.8125rem "Muller", sans-serif;
+  color: #282828;
+}
+
+.table__cell {
+  font: 400 0.688rem/0.8125rem "Muller", sans-serif;
+  color: #282828;
+}
+
+.table__value {
+  color: #5c5c5c;
+}
+
+.table__link {
+  color: #003ead;
+  text-decoration: underline;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.table__link:hover, .table__link:focus {
+  color: #0057f2;
+  text-decoration: underline;
+  outline: none;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.625rem;
+  -webkit-border-radius: 0.25rem;
+          border-radius: 0.25rem;
+  font: 400 0.563rem/0.6875rem "Muller", sans-serif;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.status--green {
+  background: #acd373;
+}
+
+.status--red {
+  background: -webkit-gradient(linear, left top, right top, from(#e2564b), to(#e2804b));
+  background: -webkit-linear-gradient(left, #e2564b 0%, #e2804b 100%);
+  background: linear-gradient(to right, #e2564b 0%, #e2804b 100%);
+}
+
+.status--gray {
+  background: #ebebeb;
+  color: #b3b3b3;
+}
+
+@media only screen and (min-width: 768px) {
+  .platform__link {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .platform {
+    padding: 2.5rem 1.75rem;
+  }
+  .status {
+    padding: 0.75rem 0.9375rem;
+    font-size: 0.688rem;
+    line-height: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .platform__table {
+    margin-top: 2.5rem;
+  }
+  .table__cell {
+    font-size: 0.813rem;
+    line-height: 0.9375rem;
+  }
 }
 
 /* ---------------------------------------- */
@@ -3724,6 +3826,11 @@
 
 .plan__heading {
   padding-bottom: 1.25rem;
+}
+
+.plan__link {
+  text-decoration: underline;
+  text-align: right;
 }
 
 .plan__img {

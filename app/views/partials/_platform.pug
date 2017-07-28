@@ -1,8 +1,6 @@
 .platform
-  .justify-content-between
-    .d-inline-flex.pl-2.pr-2
-      h3.h3-heading!= content.product.platform.heading
-    .d-inline-flex.pl-2.pr-2
+  .d-flex.justify-content-between.align-items-center
+      h3.h3-heading.platform__heading!= content.product.platform.heading
       a.platform__link(href=content.product.platform.shawAll.href)!= content.product.platform.shawAll.text
   .table-responsive
     table.table.platform__table.table--borderless
@@ -20,11 +18,11 @@
             each item, key in items
               td.table__cell
                 if (key == 'img')
-                  img.img-fluid(src=item.src, alt=item.alt)
+                  img(src=item.src, alt=item.alt)
                 else if (key == 'name')
                   a.table__link(href=item.href)!= item.name
                 else if (key == 'status')
                   each value, key in item
-                    span.table__status(class='table__status--' + key)!= value
+                    span.table__status.status(class='status--' + key)!= value
                 else
                   span.table__text!= item
