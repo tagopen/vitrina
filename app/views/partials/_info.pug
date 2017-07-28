@@ -11,7 +11,7 @@ if (page.info)
     .option.info__option
       each option in page.info.options
         .option__item
-          .row
+          .row.align-items-center
             .col
               .option__name.option__name--dark.option__value--info!= option.name
             .col
@@ -28,6 +28,9 @@ if (page.info)
                   else
                     span.railway__icon(class='railway__icon--' + option.value.railway.icon.color)!= option.value.railway.icon.name
                     != option.value.railway.name
+              else if (option.value.status)
+                each value, key in option.value.status
+                  span.status(class='status--' + key)!= value
               else
                 .option__value.option__value--info
                   span.option__number!= option.value.number
