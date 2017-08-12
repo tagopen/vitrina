@@ -10,9 +10,9 @@ mixin cols(i)
 section.category
   .container
     .row.flex-row-reverse
-      if (page.map)
-        .hidden-xs-up.col.col-24.col-md-14.col-lg-13.col-xl-16.map(class=page.map.class)
-          img.img-fluid(src=page.map.img.src, alt=page.map.img.alt)
+      if (page.category.map)
+        .hidden-xs-up.col.col-24.col-md-14.col-lg-13.col-xl-16.map(class=page.category.map.class)
+          img.img-fluid(src=page.category.map.img.src, alt=page.category.map.img.alt)
       .d-inline-flex.category__col
         .row.justify-content-center.align-items-md-stretch
           each item, i in content.catalog.category.items

@@ -449,25 +449,28 @@
   }
 
   // DatePicker
-  $(function () {
+  if ($('#datetimepicker1').length) {
     $('#datetimepicker1').datepicker({
       format: 'dd / yyyy',
       autoclose: true,
       language: 'ru'
     });
-  });
+  }
 
-  $(".letter__select-multiple").tagsInput({
-     'width':'auto',
-     'height':'auto',
-     'interactive':true,
-     'defaultText':'+ добавить еще',
-     'delimiter': [','],   // Or a string with a single delimiter. Ex: ';'
-     'removeWithBackspace' : true,
-     'minChars' : 0,
-     'maxChars' : 0, // if not provided there is no limit
-     'placeholderColor' : '#bec5c9'
-  });
+  // Tags input
 
+  if ($('.letter__select-multiple').length) {
+    $('.letter__select-multiple').tagsInput({
+       'width':'auto',
+       'height':'auto',
+       'interactive':true,
+       'defaultText':'+ добавить еще',
+       'delimiter': [','],   // Or a string with a single delimiter. Ex: ';'
+       'removeWithBackspace' : true,
+       'minChars' : 0,
+       'maxChars' : 0, // if not provided there is no limit
+       'placeholderColor' : '#bec5c9'
+    });
+  }
 
 })(jQuery); // End of use strict
