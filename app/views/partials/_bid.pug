@@ -1,0 +1,80 @@
+section.letter
+  .container
+    .row.justify-content-between.align-items-center
+      .col-24
+        .letter__warning!= content.bid.form.warning
+    .recipient
+      .row.justify-content-between.align-items-center
+        each item in content.bid.form.recipients
+          .col-24.col-md-10.col-lg-8
+            .recipient__heading
+              img.img-fluid.recipient__img(src=item.img.src, alt=item.img.alt)
+              button.btn.btn--close-gray(type='button')
+      .row.justify-content-between.align-items-center
+        each item in content.bid.form.recipients
+          .col-24.col-md-10.col-lg-8
+            .recipient__content
+              .recipient__info
+                each info in item.info
+                  p.recipient__text!= info.text
+                    if (info.date)
+                      span.recipient__date
+                        != info.date.text 
+                        span.recipient__time!= info.date.time
+    form.letter(action='mail/mail.php', method='post')
+      h2.letter__heading!= content.bid.form.letter.heading
+      p.letter__descr!= content.bid.form.letter.descr
+      ol.letter__list
+        each items, i in content.bid.form.letter.list
+          li.form-group.letter__group
+            each value, item in items
+              if (item === 'input' || item === 'input2')
+                input.form-control.letter__input(class=value.modifier, name=value.name, type='text')
+              else if (item === 'selectSingle' || item === 'selectSingle2')
+                select.form-control.letter__select-single(name=item.name)
+                  each option in value.items
+                    option(value=option)!= option
+              else if (item === 'selectMultiple')
+                input.form-control.letter__select-multiple(name=value.name, value=value.items)
+              else if (item === 'system')
+                .letter-system
+                  .letter-system__heading!= value.heading
+                  .letter-system__group
+                    each tag, j in value.items
+                      label.letter-system__label
+                        input.letter-system__input(name=tag.name, type='radio', checked={'checked' : j === 0})
+                        != tag.text
+              else if (item === 'addons')
+                span.input-group.letter__addons
+                  input.form-control.letter__input.letter__input--addon(class=value.input.modifier,name=value.input.name, type='text')
+                  span.input-group-btn
+                    select.form-control.letter__select-single(class=value.selectSingle.modifier,name=value.selectSingle.name)
+                      each option in value.selectSingle.items
+                        option(value=option)!= option
+              else if (item === 'date')
+                #datetimepicker1.input-group.date
+                  input.form-control.letter__input.letter__input--date(type='text', name=value.name, tabindex='-1', placeholder=value.placeholder)
+                  span.input-group-addon.input-group-addon--date
+                    span(class=value.icon)
+              else
+                span.letter__label!= value
+      .row.justify-content-end
+        .col.col-md-10.col-lg-9
+          address.person
+            each item, key in content.bid.form.letter.person.items
+              .person__item(class=item.modifier)
+                .row
+                  if (item.name)
+                    .col-4
+                      .person__name!= item.name
+                  if (item.value)
+                    .col
+                      .person__value!= item.value
+      .row.justify-content-around.align-items-center
+        .col-24.col-sm-auto
+          .letter__btn-group
+            a.letter__validate(href=content.bid.form.letter.btnGroup.validate.href)!= content.bid.form.letter.btnGroup.validate.text
+        .col-24.col-sm-auto
+          .letter__btn-group
+            button.btn.btn--default.letter__submit(type='submit')!= content.bid.form.letter.btnGroup.submit.text
+

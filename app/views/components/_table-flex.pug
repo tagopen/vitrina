@@ -1,0 +1,199 @@
+.table-responsive
+  table.table.table--compare
+    thead
+      tr
+        th.table__heading.choice.choice--compare
+          .choice__heading.choice__heading--compare Вы выбрали
+          button.btn.choice__btn.btn--square 3
+          span.choice__text.choice__text--compare торговых центра
+        th.table__heading.table__heading--photo
+          .product
+            a.product__photo.product__photo(href="#")
+              img.product__img.product__img--compare(src="img/category-1.jpg", alt="ТЦ Европейский")
+          button.btn.btn--close.comparison__close(type='button')
+            i.ic.ic--delete
+        th.table__heading.table__heading--photo
+          .product
+            a.product__photo.product__photo(href="#")
+              img.product__img.product__img--compare(src="img/category-2.jpg", alt="ТЦ Ереван Плаза")
+          button.btn.btn--close.comparison__close(type='button')
+            i.ic.ic--delete
+        th.table__heading.table__heading--photo  
+          .product
+            a.product__photo.product__photo(href="#")
+              img.product__img.product__img--compare(src="img/category-3.jpg", alt="ТЦ Метрополис")
+          button.btn.btn--close.comparison__close(type='button')
+            i.ic.ic--delete
+    tbody
+      tr
+        td
+        td    
+          .product.product--compare
+            a.product__name(href="#") ТЦ Европейский
+        td    
+          .product.product--compare
+            a.product__name(href="#") ТЦ Ереван Плаза
+        td    
+          .product.product--compare
+            a.product__name(href="#") ТЦ Метрополис
+      tr.option.option--compare      
+        td(scope="row")
+          .option__item.option__item--compare
+            .option__name.option__name--compare город
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compar Москва
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare Москва
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare Москва
+      tr.option.option--compare      
+        td(scope="row")
+          .option__item.option__item--compare
+            .option__name.option__name--compare наличие метро/отдаленность
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare
+              .railway
+                span.railway__icon(class='railway__icon--blue') м
+                | Киевская
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare
+              .railway
+                span.railway__icon(class='railway__icon--gray') м
+                | Тульская
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare
+              .railway
+                span.railway__icon(class='railway__icon--green') м
+                | Войковская
+      tr.option.option--compare      
+        td(scope="row")
+          .option__item.option__item--compare
+            .option__name.option__name--compare посещаемость
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare 1200 \ 302000 \ 4000000
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare 1200 \ 302000 \ 4000000
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare 1200 \ 302000 \ 4000000
+      tr.option.option--compare      
+        td(scope="row")
+          .option__item.option__item--compare
+            .option__name.option__name--compare площадь общая
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare 1000 м2
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare 700 м2
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare 890 м2
+      tr.option.option--compare      
+        td(scope="row")
+          .option__name.option__name--compare площадь торговая
+        td
+          .option__value.option__value--compare 250 м2
+        td
+          .option__value.option__value--compare 150 м2
+        td
+          .option__value.option__value--compare 175 м2
+      tr.option.option--compare      
+        td(scope="row")
+          .option__item.option__item--compare
+            .option__name.option__name--compare Якорные арендаторы
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare.tags
+              a.tags__link(href="#") Ашан
+              | , 
+              a.tags__link(href="#") McDonalds
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare.tags
+              a.tags__link(href="#") Ашан
+              | , 
+              a.tags__link(href="#") McDonalds
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare.tags
+              a.tags__link(href="#") Ашан
+              | , 
+              a.tags__link(href="#") McDonalds
+      tr.option.option--compare
+        td(scope="row")
+          .option__item.option__item--compare
+            .option__name.option__name--compare наличие кинотеатра
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare Формула Кино Европа
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare Синема Стар Ереван-плаза
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--empty нет
+      tr.option.option--compare     
+        td(scope="row")
+          .option__item.option__item--compare
+            .option__name.option__name--compare кол-во свободных площадей
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare.tags
+              a.tags__link(href="#") 8 свободных
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--empty.tags нет свободных
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare.tags
+              a.tags__link(href="#") 2 свободных
+      tr.option.option--compare  
+        td(scope="row")
+          .option__item.option__item--compare
+            .option__name.option__name--compare кол-во паркомест
+        td
+          .option__item.option__item--compare
+          .option__value.option__value--compare 1200 мест
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare 250 мест + 350 наземных
+        td
+          .option__item.option__item--compare
+            .option__value.option__value--compare 2820 мест
+    tfoot
+      tr
+        td
+        td
+          .comparison__group
+            button.comparison__btn.btn.btn--green-round(type=button) отправить заявку 
+          .comparison__group
+            a.comparison__btn.btn.btn--orange.compare(href="#") 
+              i.fa.fa-star.compare__icon
+              | добавить в избранное
+
+        td
+          .comparison__group
+            button.comparison__btn.btn.btn--green-round(type=button) отправить заявку 
+          .comparison__group
+            a.comparison__btn.btn.btn--orange.compare(href="#") 
+              i.fa.fa-star.compare__icon
+              | добавить в избранное
+
+        td
+          .comparison__group
+            button.comparison__btn.btn.btn--green-round(type=button) отправить заявку 
+          .comparison__group
+            a.comparison__btn.btn.btn--orange.compare(href="#") 
+              i.fa.fa-star.compare__icon
+              | добавить в избранное
+
+

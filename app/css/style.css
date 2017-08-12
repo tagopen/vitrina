@@ -379,6 +379,136 @@
   opacity: 1;
 }
 
+.tagsinput {
+  display: inline;
+  background: #FFF;
+  padding: 5px;
+}
+
+.tagsinput .tag {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 0.4375rem 1rem;
+  margin: 0.25rem;
+  text-decoration: none;
+  background: #e5ecf0;
+  font: 700 0.938rem/1.0625rem "Muller", sans-serif;
+  color: #282828;
+  border: 0.063rem solid #d9e1e5;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  word-break: break-word;
+  text-align: center;
+}
+
+.tagsinput .tag a {
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
+  width: 0.725rem;
+  height: 0.725rem;
+  cursor: pointer;
+  text-indent: -99999px;
+  text-decoration: none;
+}
+
+.tagsinput .tag a:before, .tagsinput .tag a:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 0.0625rem;
+  width: 80%;
+  background-color: #ccd3d7;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.tagsinput .tag a:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.tagsinput .tag a:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.tagsinput input {
+  width: auto !important;
+  margin: 0px;
+  font-family: helvetica;
+  font-size: 13px;
+  border: 1px solid transparent;
+  padding: 5px;
+  background: transparent;
+  color: #000;
+  outline: 0px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.tagsinput input:focus {
+  border-bottom: 0.0625rem solid #bec5c9;
+}
+
+.tagsinput div {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.tags_clear {
+  clear: both;
+  width: 100%;
+  height: 0px;
+}
+
+.not_valid {
+  background: #FBD8DB !important;
+  color: #90111A !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .tagsinput .tag {
+    width: auto;
+  }
+  .tagsinput .tag a {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
 /* ---------------------------------------- */
 /* G E N E R A L    S T Y L E               */
 /* ---------------------------------------- */
@@ -470,6 +600,12 @@
   background: url(../img/sprite.png) -416px -196px no-repeat;
 }
 
+.ic--delete:before {
+  width: 22px;
+  height: 22px;
+  background: url(../img/sprite.png) -663px -512px no-repeat;
+}
+
 .ic--location:before {
   width: 66px;
   height: 87px;
@@ -485,7 +621,7 @@
 .ic--pdf:before {
   width: 19px;
   height: 21px;
-  background: url(../img/sprite.png) -696px -512px no-repeat;
+  background: url(../img/sprite.png) -695px -512px no-repeat;
 }
 
 .ic--plaza:before {
@@ -503,7 +639,7 @@
 .ic--print:before {
   width: 23px;
   height: 21px;
-  background: url(../img/sprite.png) -663px -512px no-repeat;
+  background: url(../img/sprite.png) -630px -555px no-repeat;
 }
 
 .ic--rgb:before {
@@ -1683,9 +1819,15 @@
 .nav-item {
   width: 100%;
   text-align: center;
+  border-left: 0.0625rem dashed rgba(0, 0, 0, 0.1);
+}
+
+.nav-item:first-of-type {
+  border-left: 0 none;
 }
 
 .dropdown--navbar {
+  display: block;
   padding: 0.5em 1em;
   width: 100%;
 }
@@ -1824,8 +1966,7 @@
     width: auto;
   }
   .nav-link {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0.5rem 2rem !important;
   }
   .dropdown__toggle--navbar {
     color: rgba(40, 40, 40, 0.29);
@@ -1841,7 +1982,7 @@
 
 @media only screen and (min-width: 992px) {
   .user-btn__item {
-    padding: 0 2.5rem;
+    padding: 0.5rem 2.5rem;
   }
   .user-btn__icon {
     position: absolute;
@@ -2359,7 +2500,7 @@
 
 .breadcrumbs__item {
   position: relative;
-  display: inline-block;
+  display: inline;
   font: 400 0.75rem/0.875rem "Muller", sans-serif;
   color: #424242;
   line-height: 0.125rem;
@@ -2648,6 +2789,10 @@
 .option__value {
   font: 700 0.563rem/0.6875rem "Muller", sans-serif;
   color: #4d4d4d;
+}
+
+.option__value--empty {
+  color: #b6b6b6;
 }
 
 .option__descr {
@@ -3960,4 +4105,684 @@
 .featured__heading {
   text-transform: none;
   text-align: left;
+}
+
+/* ---------------------------------------- */
+/* C O M P A R E    P A G E    S T Y L E    */
+/* ---------------------------------------- */
+.intro--bgn {
+  background: #f9f9f9;
+}
+
+.intro__link--compare {
+  font: 500 1rem/1.125rem "Muller", sans-serif;
+  color: #c7c7c7;
+  text-decoration: underline;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.intro__link--compare:hover, .intro__link--compare:focus {
+  color: #0652a0;
+}
+
+.dropdown__toggle--localization {
+  padding: 0.625rem 2rem;
+  border: 0.125rem dotted #dcd9d9;
+  -webkit-border-radius: 1.125rem;
+          border-radius: 1.125rem;
+  font: 400 0.875rem/1rem "Muller", sans-serif;
+  color: #dcd9d9;
+}
+
+.dropdown__toggle--localization:hover, .dropdown__toggle--localization:focus {
+  background-color: #f3f1f1;
+  color: #fff;
+  border: 0.125rem dotted #fff;
+}
+
+/* ---------------------------------------- */
+/* S E C T I O N    I N T R O    S T Y L E  */
+/* ---------------------------------------- */
+/* -------------------------------------------- */
+/* S E C T I O N    C O M P A R E    S T Y L E  */
+/* -------------------------------------------- */
+.comparison {
+  background-color: #f9f9f9;
+}
+
+.comparison__group {
+  text-align: center;
+}
+
+.comparison__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.comparison__btn {
+  margin-top: 0.5rem;
+}
+
+.choice--compare {
+  text-align: left;
+}
+
+.choice__heading--compare {
+  margin-bottom: 0.75rem;
+  font: 500 0.75rem/0.875rem "Muller", sans-serif;
+}
+
+.choice__text--compare {
+  font: 500 0.875rem/1rem "Muller", sans-serif;
+}
+
+.btn--square {
+  margin-bottom: 0.75rem;
+  background-color: #55a6db;
+  -webkit-border-radius: 0.25rem;
+          border-radius: 0.25rem;
+  color: #fff;
+}
+
+.btn--square:hover, .btn--square:focus {
+  background-color: #66c7ff;
+}
+
+.btn--green-round {
+  background-color: #a4df4f;
+  -webkit-border-radius: 1.25rem;
+          border-radius: 1.25rem;
+  font: 500 0.875rem/1rem "Muller", sans-serif;
+  color: #fff;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.btn--green-round:hover, .btn--green-round:focus {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 0 0.125rem #a4df4f;
+          box-shadow: 0 0 0 0.125rem #a4df4f;
+  color: #a4df4f;
+}
+
+.btn--orange {
+  border: 0.125rem solid #ed8a19;
+  -webkit-border-radius: 1.25rem;
+          border-radius: 1.25rem;
+  font: 500 0.563rem/0.625rem "Muller", sans-serif;
+  color: #414141;
+}
+
+.btn--orange .compare__icon {
+  margin-right: 0.5rem;
+  color: #ed8a19;
+}
+
+.btn--orange:hover, .btn--orange:focus {
+  background-color: #ed8a19;
+  color: #fff;
+}
+
+.btn--orange:hover .compare__icon, .btn--orange:focus .compare__icon {
+  color: #fff;
+}
+
+.btn--close {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: transparent;
+}
+
+.product--compare {
+  background: transparent;
+}
+
+.product--compare:hover, .product--compare:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.product__img--compare {
+  max-width: 16rem;
+}
+
+.option__item--compare {
+  padding: 0;
+}
+
+.option__name--compare {
+  font: 500 0.625rem/0.75rem "Muller", sans-serif;
+  color: #282828;
+}
+
+.option__value--compare {
+  font: 500 0.625rem/0.75rem "Muller", sans-serif;
+}
+
+.table__heading {
+  position: relative;
+}
+
+.table--compare thead th,
+.table--compare thead td,
+.table--compare tbody th,
+.table--compare tbody td,
+.table--compare tfoot th,
+.table--compare tfoot td {
+  padding: 0.5rem 1.5rem;
+  border: 0 none;
+  vertical-align: middle;
+  border-left: 0.0625rem dotted #e6e6e6;
+}
+
+.table--compare thead th:first-of-type,
+.table--compare thead td:first-of-type,
+.table--compare tbody th:first-of-type,
+.table--compare tbody td:first-of-type,
+.table--compare tfoot th:first-of-type,
+.table--compare tfoot td:first-of-type {
+  border-left: 0 none;
+}
+
+.table--compare thead .table__heading--photo,
+.table--compare tbody .table__heading--photo,
+.table--compare tfoot .table__heading--photo {
+  padding: 0;
+}
+
+.table--compare thead {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.625rem 5rem rgba(0, 0, 0, 0.07);
+          box-shadow: 0 0.625rem 5rem rgba(0, 0, 0, 0.07);
+}
+
+.table--compare tbody {
+  background-color: #fff;
+}
+
+.table--compare tbody td:first-of-type {
+  background-color: #f9f9f9;
+}
+
+.table--compare tfoot td {
+  border-top: 0.0625rem dotted #e6e6e6;
+  background-color: #fff;
+}
+
+.table--compare tfoot td:first-of-type {
+  background-color: #fcfcfc;
+}
+
+@media only screen and (min-width: 768px) {
+  .choice--compare {
+    white-space: nowrap;
+  }
+  .choice__heading--compare {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+  .choice__text--conmpare {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+  .btn--square {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .product__img--compare {
+    max-width: 20.375rem;
+  }
+  .btn--green-round {
+    font-size: 0.813rem;
+    line-height: 1.25rem;
+  }
+  .btn--orange {
+    font-size: 0.688rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .choice__heading--compare {
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+  .choice__text--compare {
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+  .btn--square {
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+  .option__name--compare {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+  .option__value--compare {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+/* ---------------------------------------- */
+/* B I D    P A G E    S T Y L E            */
+/* ---------------------------------------- */
+.letter {
+  padding: 1.625rem 0;
+}
+
+.recipient__heading {
+  position: relative;
+  margin: 0.3125rem 0;
+  padding: 1.625rem;
+  border: 0.125rem dashed #e1e1e1;
+  -webkit-border-radius: 0.3125rem;
+          border-radius: 0.3125rem;
+  text-align: center;
+}
+
+.recipient__text {
+  margin: 0;
+  padding: 0.625rem 0;
+  font: 400 0.75rem/0.875rem "Muller", sans-serif;
+  color: #232323;
+  text-align: center;
+}
+
+.recipient__date {
+  display: block;
+  font: 400 0.625rem/0.75rem "Muller", sans-serif;
+  color: #8f8f8f;
+}
+
+.btn--close-gray {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  padding: 0;
+  background-color: #e1e1e1;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.btn--close-gray:before, .btn--close-gray:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  height: 0.0625rem;
+  background-color: #fff;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.btn--close-gray:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.btn--close-gray:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.btn--close-gray:hover, .btn--close-gray:focus {
+  background: #f22e3a;
+}
+
+.letter__warning {
+  padding: 0.25rem 0 0.75rem;
+  font: 400 0.688rem/0.8125rem "Muller", sans-serif;
+  opacity: 0.52;
+  filter: alpha(opactiy=52);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=52)";
+  color: #232323;
+  text-align: center;
+}
+
+.letter__heading {
+  margin: 0;
+  padding: 2.875rem 0 0.6875rem;
+  font: 500 1.063rem/1.188rem "Muller", sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.letter__descr {
+  font: 400 0.75rem/0.875rem "Muller", sans-serif;
+  color: #282828;
+  text-align: center;
+}
+
+.letter__list {
+  padding: 1.25rem 0 4.375rem;
+}
+
+.letter__group {
+  text-align: center;
+}
+
+.letter__label {
+  font: 400 0.875rem/1rem "Muller", sans-serif;
+  color: #282828;
+}
+
+.letter__input {
+  display: inline-block;
+  width: 100%;
+  margin: 0.125rem 0;
+  background-color: #f5f8f9;
+  border: 0.063rem solid #d7d7d7;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  font: 700 0.938rem/1.0625rem "Muller", sans-serif;
+  color: #282828;
+}
+
+.letter__input:focus {
+  background-color: white;
+}
+
+.letter__input--date {
+  margin: 0;
+  background-color: #fcfde8;
+  border: 0.063rem solid #f1f7af;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  -webkit-box-shadow: 0.031rem 0.056rem 0.063rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0.031rem 0.056rem 0.063rem rgba(0, 0, 0, 0.05);
+}
+
+.letter__select-single {
+  position: relative;
+  display: inline-block;
+  min-width: 6.938rem;
+  width: auto;
+  margin: 0.25rem;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ededed), to(white));
+  background-image: -webkit-linear-gradient(bottom, #ededed 0%, white 100%);
+  background-image: linear-gradient(to top, #ededed 0%, white 100%);
+  border: 0.063rem solid #b8bdc4;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  -webkit-box-shadow: 0.031rem 0.056rem 0.063rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0.031rem 0.056rem 0.063rem rgba(0, 0, 0, 0.05);
+  color: #5c6167;
+  text-align: center;
+}
+
+.letter__navigate {
+  min-width: 7.375rem;
+  padding: 0.625rem 1rem;
+  width: auto;
+  height: auto;
+  bottom: 1.375rem;
+  top: auto;
+  background-color: #9ed947;
+  -webkit-border-radius: 0.25rem;
+          border-radius: 0.25rem;
+  font: 700 0.875rem/0.938rem "Muller", sans-serif;
+  color: #fff;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.letter__navigate.slick-disabled {
+  background: #d6d6d6;
+}
+
+.letter__navigate.slick-disabled:hover, .letter__navigate.slick-disabled:focus {
+  background: #d6d6d6;
+}
+
+.letter__navigate:hover, .letter__navigate:focus {
+  background-color: #beff55;
+}
+
+.letter__btn-group {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.letter__validate {
+  font: 900 0.75rem/0.875rem "Muller", sans-serif;
+  color: #c4c4c4;
+  text-decoration: underline;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.letter__validate:hover, .letter__validate:focus {
+  color: #0652a0;
+}
+
+.letter-system {
+  padding: 0.625rem 0;
+}
+
+.letter-system__heading {
+  font: 400 0.938rem/1.063rem "Muller", sans-serif;
+  color: #8b8e97;
+}
+
+.letter-system__label {
+  margin-right: 0.625rem;
+  font: 400 0.875rem/1rem "Muller", sans-serif;
+}
+
+.letter-system__input {
+  margin-right: 0.625rem;
+}
+
+.date {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 11rem;
+  margin: 0.625rem;
+}
+
+.input-group-addon--date {
+  background-color: #fcfde8;
+  border: 0.063rem solid #f1f7af;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  -webkit-box-shadow: 0.031rem 0.056rem 0.063rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0.031rem 0.056rem 0.063rem rgba(0, 0, 0, 0.05);
+  color: #d7e077;
+}
+
+.person {
+  padding: 0.625rem 0;
+  text-align: right;
+}
+
+.person__item {
+  margin: 0.25rem 0;
+  padding: 0.375rem 0.9375rem;
+  background-color: #f5f8f9;
+  border: 0.063rem solid #d7d7d7;
+  font: 500 0.875rem/0.938rem "Muller", sans-serif;
+  text-align: left;
+}
+
+.person__item--nonebg {
+  background: transparent;
+  border-color: transparent;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+
+.person__name {
+  color: #d6d6d6;
+}
+
+.person__value {
+  color: #000;
+}
+
+@media only screen and (max-width: 767px) {
+  .letter__list {
+    list-style: none;
+    border-top: 0.125rem dashed #e5ecf0;
+    border-bottom: 0.125rem dashed #e5ecf0;
+  }
+  .letter__submit {
+    padding: 1.375rem 1.5rem;
+    -webkit-border-radius: 1.938rem;
+            border-radius: 1.938rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .letter__heading {
+    padding: 2.875rem 0;
+  }
+  .letter__descr {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+  .letter__group {
+    text-align: left;
+  }
+  .letter__addons {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 4.375rem;
+  }
+  .letter__list {
+    padding: 1.25rem 0 2.375rem;
+  }
+  .letter__label {
+    font-size: 1.063em;
+    line-height: 1.188rem;
+  }
+  .letter__input {
+    margin: 0.25rem 0.5rem;
+    width: auto;
+  }
+  .letter__input--floor {
+    width: 5rem;
+  }
+  .letter__input--payment {
+    width: 3rem;
+  }
+  .letter__input--term-decor {
+    width: 3rem;
+  }
+  .letter__input--power {
+    width: 5rem;
+  }
+  .letter__input--ventilation {
+    width: 7rem;
+  }
+  .letter__input--prepayment {
+    width: 10rem;
+  }
+  .letter__input--billboard {
+    width: 3rem;
+  }
+  .letter__input--index {
+    margin-right: 0;
+    width: 4rem !important;
+  }
+  .letter__input--date {
+    margin: 0;
+  }
+  .letter__select-single {
+    margin: 0.25rem 0.5rem;
+    padding: 0.3125rem;
+  }
+  .letter__select-single--index-type {
+    margin-left: 0;
+  }
+  .letter__addons {
+    margin: 0.25rem 0.5rem;
+  }
+  .letter__validate {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+  .letter-system__label {
+    font-size: 1.063em;
+    line-height: 1.188rem;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .recipient__heading {
+    padding: 2.625rem;
+  }
+  .recipient__text {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+  .recipient__date {
+    font-size: 0.75rem;
+    line-height: 0.874rem;
+  }
+  .btn--close-gray {
+    width: 1.313rem;
+    height: 1.313rem;
+  }
+  .letter__warning {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+  .letter__heading {
+    font-size: 1.375rem;
+    line-height: 1.5rem;
+  }
+  .letter__descr {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+  .letter__label {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+  .letter__validate {
+    font-size: 1.188rem;
+    line-height: 1.313rem;
+  }
+  .letter-system__label {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+  .person__name {
+    font-size: 1.188rem;
+    line-height: 1.313rem;
+  }
+  .person__value {
+    font-size: 1.188rem;
+    line-height: 1.313rem;
+  }
 }

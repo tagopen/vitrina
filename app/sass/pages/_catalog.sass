@@ -24,8 +24,12 @@
 .nav-item 
   width: 100%
   text-align: center
+  border-left: 0.0625rem dashed $nav-item-border
+  &:first-of-type
+    border-left: 0 none
 .dropdown
   &--navbar
+    display: block
     padding: 0.5em 1em
     width: 100%
   &__toggle
@@ -113,8 +117,7 @@
     &--inside
       width: auto
   .nav-link
-    padding-top: 0
-    padding-bottom: 0
+    padding: 0.5rem 2rem !important
   .dropdown
     &__toggle
       &--navbar
@@ -127,7 +130,7 @@
 +r(992)
   .user-btn
     &__item
-      padding: 0 2.5rem
+      padding: 0.5rem 2.5rem
     &__icon
       position: absolute
       top: -1rem
@@ -478,7 +481,7 @@
   list-style: none
   &__item
     position: relative
-    display: inline-block
+    display: inline
     font: 400 0.75rem/0.875rem $main-font
     color: $breadcrumbs-color
     line-height: 0.125rem
@@ -654,6 +657,8 @@
   &__value
     font: 700 0.563rem/0.6875rem $main-font
     color: $option-value-color
+    &--empty
+      color: $option-value-empty-color
   &__descr
     font-weight: 400
     color: $option-descr-color

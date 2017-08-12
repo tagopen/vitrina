@@ -127,12 +127,18 @@
       });
     }
 
-    if ($(".disperse__select--undesirable").length) {
-      $(".disperse__select--undesirable").select2({
+/*    if ($(".letter__select-single").length) {
+      $(".letter__select-single").select2({
         language: 'ru',
+      });
+    }*/
+
+    if ($(".disperse__select--desirable").length) {
+      $(".disperse__select--desirable").select2({
+        language: 'ru',
+        maximumSelectionLength: 2,
         tags: true,
         tokenSeparators: [',', ' '],
-        theme: "red"
       });
     }
 
@@ -332,7 +338,7 @@
     }
   });
 
-  // Featured Slider
+  // Slick slider
   if ($('.slider--plan')) {
     $('.slider--plan').slick({
       dots: false,
@@ -360,7 +366,8 @@
       ]
     });
   }
-  // Featured Slider
+
+  // Slick Slider
   if ($('.slider--featured')) {
     $('.slider--featured').slick({
       dots: true,
@@ -415,6 +422,51 @@
         ]
       });
     }
+  });
+
+  // Slick slider
+  if ($('.letter__list')) {
+    $('.letter__list').slick({
+      dots: false,
+      arrows: true,
+      infinite: false,
+      slidesPerRow: 1,
+      rows: 3,
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      swipeToSlide: '15',
+      prevArrow: '<button type="button" data-role="none" class="slick-prev letter__navigate" aria-label="Previous" tabindex="0" role="button">Назад</button>',
+      nextArrow: '<button type="button" data-role="none" class="slick-next letter__navigate" aria-label="Next" tabindex="0" role="button">Далее</button>',
+      mobileFirst: true,
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: "unslick",
+        }
+      ]
+    });
+  }
+
+  // DatePicker
+  $(function () {
+    $('#datetimepicker1').datepicker({
+      format: 'dd / yyyy',
+      autoclose: true,
+      language: 'ru'
+    });
+  });
+
+  $(".letter__select-multiple").tagsInput({
+     'width':'auto',
+     'height':'auto',
+     'interactive':true,
+     'defaultText':'+ добавить еще',
+     'delimiter': [','],   // Or a string with a single delimiter. Ex: ';'
+     'removeWithBackspace' : true,
+     'minChars' : 0,
+     'maxChars' : 0, // if not provided there is no limit
+     'placeholderColor' : '#bec5c9'
   });
 
 

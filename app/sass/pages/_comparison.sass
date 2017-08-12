@@ -1,0 +1,189 @@
++comment("compare page style")
+.intro
+  &--bgn
+    background: $intro-compare-bg
+  &__link
+    &--compare
+      font: 500 1rem/1.125rem $main-font
+      color: $intro-compare-color
+      text-decoration: underline
+      transition: all .3s ease-out
+      &:hover,
+      &:focus
+        color: $intro-compare-color-hover
+.dropdown
+  &__toggle
+    &--localization
+      padding: 0.625rem 2rem
+      border: 0.125rem dotted $dropdown-localization-border
+      border-radius: 1.125rem
+      font: 400 0.875rem/1rem $main-font
+      color: $dropdown-localization-color
+      &:hover,
+      &:focus
+        background-color: $dropdown-localization-bg-hover
+        color: $dropdown-localization-color-hover
+        border: 0.125rem dotted $dropdown-localization-border-hover
++comment("section intro style")
++comment("section compare style")
+.comparison
+  background-color: $compare-bg
+  &__group
+    text-align: center
+  &__close
+    position: absolute
+    top: 1.25rem
+    right: 1.25rem
+  &__btn
+    margin-top: 0.5rem
+
+.choice
+  &--compare
+    text-align: left
+  &__heading
+    &--compare
+      margin-bottom: 0.75rem
+      font: 500 0.75rem/0.875rem $main-font
+  &__text
+    &--compare
+      font: 500 0.875rem/1rem $main-font
+.btn
+  &--square
+    margin-bottom: 0.75rem
+    background-color: #55a6db
+    border-radius: 0.25rem
+    color: #fff
+    &:hover,
+    &:focus
+      background-color: #55a6db * 1.2 
+  &--green-round
+    background-color: #a4df4f
+    border-radius: 1.25rem
+    font: 500 0.875rem/1rem $main-font
+    color: #fff
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      background-color: #fff
+      box-shadow: 0 0 0 0.125rem #a4df4f
+      color: #a4df4f
+  &--orange
+    border: 0.125rem solid #ed8a19
+    border-radius: 1.25rem
+    font: 500 0.563rem/0.625rem $main-font
+    color: #414141
+    .compare__icon
+      margin-right: 0.5rem
+      color: #ed8a19
+    &:hover,
+    &:focus
+      background-color: #ed8a19
+      color: #fff
+      .compare__icon
+        color: #fff
+  &--close
+    border-radius: 50%
+    background-color: transparent
+.product
+  &--compare
+    background: transparent
+    &:hover,
+    &:focus
+      box-shadow: none
+  &__img
+    &--compare
+      max-width: 16rem
+.option
+  &__item
+    &--compare
+      padding: 0
+  &__name
+    &--compare
+      font: 500 0.625rem/0.75rem $main-font
+      color: #282828
+  &__value
+    &--compare
+      font: 500 0.625rem/0.75rem $main-font
+.table
+  &__heading
+    position: relative
+  &--compare
+    thead,
+    tbody,
+    tfoot
+      th,
+      td
+        padding: 0.5rem 1.5rem
+        border: 0 none
+        vertical-align: middle
+        border-left: 0.0625rem dotted 0.9 * #fff
+        &:first-of-type
+          border-left: 0 none
+      .table__heading--photo
+        padding: 0
+    thead
+      background-color: #fff
+      box-shadow: 0 0.625rem 5rem rgba(0, 0, 0, 0.07)
+    tbody
+      background-color: #fff
+      td
+        &:first-of-type
+          background-color: #f9f9f9
+    tfoot
+      td
+        border-top: 0.0625rem dotted 0.9 * #fff
+        background-color: #fff
+        &:first-of-type
+          background-color: #fcfcfc
++r(768)
+  .choice
+    &--compare
+      white-space: nowrap
+    &__heading
+      &--compare
+        font-size: 0.875rem
+        line-height: 1rem
+    &__text
+      &--conmpare
+        font-size: 0.875rem
+        line-height: 1rem
+  .btn
+    &--square
+      margin-bottom: 0
+      font-size: 0.875rem
+      line-height: 1rem
++r(992)
+  .product
+    &__img
+      &--compare
+        max-width: 20.375rem
+  .btn
+    &--green-round
+      font-size: 0.813rem
+      line-height: 1.25rem
+    &--orange
+      font-size: 0.688rem
+      line-height: 1.125rem
++r(1344)
+  .choice
+    &__heading
+      &--compare
+        font-size: 1rem
+        line-height: 1.125rem
+    &__text
+      &--compare
+        font-size: 1rem
+        line-height: 1.125rem
+  .btn
+    &--square
+      font-size: 1rem
+      line-height: 1.125rem
+  .option
+    &__name
+      &--compare
+        font-size: 0.75rem
+        line-height: 0.875rem
+    &__value
+      &--compare
+        font-size: 0.75rem
+        line-height: 0.875rem

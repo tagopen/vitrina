@@ -573,7 +573,9 @@
           },
         ],
         intro: {
-          heading: "Выберите нужные вам критерии поиска",
+          heading: {
+            text: "Выберите нужные вам критерии поиска"
+          },
           choice: {
             btn: {
               number: "32",
@@ -1205,7 +1207,9 @@
           },
         ],
         intro: {
-          heading: "Тц «европейский»",
+          heading: {
+            text: "Тц «европейский»"
+          },
           choice: {
             btn: {
               number: "отправить заявку  на аренду без посредников",
@@ -1943,7 +1947,9 @@
           },
         ],
         intro: {
-          heading: "Тц «европейский»",
+          heading: {
+            text: "Тц «европейский»"
+          },
           choice: {
             btn: {
               number: "отправить заявку  на аренду без посредников",
@@ -2681,7 +2687,9 @@
           },
         ],
         intro: {
-          heading: "Помещение #1 в тЦ «Европейский»",
+          heading: {
+            text: "Помещение #1 в тЦ «Европейский»"
+          },
           choice: {
             btn: {
               number: "отправить заявку  на аренду без посредников",
@@ -3304,5 +3312,545 @@
             href: "#"
           }
         }
-      }, //- productNoVideo
+      }, //- premises
+      comparison: { 
+        hostname: "comparison.html",
+        title: "Сравнение торговых центров",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            siteName: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        },
+        breadcrumbs: [
+          {
+            name: "Главная",
+            href: "#"
+          },
+          {
+            name: "Сравнение торговых центров в городе Москва",
+            href: "#"
+          },
+        ],
+        intro: {
+          class: "intro--bgn",
+          heading: {
+            text: "Сравнение торговых центров",
+          },
+          compare: {
+            href: "#",
+            name: "очистить сравнение"
+          },
+          localization: {
+            items: [
+              {
+                name: "Москва",
+                href: "#"
+              },
+              {
+                name: "Екатеринбург",
+                href: "#"
+              },
+              {
+                name: "Одинцово",
+                href: "#"
+              }
+            ]
+          }
+        },
+        flexTable: [       
+          {
+            thead: {
+              heading: "Вы выбрали",
+              number: "3",
+              descr: "торговых центра"
+            },
+            tbody: [
+              "город",
+              "наличие метро/отдаленность",
+              "посещаемость",
+              "площадь общая",
+              "площадь торговая",
+              "якорные арендаторы",
+              "наличие кинотеатра",
+              "кол-во свободных площадей",
+              "кол-во паркомест"
+            ]
+          },
+          {
+            href: "#",
+            img: {
+              link: "img/category-1.jpg",
+              alt: "ТЦ Европейский"
+            },
+            name: "ТЦ Европейский",
+            options: [
+              {
+                //-name: "город:",
+                value: {
+                  number: "Москва",
+                }
+              },
+              {
+                //-name: "наличие метро/отдаленность",
+                value: {
+                  railway: {
+                    icon: {
+                      color: "blue",
+                      name: "м"
+                    },
+                    name: "Киевская"
+                  },
+                }
+              },
+              {
+                //-name: "посещаемость",
+                value: {
+                  number: "1200 \\ 302000 \\ 4000000",
+                }
+              },
+              {
+                //-name: "площадь общая",
+                value: {
+                  number: "1000 м2",
+                }
+              },
+              {
+                //-name: "площадь торговая",
+                value: {
+                  number: "250м2",
+                }
+              },
+              {
+                //-name: "якорные арендаторы",
+                value: {
+                  links: [
+                    {
+                      name: "Ашан",
+                      href: "#"
+                    },
+                    {
+                      name: "McDonalds",
+                      href: "#"
+                    },
+                  ],
+                  delimeter: ", "
+                }
+              },
+              {
+                //-name: "наличие кинотеатра",
+                value: {
+                  number: "Формула Кино Европа",
+                }
+              },
+              {
+                //-name: "кол-во свободных площадей",
+                value: {
+                  links: [
+                    {
+                      name: "8 свободных",
+                      href: "#"
+                    },
+                  ],
+                  delimeter: ", "
+                }
+              },
+              {
+                //-name: "кол-во паркомест",
+                value: {
+                  number: "1200 мест",
+                }
+              },
+            ],
+            btnGroup: {
+              green: {
+                href: "#",
+                name: "отправить заявку"
+              },
+              compare: {
+                href: "#",
+                icon: "fa-star",
+                name: "добавить в избранное"
+              }
+            }
+          },
+        ]
+      }, //- comparison
+      bid: { 
+        hostname: "bid.html",
+        title: "Письмо о намерениях",
+        meta: {
+          description: "",
+          keywords: "",
+          openGraph: {
+            title: "Site name",
+            siteName: "Site name",
+            description: "Описание сайта",
+            type: "website",
+            locale: "ru_RU",
+            image: "microformat.png",
+            imageType: "image/png",
+            url: hostname
+          },
+          twitter: {
+            card: "summary",
+            site: "@flickr",
+            title: "My Site",
+            description: "My Site is cool",
+            image: hostname + "/img/logo/microformat.png"
+          }
+        },
+        breadcrumbs: [
+          {
+            name: "Главная",
+            href: "#"
+          },
+          {
+            name: "Сравнение торговых центров в городе Москва",
+            href: "#"
+          },
+        ],
+        intro: {
+          class: "intro--bgn",
+          heading: {
+            text: "Оставить заявку на аренду <b>в ТЦ Европейский</b>",
+            modifier: "narrow"
+          },
+        },
+        form: {
+          warning: "Данное письмо о намерениях сформированно через серивис vitrina.club",
+          recipients: [
+            {
+              img: {
+                src: "img/logo/company/x5-retail-group.png",
+                alt: "X5RetailGroup"
+              },
+              info: [
+                {
+                  text: "109029, г. Москва, ул. Средняя Калитниковская,"
+                },
+                {
+                  text: "Телефон: +7 (495) 662-88-88",
+                  date: {
+                    text: "Дата письма: ",
+                    time: "06 июня 2017г."
+                  }
+                }
+              ],
+            },
+            {
+              img: {
+                src: "img/logo/company/zeleniy-perekrestok.png",
+                alt: "Перекресток зелёный"
+              },
+              info: [
+                {
+                  text: "Руководителю департамента Торговой недвижимости <br />ООО \"РРГ Брокеридж\" <br />Тараненко Ю."
+                },
+              ],
+            },
+          ],
+          letter: {
+            heading: "Письмо о намерениях",
+            descr: "Наша компания подтверждает следующие условия аренды торговых площадей в Торговом Центре <b>ТЦ Европейский</b>, находящемуся по адресу: <b>121059, Россия, Москва, пл. Киевского Вокзала, 2</b>:",
+            list: [
+              {
+                text: "Название магазина",
+                input: {
+                  name: "name"
+                }
+              },
+              {
+                text: "Для продажи товаров",
+                selectMultiple: {
+                  items: "Продовольственные товары, Бытовая химия",
+                  btnAdd: {
+                    icon: "fa fa-plus",
+                    text: "Добвить еще"
+                  },
+                  delimeter: ",",
+                  name: "sale"
+                }
+              },
+              {
+                text: "Этаж размещения магазина",
+                selectSingle: {
+                  items: [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                  ],
+                  name: "floor"
+                },
+                text2: "этаж.",
+              },
+              {
+                text: "Общая арендуемая площадь",
+                input: {
+                  name: "area",
+                  modifier: "letter__input--floor"
+                },
+                text2: "квм."
+              },
+              {
+                text: "Договор аренды",
+                selectSingle: {
+                  items: [
+                    "Краткосрочная",
+                    "Долгосрочная",
+                  ],
+                  name: "contract"
+                },
+                text2: ".",
+              },
+              {
+                text: "Срок аренды",
+                selectSingle: {
+                  items: [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                  ],
+                  name: "term"
+                },
+                text2: "месяцев.",
+                system: {
+                  heading: "Выбирете систему расчетов:",
+                  items: [
+                    {
+                      name: "system",
+                      text: "<i class=\"fa fa-rub\"></i> фиксированная"
+                    },
+                    {
+                      name: "system",
+                      text: "% Процент от оборота"
+                    }
+                  ]
+                }
+              },
+              {
+                text: "Арендная плата может оплачиваться в качестве процента от товарооборота, который составит",
+                input: {
+                  name: "circularGoods",
+                  modifier: "letter__input--payment"
+                },
+                text2: "%, при этом минимальный ежемесячный платеж составит",
+                input2: {
+                  name: "payment",
+                },
+                text3: "руб за квм в месяц, ",
+                selectSingle: {
+                  items: [
+                    "включая",
+                    "не включая",
+                  ],
+                  name: "tax"
+                },
+                text4: "НДС."
+              },
+              {
+                text: "Период для расчета товарооборота",
+                selectSingle: {
+                  items: [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                  ],
+                  name: "period"
+                },
+                text2: "месяцев"
+              },
+              {
+                text: "Ежегодная индексация арендной ставки не более",
+                addons: {
+                  input: {
+                    name: "index",
+                    modifier: "letter__input--index"
+                  },
+                  selectSingle: {
+                    items: [
+                      "% ИПЦ",
+                      "% ИПА",
+                    ],
+                    modifier: "letter__select-single--index-type",
+                    name: "indexType"
+                  },
+                },
+                text2: "в год"
+              },
+              {
+                text: "Комунальные платежи",
+                selectSingle: {
+                  items: [
+                    "включены",
+                    "не включены",
+                  ],
+                  name: "communal"
+                },
+                text2: "в арендную плату и оплачиваются",
+                selectSingle2: {
+                  items: [
+                    "по счетчикам",
+                    "по объему",
+                  ],
+                  name: "communalType"
+                },
+              },
+              {
+                selectSingle: {
+                  items: [
+                    "Страховой депозит в размере один месяц",
+                    "Страховой депозит в размере два месяца",
+                  ],
+                  name: "insurance"
+                },
+              },
+              {
+                text: "Состояние помещения при передаче в аренду",
+                selectSingle: {
+                  items: [
+                    "С отделкой",
+                    "Без отделки",
+                  ],
+                  name: "state"
+                },
+                text2: "."
+              },
+              {
+                text: "Желательная дата получения помещения под отделку",
+                date: {
+                  placeholder: "08 / 2017г.",
+                  name: "date",
+                  icon: "fa fa-calendar"
+                }
+              },
+              {
+                text: "Срок необходимый для отделки и ремонта",
+                input: {
+                  name: "termDecor",
+                  modifier: "letter__input--term-decor"
+                },
+                text2: "дней."
+              },
+              {
+                text: "Необходимая электрическая мощность",
+                input: {
+                  name: "power",
+                  modifier: "letter__input--power"
+                },
+                text2: "кВт",
+                selectSingle: {
+                  items: [
+                    "За всё помещение",
+                    "За арендованную площадь",
+                  ],
+                  name: "amount"
+                },
+              },
+              {
+                text: "Необходима приточно-вытяжная вентиляция в объеме",
+                input: {
+                  name: "ventilation",
+                  modifier: "letter__input--ventilation"
+                },
+                text2: "кубометров в час."
+              },
+              {
+                text: "Для подтверждения своих намерений готовы оплатить аванс в размере",
+                input: {
+                  name: "prepayment",
+                  modifier: "letter__input--prepayment"
+                },
+                text2: "руб, который будет зачтен в качестве первого платежа по договору."
+              },
+              {
+                text: "Просим предоставить рекламное место размером",
+                input: {
+                  name: "billboardWidth",
+                  modifier: "letter__input--billboard"
+                },
+                text2: "на",
+                input2: {
+                  name: "billboardHeight",
+                  modifier: "letter__input--billboard"
+                },
+                text3: "м на фасаде. Рекламное место просим предоставить",
+                selectSingle: {
+                  items: [
+                    "Бесплатно",
+                    "Платно",
+                  ],
+                  name: "billboardCost"
+                },
+              }
+            ],
+            person: {
+              items: [
+                {
+                  value: "Начальник отдела развития",
+                },
+                {
+                  value: "Федеральной торговой сети “ПЕРЕКРЕСТОК“",
+                  modifier: "person__item--nonebg"
+                },
+                {
+                  name: "ФИО",
+                  value: "М.Максимов"
+                },
+                {
+                  name: "Тел.:",
+                  value: "+7 (495) 662-88-88"
+                },
+                {
+                  name: "Email:",
+                  value: "<a class=\"person__link\" href=\"mailto:mail@mail.ru\">mail@mail.ru</a>"
+                },
+              ]
+            },
+            btnGroup: {
+              validate: {
+                text: "Проверить на наличие ошибок",
+                href: "#"
+              },
+              submit: {
+                text: "Отправить заявку",
+              }
+            }
+          }
+        }
+      }, //- bid
     }

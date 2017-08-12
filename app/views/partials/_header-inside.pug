@@ -5,18 +5,27 @@ mixin introCol($color)
   else
     .col-24.col-md-12.col-lg-auto
       block
-header.intro
+header.intro(class=page.intro.class)
   .container
     .row
-      .col-24
+      .col
         include ../components/_breadcrumb.pug
+      if (page.intro.localization)
+        .col-4
+          if (page.intro.localization)
+            .hidden-md-down.dropdown.dropdown--localization
+              a#dropdown-localization.dropdown__toggle.dropdown__toggle--localization(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')!=page.intro.localization.items[0].name
+              .dropdown-menu.dropdown-menu--localization(aria-labelledby='dropdown-localization')
+                each link, count in page.intro.localization.items
+                  if (count > 0)
+                    a.dropdown-item.dropdown__item(href=link.href)!= link.name
     .row.justify-content-between.align-items-center
       if (page.intro)
         if ((page.intro.heading) || (page.intro.street))
           .col-18.col-md-12.col-lg-auto
             .intro__item
               if (page.intro.heading)
-                h1.heading.intro__heading!= page.intro.heading
+                h1.heading.intro__heading(class='intro__heading--' + page.intro.heading.modifier)!= page.intro.heading.text
               if (page.intro.street)
                 address.intro__street.street
                   i.street__icon(class=page.intro.street.icon)
@@ -37,3 +46,6 @@ header.intro
                     span.choice__num!= page.intro.choice.btn.number
                     if (page.intro.choice.btn.text)
                       span.hidden-sm-down.choice__val!= page.intro.choice.btn.text
+        if (page.intro.compare)
+          .hidden-sm-down.col-4
+            a.intro__link.intro__link--compare(href=page.intro.compare.href)!= page.intro.compare.name
